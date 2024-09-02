@@ -1,295 +1,438 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <!--Theme is ning by ning0818. See https://github.com/ning0818/hexo-theme-ning-->
-    <script src=/app.js></script>
-    <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/ning0818/CDN-Files/ai.css">
-    <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <style>
-    .ai-summary {
-    background: #f1f3f8;
-    border-radius: 10px;
-    padding: 12px;
-    line-height: 1.3;
-    border: 1px solid #e3e8f7;
-    margin-bottom: 16px;
-    </style>
-    <link rel="shortcut icon" href="https://gitee.com/ZiXieGQL/blog-pictures/raw/master/img/Cat.jpg" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <link rel="stylesheet" class="nightmode" href="/assets/css/main.css">
-    <link rel="stylesheet" href="https://npm.elemecdn.com/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
-    <link rel="stylesheet" class="nightmode" href="/css/style.css">
-    <link rel="stylesheet" class="nightmode" href="/css/plugin.css">
-    <script src="/js/pandown.js"></script>
-<meta name="generator" content="Hexo 7.3.0"></head>
-    <body>
-        <div class="container">
-            <body class="no-touch">
-    <div id="app" class="App affix App--index" style="min-height: 744px;" aria-hidden="false">
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-        <div id="app-navigation" class="App-navigation">
-            <div class="Navigation ButtonGroup App-backControl"><button class="Button Button--icon Navigation-drawer hasIcon" type="button" aria-label="打开导航抽屉"><i aria-hidden="true" class="icon fas fa-bars Button-icon"></i><span class="Button-label"></span></button></div>
-        </div>
+<link rel="stylesheet" href="/css/main.css">
 
-        <div id="drawer" class="App-drawer">
 
-            <header id="header" class="App-header navbar-fixed-top">
-                <div id="header-navigation" class="Header-navigation">
-                    <div class="Navigation ButtonGroup"></div>
-                </div>
-                <div class="container">
-                    <div class="Header-title">
-                        <a href="/" id="home-link">
-                            <!--顶栏logo-->
-                            <img src="https://gitee.com/ZiXieGQL/blog-pictures/raw/master/img/Cat.jpg" alt="首页" class="Header-logo">
-                            <!--顶栏logo end-->
-                        </a>
-                    </div>
-                    <div id="header-primary" class="Header-primary">
-                        <ul class="Header-controls">
-                            <!--顶栏内容-->
-                            
-                            <li class="item-link4">
-                                <a class="LinksButton Button Button--link active" href="/">
-                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
-                                    <span class="LinksButton-title">首页</span>
-                                </a>
-                            </li>
-                            
-                            <li class="item-link4">
-                                <a class="LinksButton Button Button--link active" href="/tags/">
-                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
-                                    <span class="LinksButton-title">标签</span>
-                                </a>
-                            </li>
-                            
-                            <!--顶栏内容 end-->
-                        </ul>
-                    </div>
-                    <div id="header-secondary" class="Header-secondary">
-                        <ul class="Header-controls">
-                            
-                                
-                                <li class="item-nightmode">
-                                    <button class="Button Button--flat hasIcon" type="button">
-                                        <a href="/">
-                                        <i aria-hidden="true" class="bi bi-house-door"></i>
-                                        <span class="Button-label">首页</span>
-                                        </a>
-                                    </button>
-                                </li>
-                            
-                                
-                                <li class="item-nightmode">
-                                    <button class="Button Button--flat hasIcon" type="button">
-                                        <a target="_blank" rel="noopener" href="https://github.com/ning0818/">
-                                        <i aria-hidden="true" class="bi bi-github"></i>
-                                        <span class="Button-label">Github</span>
-                                        </a>
-                                    </button>
-                                </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </header>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-        </div>
-            <title>Hello World | 子协</title>
-<main class="App-content">
-    <div id="content">
-        <div class="IndexPage">
-            <div class="container">
-                <div class="sideNavContainer">
-                    <div class="IndexPage-results sideNavOffset">
-                        <div id="post">
-                        <div class="card" id="title">
-                        <h1>Hello World</h1>
-                        </div>
-                        <div class="card" id="post-body">
-                        
-                        <div class=ai-summary>
-                        <div class=title>
-                            <svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink width=20px height=20px viewBox="0 0 48 48">
-                                <g stroke=none stroke-width=1 fill=none fill-rule=evenodd>
-                                    <path d="M34.717885,5.03561087 C36.12744,5.27055371 37.079755,6.60373651 36.84481,8.0132786 L35.7944,14.3153359 L38.375,14.3153359 C43.138415,14.3153359 47,18.1768855 47,22.9402569 L47,34.4401516 C47,39.203523 43.138415,43.0650727 38.375,43.0650727 L9.625,43.0650727 C4.861585,43.0650727 1,39.203523 1,34.4401516 L1,22.9402569 C1,18.1768855 4.861585,14.3153359 9.625,14.3153359 L12.2056,14.3153359 L11.15519,8.0132786 C10.920245,6.60373651 11.87256,5.27055371 13.282115,5.03561087 C14.69167,4.80066802 16.024865,5.7529743 16.25981,7.16251639 L17.40981,14.0624532 C17.423955,14.1470924 17.43373,14.2315017 17.43948,14.3153359 L30.56052,14.3153359 C30.56627,14.2313867 30.576045,14.1470924 30.59019,14.0624532 L31.74019,7.16251639 C31.975135,5.7529743 33.30833,4.80066802 34.717885,5.03561087 Z M38.375,19.4902885 L9.625,19.4902885 C7.719565,19.4902885 6.175,21.0348394 6.175,22.9402569 L6.175,34.4401516 C6.175,36.3455692 7.719565,37.89012 9.625,37.89012 L38.375,37.89012 C40.280435,37.89012 41.825,36.3455692 41.825,34.4401516 L41.825,22.9402569 C41.825,21.0348394 40.280435,19.4902885 38.375,19.4902885 Z M14.8575,23.802749 C16.28649,23.802749 17.445,24.9612484 17.445,26.3902253 L17.445,28.6902043 C17.445,30.1191812 16.28649,31.2776806 14.8575,31.2776806 C13.42851,31.2776806 12.27,30.1191812 12.27,28.6902043 L12.27,26.3902253 C12.27,24.9612484 13.42851,23.802749 14.8575,23.802749 Z M33.1425,23.802749 C34.57149,23.802749 35.73,24.9612484 35.73,26.3902253 L35.73,28.6902043 C35.73,30.1191812 34.57149,31.2776806 33.1425,31.2776806 C31.71351,31.2776806 30.555,30.1191812 30.555,28.6902043 L30.555,26.3902253 C30.555,24.9612484 31.71351,23.802749 33.1425,23.802749 Z" fill=#425aef fill-rule=nonzero></path>
-                                </g>
-                            </svg>
-                            <div class=title>智能摘要</div>
-                        </div>
-                        <div class=content id=ai-summary>获取中……</div>
-                    </div>
-                    <script>
-                        function ai_summary() {
-                            Ning.console.debug(`AI摘要插件
-API URL: https://ai.ning0818.top
-Key: 
-发送的内容: ` + (document.title + " " + document.getElementById("post").innerText.replaceAll("\n", " ")).substring(0, 201)),
-                            fetch("https://ai.ning0818.top/?key=&content=" + (document.title + " " + document.getElementById("post").innerText.replaceAll("\n", " ")).substring(0, 201)).then(function(t) {
-                                t.json().then(function(t) {
-                                    document.getElementById("ai-summary").innerHTML = t.summary
-                                }).catch(function(t) {
-                                    document.getElementById("ai-summary").innerHTML = "代码出现故障：" + t
-                                })
-                            }).catch(function(t) {
-                                document.getElementById("ai-summary").innerHTML = "代码出现故障：" + t
-                            })
-                        }
-                        Ning.onload.add(ai_summary)
-                    </script>
-                        
-                        <p><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+  <meta name="description" content="STM32F103C8T6FLASH:64KB，RAM:20KBflash起始地址为0x08000000，大小为0x10000(16进制)—&gt;65536字节(10进制)—&gt;64KBRAM起始地址为  0x20000000，大小为0x05000(16进制)—&gt;20480字节(10进制)—&gt;20KB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="子协">
+<meta property="og:url" content="http://example.com/2024/09/02/hello-world/index.html">
+<meta property="og:site_name" content="子协">
+<meta property="og:description" content="STM32F103C8T6FLASH:64KB，RAM:20KBflash起始地址为0x08000000，大小为0x10000(16进制)—&gt;65536字节(10进制)—&gt;64KBRAM起始地址为  0x20000000，大小为0x05000(16进制)—&gt;20480字节(10进制)—&gt;20KB">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-01T16:36:39.306Z">
+<meta property="article:modified_time" content="2024-09-02T17:15:28.974Z">
+<meta property="article:author" content="子协">
+<meta name="twitter:card" content="summary">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<link rel="canonical" href="http://example.com/2024/09/02/hello-world/">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</p>
-                        </div>
-                        <div class="share card" id="sharecard">
-                            <link rel="stylesheet" class="nightmode" href="/css/copyright.css">
-                            <div class="copyright">
-                                <i class="bi bi-c-circle icon"></i>
-                                <div class="text">
-                                    <br>
-                                    <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-                                    <p>本文永久链接是：<a href="http://example.com/2024/09/02/hello-world/">http://example.com/2024/09/02/hello-world/</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="card">
-                            <h2><i class="bi bi-chat-fill"></i> 评论</h2>
-                            <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
-<div id="comments"></div>
-<script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-  init({
-    el: '#comments',
-    serverURL: 'https://waline.ning0818.top',
-  });
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
 </script>
-                        </div>
-                    </div>
-                    <div class="AfruxWidgets-sideNavAlt AfruxWidgets-WidgetSection">
-    <div class="AfruxWidgets-Widget welcomebox-widget">
-        <div class="AfruxWidgets-Widget-content">
-            <div class="containerwb">
-                <div class="backgrwb">
-                    <div><a href="/">
-                            <div class="avatarwb">
-                                <div class="AvatarEditor Dropdown">
-                                    <!--侧栏logo-->
-                                    <img loading="eager" class="Avatar" src="https://gitee.com/ZiXieGQL/blog-pictures/raw/master/img/Cat.jpg" alt="">
-                                    <!--侧栏logo end-->
-                                    <ul class="Dropdown-menu Menu">
-                                        <li class="item-upload"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-upload Button-icon"></i><span class="Button-label">上传</span></button></li>
-                                        <li class="item-remove"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label">移除</span></button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div class="contentwb">
-                        <div class="textinfo"><strong><span class="username">子协</span></strong></div>
-                        <div class="cont">
-                            <div class="circletop">
-                                
-                                    
-                                    <a href="/about/" title="关于">
-                                        <i class="bi bi-file-earmark-person-fill"></i>
-                                    </a>
-                                
-                                    
-                                    <a href="/about/" title="Github">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="iconbadge"></div>
-                </div>
-            </div>
-        </div>
+
+  <title> | 子协</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">子协</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
     
-        
-        <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
-            <div class="AfruxWidgets-Widget-title">
-                <span class="AfruxWidgets-Widget-title-icon">
-                    <i aria-hidden="true" class="bi bi-bell-fill"></i>
-                </span>
-                <span class="AfruxWidgets-Widget-title-label">公告</span>
-                <div class="AfruxWidgets-Widget-title-desc">
-                </div>
-            </div>
-            <div class="AfruxWidgets-Widget-content">
-                <p>这是一个公告</p>
-            </div>
-        </div>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
     
-    <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
-        <div class="AfruxWidgets-Widget-title">
-            <span class="AfruxWidgets-Widget-title-icon">
-                <i aria-hidden="true" class="bi bi-alexa"></i>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/02/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Cat.png">
+      <meta itemprop="name" content="子协">
+      <meta itemprop="description" content="永远相信美好的事情即将发生！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="子协">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-09-02 00:36:39" itemprop="dateCreated datePublished" datetime="2024-09-02T00:36:39+08:00">2024-09-02</time>
             </span>
-            <span class="AfruxWidgets-Widget-title-label">统计</span>
-            <div class="AfruxWidgets-Widget-title-desc">
-            </div>
-        </div>
-        <div class="AfruxWidgets-Widget-content">
-            <div class="Afrux-ForumStatsWidget-grid">
-                    <p>访客数<span id="busuanzi_value_site_uv"></span>人</p>
-                    <p>访问量<span id="busuanzi_value_site_pv"></span>次</p>
-        </div>
-    </div>
-</div>
-<div class="AfruxWidgets-bottomWidgetSection AfruxWidgets-WidgetSection"></div>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-03 01:15:28" itemprop="dateModified" datetime="2024-09-03T01:15:28+08:00">2024-09-03</time>
+              </span>
 
-                </div>
-            </div>
+          
+
         </div>
-        
-        
-    <noscript>
-        <div class="Alert">
-            <div class="container">
-                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
-            </div>
-        </div>
-    </noscript>
-</main>
-</div>
-</body>
-            <hr>
-<div>
+      </header>
+
     
-<!--这里是靠左的底栏-->
-<a href="https://icp.gov.moe/?keyword=20221982" target="_blank">萌ICP备20221982号</a>
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-</div>
-<div style="text-align: right;">
+      
+        <h1 id="STM32F103C8T6"><a href="#STM32F103C8T6" class="headerlink" title="STM32F103C8T6"></a>STM32F103C8T6</h1><p><strong>FLASH:64KB，RAM:20KB</strong><br><strong>flash起始地址为0x08000000，大小为0x10000(16进制)—&gt;65536字节(10进制)—&gt;64KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x05000(16进制)—&gt;20480字节(10进制)—&gt;20KB</strong></p>
+<span id="more"></span>
 
-<!--这里是靠右的底栏-->
-<p>Theme is <a target="_blank" rel="noopener" href="https://github.com/ning0818/hexo-theme-ning">Ning</a> By <a target="_blank" rel="noopener" href="https://www.yuanning0818.tk">Ning0818</a></p>
-<p>Powerd By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+<hr>
+<h1 id="STM32F103RCT6"><a href="#STM32F103RCT6" class="headerlink" title="STM32F103RCT6"></a>STM32F103RCT6</h1><p><strong>FLASH:256KB，SRAM：48KB</strong><br><strong>flash起始地址为0x08000000，大小为0x4000(16进制)—&gt;262144字节(10进制)—&gt;256KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0xC000(16进制)—&gt;49125字节 (10进制)—&gt;48KB</strong></p>
+<hr>
+<h1 id="STM32F103ZET6"><a href="#STM32F103ZET6" class="headerlink" title="STM32F103ZET6"></a>STM32F103ZET6</h1><p><strong>FLASH:512KB，SRAM：64KB；</strong><br><strong>flash起始地址为0x08000000，大小为0x80000(16进制)—&gt;524288字节(10进制)—&gt;512KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x10000(16进制)—&gt;65536字节 (10进制)—&gt;64KB</strong></p>
+<hr>
+<h1 id="STM32F103VET6"><a href="#STM32F103VET6" class="headerlink" title="STM32F103VET6"></a>STM32F103VET6</h1><p><strong>FLASH:512KB，SRAM：64KB；</strong><br><strong>flash起始地址为0x08000000，大小为0x80000(16进制)—&gt;524288字节(10进制)—&gt;512KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x10000(16进制)—&gt;65536字节 (10进制)—&gt;64KB</strong></p>
+<hr>
+<p>#FreeRTOS配置项<br><strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/ZCShouCSDN/article/details/54694511">链接</a></strong> </p>
+<hr>
+<h1 id="占用RAM和flash大小计算"><a href="#占用RAM和flash大小计算" class="headerlink" title="占用RAM和flash大小计算"></a>占用RAM和flash大小计算</h1><p><strong>占用的FLASH &#x3D; Code + RO-data + RW-data</strong><br><strong>占用的 SRAM &#x3D; RW-data + ZI-data</strong></p>
+<hr>
+<h1 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h1><pre><code>**ram中包含了如下几个部分：**  
+**1、data : 存放初始化为非 0 值的全局变量**  
+**2、bss : 存放未初始化或者是初始化为 0 的全局变量**  
+**3、堆 (heap) : 由 malloc 申请，由 free 释放**  
+**4、栈 (Stack) : 存放局部变量和函数调用时的返回地址**  
+</code></pre>
+<p><strong>先给变量分配空间，然后分配堆栈大小</strong>  </p>
+<hr>
+<p>#SystemInit()函数作用<br><strong>复位并配置向量表</strong><br><strong>设置系统时钟为外部高速时钟</strong></p>
+<h1 id="正点原子"><a href="#正点原子" class="headerlink" title="正点原子"></a>正点原子</h1><p><strong>寄存器版：</strong><br>        Stm32_Clock_Init(u8 PLL)  ： 复位并配置向量表  设置系统时钟为外部高速时钟<br>        delay_init(72);			  ： 设置滴答定时器时钟和中断</p>
+<p><strong>库函数版</strong><br>        void SystemInit (void)    ： 复位并配置向量表  设置系统时钟为外部高速时钟<br>        delay_init(); 			  ： 设置滴答定时器时钟和中断</p>
+<h1 id="正点原子时钟源选择"><a href="#正点原子时钟源选择" class="headerlink" title="正点原子时钟源选择"></a>正点原子时钟源选择</h1><p><strong>Keil编写程序是默认的时钟为72Mhz，其实是这么来的：外部晶振(HSE)提供的8MHz（与电路板上的晶振的相关）通过PLLXTPRE分频器后，进入PLLSRC选择开关，进而通过PLLMUL锁相环进行倍频（x9）后，为系统提供72MHz的系统时钟（SYSCLK）。之后是AHB预分频器对时钟信号进行分频，然后为低速外设提供时钟。</strong></p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
 
 
-</div>
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/09/03/test/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-    </body>
-    </html> 
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#STM32F103C8T6"><span class="nav-number">1.</span> <span class="nav-text">STM32F103C8T6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STM32F103RCT6"><span class="nav-number">2.</span> <span class="nav-text">STM32F103RCT6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STM32F103ZET6"><span class="nav-number">3.</span> <span class="nav-text">STM32F103ZET6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STM32F103VET6"><span class="nav-number">4.</span> <span class="nav-text">STM32F103VET6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%A0%E7%94%A8RAM%E5%92%8Cflash%E5%A4%A7%E5%B0%8F%E8%AE%A1%E7%AE%97"><span class="nav-number">5.</span> <span class="nav-text">占用RAM和flash大小计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-number">6.</span> <span class="nav-text">内存分配</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90"><span class="nav-number">7.</span> <span class="nav-text">正点原子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90%E6%97%B6%E9%92%9F%E6%BA%90%E9%80%89%E6%8B%A9"><span class="nav-number">8.</span> <span class="nav-text">正点原子时钟源选择</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="子协"
+      src="/uploads/Cat.png">
+  <p class="site-author-name" itemprop="name">子协</p>
+  <div class="site-description" itemprop="description">永远相信美好的事情即将发生！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">子协</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
