@@ -60,6 +60,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>FreeRTOS-启动第一个任务</title>
+    <url>/2024/09/03/FreeRTOS-%E5%90%AF%E5%8A%A8%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1/</url>
+    <content><![CDATA[<span id="more"></span>
+
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/2024/09/02/hello-world/</url>
     <content><![CDATA[<h1 id="STM32F103C8T6"><a href="#STM32F103C8T6" class="headerlink" title="STM32F103C8T6"></a>STM32F103C8T6</h1><p><strong>FLASH:64KB，RAM:20KB</strong><br><strong>flash起始地址为0x08000000，大小为0x10000(16进制)—&gt;65536字节(10进制)—&gt;64KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x05000(16进制)—&gt;20480字节(10进制)—&gt;20KB</strong></p>
@@ -90,13 +97,6 @@
 <h1 id="正点原子时钟源选择"><a href="#正点原子时钟源选择" class="headerlink" title="正点原子时钟源选择"></a>正点原子时钟源选择</h1><p><strong>Keil编写程序是默认的时钟为72Mhz，其实是这么来的：外部晶振(HSE)提供的8MHz（与电路板上的晶振的相关）通过PLLXTPRE分频器后，进入PLLSRC选择开关，进而通过PLLMUL锁相环进行倍频（x9）后，为系统提供72MHz的系统时钟（SYSCLK）。之后是AHB预分频器对时钟信号进行分频，然后为低速外设提供时钟。</strong></p>
 <hr>
 <p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/image-20240903105446252.png" alt="image-20240903105446252"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>FreeRTOS-启动第一个任务</title>
-    <url>/2024/09/03/FreeRTOS-%E5%90%AF%E5%8A%A8%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1/</url>
-    <content><![CDATA[<span id="more"></span>
-
 ]]></content>
   </entry>
 </search>
