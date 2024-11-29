@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>FreeRTOS-创建任务</title>
+    <url>/2024/09/03/FreeRTOS-%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1/</url>
+    <content><![CDATA[<h2 id="一、任务创建API"><a href="#一、任务创建API" class="headerlink" title="一、任务创建API"></a>一、任务创建API</h2><p>FreeRTOS可以使用动态或静态方式来创建一个任务</p>
+<ul>
+<li><p>动态创建：任务所需要的任务堆栈由<em><strong>系统自动分配</strong></em></p>
+</li>
+<li><p>静态创建：任务所需要的任务堆栈由<em><strong>开发者提供</strong></em></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th align="center">API</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">xTaskCreate()</td>
+<td align="center">动态创建任务</td>
+</tr>
+<tr>
+<td align="center">xTaskCreateStatic()</td>
+<td align="center">静态创建任务</td>
+</tr>
+<tr>
+<td align="center">xTaskCreateRestricted()</td>
+<td align="center">创建一个使用 MPU 进行限制的任务,相关内存使用动态内存分配。</td>
+</tr>
+</tbody></table>
+<h3 id="1、xTaskCreate"><a href="#1、xTaskCreate" class="headerlink" title="1、xTaskCreate()"></a>1、xTaskCreate()</h3><p>函数原型：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">BaseType_t <span class="title function_">xTaskCreate</span><span class="params">( TaskFunction_t pxTaskCode,</span></span><br><span class="line"><span class="params">                            <span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> pcName, <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></span></span><br><span class="line"><span class="params">                            <span class="type">const</span> configSTACK_DEPTH_TYPE usStackDepth,</span></span><br><span class="line"><span class="params">                            <span class="type">void</span> * <span class="type">const</span> pvParameters,</span></span><br><span class="line"><span class="params">                            UBaseType_t uxPriority,</span></span><br><span class="line"><span class="params">                            TaskHandle_t * <span class="type">const</span> pxCreatedTask )</span></span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<p>​        <strong>pxTaskCode</strong>：需要执行的具体任务，即函数</p>
+<p>​	<strong>pcName</strong>：函数名，此参数用来调试</p>
+<p>​	<strong>usStackDepth</strong>：任务堆栈大小</p>
+<p>​	<strong>pvParameters</strong>：函数参数</p>
+<p>​	<strong>uxPriority</strong>：任务优先级，数值越大优先级越大(不能超过最大优先级)</p>
+<p>​	<strong>pxCreatedTask</strong>：任务句柄</p>
+<p>返回值：</p>
+<p>​	<strong>pdPASS</strong>：任务创建成功</p>
+<p>​	<strong>errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY</strong>：任务创建失败,因为堆内存不足!</p>
+<h3 id="2、xTaskCreateStatic"><a href="#2、xTaskCreateStatic" class="headerlink" title="2、xTaskCreateStatic()"></a>2、xTaskCreateStatic()</h3><p>函数原型：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">TaskHandle_t <span class="title function_">xTaskCreateStatic</span><span class="params">( TaskFunction_t pxTaskCode,</span></span><br><span class="line"><span class="params">                                    <span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> pcName, <span class="comment">/*lint !e971 Unqualified char types are allowed for strings and single characters only. */</span></span></span><br><span class="line"><span class="params">                                    <span class="type">const</span> <span class="type">uint32_t</span> ulStackDepth,</span></span><br><span class="line"><span class="params">                                    <span class="type">void</span> * <span class="type">const</span> pvParameters,</span></span><br><span class="line"><span class="params">                                    UBaseType_t uxPriority,</span></span><br><span class="line"><span class="params">                                    StackType_t * <span class="type">const</span> puxStackBuffer,</span></span><br><span class="line"><span class="params">                                    StaticTask_t * <span class="type">const</span> pxTaskBuffer )</span></span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<p>​	<strong>pxTaskCode</strong>：需要执行的具体任务，即函数</p>
+<p>​	<strong>pcName</strong>：函数名，此参数用来调试</p>
+<p>​	<strong>ulStackDepth</strong>：任务栈大小</p>
+<p>​	<strong>pvParameters</strong>：函数参数</p>
+<p>​	<strong>uxPriority</strong>：任务优先级，数值越大优先级越大(不能超过最大优先级)</p>
+<p>​	<strong>puxStackBuffer</strong>：开发者提供的任务堆栈，通常是数组</p>
+<p>​	<strong>pxTaskBuffer</strong>：任务句柄</p>
+<p>返回值：</p>
+<p>​	<strong>NULL</strong>：任务创建失败,puxStackBuffer 或 pxTaskBuffer 为 NULL 的时候会导致这个错误的发生。</p>
+<p>​	<strong>其他值</strong>：任务创建成功,返回任务的任务句柄。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>FreeRTOS-启动第一个任务</title>
+    <url>/2024/09/03/FreeRTOS-%E5%90%AF%E5%8A%A8%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1/</url>
+    <content><![CDATA[<span id="more"></span>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/02/hello-world/</url>
+    <content><![CDATA[<h1 id="STM32F103C8T6"><a href="#STM32F103C8T6" class="headerlink" title="STM32F103C8T6"></a>STM32F103C8T6</h1><p><strong>FLASH:64KB，RAM:20KB</strong><br><strong>flash起始地址为0x08000000，大小为0x10000(16进制)—&gt;65536字节(10进制)—&gt;64KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x05000(16进制)—&gt;20480字节(10进制)—&gt;20KB</strong></p>
+<span id="more"></span>
+
+<hr>
+<h1 id="STM32F103RCT6"><a href="#STM32F103RCT6" class="headerlink" title="STM32F103RCT6"></a>STM32F103RCT6</h1><p><strong>FLASH:256KB，SRAM：48KB</strong><br><strong>flash起始地址为0x08000000，大小为0x4000(16进制)—&gt;262144字节(10进制)—&gt;256KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0xC000(16进制)—&gt;49125字节 (10进制)—&gt;48KB</strong></p>
+<hr>
+<h1 id="STM32F103ZET6"><a href="#STM32F103ZET6" class="headerlink" title="STM32F103ZET6"></a>STM32F103ZET6</h1><p><strong>FLASH:512KB，SRAM：64KB；</strong><br><strong>flash起始地址为0x08000000，大小为0x80000(16进制)—&gt;524288字节(10进制)—&gt;512KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x10000(16进制)—&gt;65536字节 (10进制)—&gt;64KB</strong></p>
+<hr>
+<h1 id="STM32F103VET6"><a href="#STM32F103VET6" class="headerlink" title="STM32F103VET6"></a>STM32F103VET6</h1><p><strong>FLASH:512KB，SRAM：64KB；</strong><br><strong>flash起始地址为0x08000000，大小为0x80000(16进制)—&gt;524288字节(10进制)—&gt;512KB</strong><br><strong>RAM起始地址为  0x20000000，大小为0x10000(16进制)—&gt;65536字节 (10进制)—&gt;64KB</strong></p>
+<hr>
+<p>#FreeRTOS配置项<br><strong><a href="https://blog.csdn.net/ZCShouCSDN/article/details/54694511">链接</a></strong> </p>
+<hr>
+<h1 id="占用RAM和flash大小计算"><a href="#占用RAM和flash大小计算" class="headerlink" title="占用RAM和flash大小计算"></a>占用RAM和flash大小计算</h1><p><strong>占用的FLASH &#x3D; Code + RO-data + RW-data</strong><br><strong>占用的 SRAM &#x3D; RW-data + ZI-data</strong></p>
+<hr>
+<h1 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h1><pre><code>**ram中包含了如下几个部分：**  
+**1、data : 存放初始化为非 0 值的全局变量**  
+**2、bss : 存放未初始化或者是初始化为 0 的全局变量**  
+**3、堆 (heap) : 由 malloc 申请，由 free 释放**  
+**4、栈 (Stack) : 存放局部变量和函数调用时的返回地址**  
+</code></pre>
+<p><strong>先给变量分配空间，然后分配堆栈大小</strong>  </p>
+<hr>
+<p>#SystemInit()函数作用<br><strong>复位并配置向量表</strong><br><strong>设置系统时钟为外部高速时钟</strong></p>
+<h1 id="正点原子"><a href="#正点原子" class="headerlink" title="正点原子"></a>正点原子</h1><p><strong>寄存器版：</strong><br>        Stm32_Clock_Init(u8 PLL)  ： 复位并配置向量表  设置系统时钟为外部高速时钟<br>        delay_init(72);			  ： 设置滴答定时器时钟和中断</p>
+<p><strong>库函数版</strong><br>        void SystemInit (void)    ： 复位并配置向量表  设置系统时钟为外部高速时钟<br>        delay_init(); 			  ： 设置滴答定时器时钟和中断</p>
+<h1 id="正点原子时钟源选择"><a href="#正点原子时钟源选择" class="headerlink" title="正点原子时钟源选择"></a>正点原子时钟源选择</h1><p><strong>Keil编写程序是默认的时钟为72Mhz，其实是这么来的：外部晶振(HSE)提供的8MHz（与电路板上的晶振的相关）通过PLLXTPRE分频器后，进入PLLSRC选择开关，进而通过PLLMUL锁相环进行倍频（x9）后，为系统提供72MHz的系统时钟（SYSCLK）。之后是AHB预分频器对时钟信号进行分频，然后为低速外设提供时钟。</strong></p>
+<hr>
+<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/image-20240903105446252.png" alt="image-20240903105446252"></p>
+]]></content>
+  </entry>
+</search>
