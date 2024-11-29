@@ -1,66 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>分享VSCode插件</title>
-    <url>/2023/03/04/share/share-vscode-plugins/</url>
-    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
-<blockquote>
-<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
-</blockquote>
-<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
-<span id="more"></span>
-<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
-<thead>
-<tr>
-<th align="left"><center><strong>插件链接</strong></center></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
-<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
-<td align="left">国产，免费</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
-<td align="left">AI-assisted development</td>
-<td align="left">微软自家的</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
-<td align="left">Your AI pair programmer</td>
-<td align="left">代码能力比较强</td>
-</tr>
-</tbody></table>
-<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
-<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">链接</th>
-<th align="left">描述</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
-<td align="left">View git log, file history, compare branches or commits</td>
-<td align="left">查看git提交记录和比较提交信息</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>vscode</tag>
-        <tag>plugins</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2011/01/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -135,6 +75,105 @@
       <tags>
         <tag>git</tag>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分享VSCode插件</title>
+    <url>/2023/03/04/share/share-vscode-plugins/</url>
+    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
+</blockquote>
+<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
+<span id="more"></span>
+<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
+<thead>
+<tr>
+<th align="left"><center><strong>插件链接</strong></center></th>
+<th align="left"><strong>描述</strong></th>
+<th align="left"><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
+<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
+<td align="left">国产，免费</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
+<td align="left">AI-assisted development</td>
+<td align="left">微软自家的</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
+<td align="left">Your AI pair programmer</td>
+<td align="left">代码能力比较强</td>
+</tr>
+</tbody></table>
+<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
+<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">链接</th>
+<th align="left">描述</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
+<td align="left">View git log, file history, compare branches or commits</td>
+<td align="left">查看git提交记录和比较提交信息</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>vscode</tag>
+        <tag>plugins</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Docker</title>
+    <url>/2023/04/02/ai/aigen/cursor-docker/</url>
+    <content><![CDATA[<blockquote>
+<p>这一片关于Docker的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a><br><code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="Docker-从入门到精通"><a href="#Docker-从入门到精通" class="headerlink" title="Docker: 从入门到精通"></a>Docker: 从入门到精通</h1><h2 id="什么是-Docker？"><a href="#什么是-Docker？" class="headerlink" title="什么是 Docker？"></a>什么是 Docker？</h2><p>Docker 是一个开源的容器化平台，可以让开发者将应用程序和依赖项打包到一个可移植的容器中，然后在任何地方运行。</p>
+<h2 id="Docker-的优势"><a href="#Docker-的优势" class="headerlink" title="Docker 的优势"></a>Docker 的优势</h2><p>Docker 的优势主要有以下几点：</p>
+<ul>
+<li><strong>轻量级</strong>：Docker 容器非常轻量级，启动速度快，占用资源少。</li>
+<li><strong>可移植性</strong>：Docker 容器可以在任何地方运行，无需担心环境差异。</li>
+<li><strong>可扩展性</strong>：Docker 容器可以很容易地进行扩展，支持水平和垂直扩展。</li>
+<li><strong>易于管理</strong>：Docker 容器可以很容易地进行管理，支持自动化部署和运维。</li>
+</ul>
+<h2 id="Docker-的基本概念"><a href="#Docker-的基本概念" class="headerlink" title="Docker 的基本概念"></a>Docker 的基本概念</h2><p>在使用 Docker 之前，需要了解一些基本概念：</p>
+<ul>
+<li><strong>镜像（Image）</strong>：Docker 镜像是一个只读的模板，可以用来创建 Docker 容器。镜像可以包含操作系统、应用程序和依赖项等。</li>
+<li><strong>容器（Container）</strong>：Docker 容器是从 Docker 镜像创建的运行实例。容器可以运行、停止、删除和暂停等。</li>
+<li><strong>仓库（Repository）</strong>：Docker 仓库是用来存储 Docker 镜像的地方。Docker 官方提供了 Docker Hub 仓库，也可以使用私有仓库。</li>
+</ul>
+<h2 id="Docker-的安装"><a href="#Docker-的安装" class="headerlink" title="Docker 的安装"></a>Docker 的安装</h2><p>在安装 Docker 之前，需要先安装 Docker 的依赖项：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
+
+<p>然后，添加 Docker 的 GPG 密钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com$ <span class="built_in">sudo</span> apt-key add -$ <span class="built_in">sudo</span> add-apt-repository <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu <span class="subst">$(lsb_release -cs)</span> stable&quot;</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Cursor</tag>
+        <tag>Docker</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -255,6 +294,39 @@
       </tags>
   </entry>
   <entry>
+    <title>关于ChatGPT</title>
+    <url>/2023/03/26/ai/aigen/md-writeby-cursor/</url>
+    <content><![CDATA[<blockquote>
+<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>ChatGPT是一个基于GPT-2的聊天机器人，它可以与用户进行自然语言交互。ChatGPT使用了GPT-2的预训练模型，可以生成高质量的自然语言文本，从而实现了智能聊天的功能。</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>ChatGPT可以回答用户的问题、提供建议、进行闲聊等。用户可以通过输入文本与ChatGPT进行交互，ChatGPT会根据用户的输入生成相应的回复。ChatGPT还可以进行多轮对话，从而更好地理解用户的意图和需求。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>用户可以通过访问ChatGPT的网站或者使用ChatGPT的API进行交互。在网站上，用户可以直接输入文本与ChatGPT进行交互；在API上，用户可以通过发送HTTP请求与ChatGPT进行交互。ChatGPT的API支持多种编程语言，包括Python、Java、JavaScript等。</p>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>相比于传统的聊天机器人，ChatGPT具有以下优势：</p>
+<ul>
+<li>生成的回复更加自然、流畅，更接近人类的表达方式；</li>
+<li>可以进行多轮对话，更好地理解用户的意图和需求；</li>
+<li>可以根据用户的输入进行个性化的回复，从而提高用户的满意度。</li>
+</ul>
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>虽然ChatGPT具有很多优势，但它也存在一些局限性：</p>
+<ul>
+<li>由于使用了预训练模型，ChatGPT的回复可能会受到模型训练数据的影响，从而出现一些不合理的回复；</li>
+<li>ChatGPT无法理解一些复杂的语言结构，例如双关语、歧义等；</li>
+<li>ChatGPT无法进行真正的理解和推理，只能生成基于模型的回复。虽然ChatGPT存在一些局限性，但它仍然是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。例如，在客服领域，ChatGPT可以代替人工客服进行自然语言交互，从而提高客户服务的效率和质量；在教育领域，ChatGPT可以作为智能辅导工具，帮助学生进行学习和答疑；在娱乐领域，ChatGPT可以作为智能聊天伴侣，陪伴用户度过闲暇时光。随着ChatGPT技术的不断发展，它的应用场景也将越来越广泛。ChatGPT是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。它具有很多优势，例如生成的回复更加自然、流畅，可以进行多轮对话，可以根据用户的输入进行个性化的回复，从而提高用户的满意度。虽然ChatGPT存在一些局限性，但随着人工智能技术的不断发展，它的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。一次性写完，让我们期待ChatGPT的未来发展。ChatGPT的未来发展将会受到人工智能技术的不断发展和应用场景的不断扩大的影响。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，例如可以更好地理解复杂的语言结构、进行真正的理解和推理等。同时，ChatGPT的应用场景也将不断扩大，例如可以用于医疗、金融、法律等领域。在医疗领域，ChatGPT可以作为智能诊断工具，帮助医生进行疾病诊断和治疗方案的制定；在金融领域，ChatGPT可以作为智能投资顾问，帮助投资者进行投资决策；在法律领域，ChatGPT可以作为智能法律顾问，帮助律师进行法律咨询和案件分析。随着ChatGPT技术的不断发展和应用场景的不断扩大，它将成为人们进行自然语言交互的重要工具之一，为人们的生活和工作带来更多的便利和效率。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Cursor</tag>
+        <tag>AI</tag>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cursor帮我写的代码</title>
     <url>/2023/03/26/ai/aigen/code-writed-by-cursor/</url>
     <content><![CDATA[<blockquote>
@@ -286,49 +358,10 @@
         <category>AI</category>
       </categories>
       <tags>
-        <tag>AI</tag>
         <tag>Cursor</tag>
+        <tag>AI</tag>
         <tag>ChatGPT</tag>
         <tag>Code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于Docker</title>
-    <url>/2023/04/02/ai/aigen/cursor-docker/</url>
-    <content><![CDATA[<blockquote>
-<p>这一片关于Docker的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a><br><code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="Docker-从入门到精通"><a href="#Docker-从入门到精通" class="headerlink" title="Docker: 从入门到精通"></a>Docker: 从入门到精通</h1><h2 id="什么是-Docker？"><a href="#什么是-Docker？" class="headerlink" title="什么是 Docker？"></a>什么是 Docker？</h2><p>Docker 是一个开源的容器化平台，可以让开发者将应用程序和依赖项打包到一个可移植的容器中，然后在任何地方运行。</p>
-<h2 id="Docker-的优势"><a href="#Docker-的优势" class="headerlink" title="Docker 的优势"></a>Docker 的优势</h2><p>Docker 的优势主要有以下几点：</p>
-<ul>
-<li><strong>轻量级</strong>：Docker 容器非常轻量级，启动速度快，占用资源少。</li>
-<li><strong>可移植性</strong>：Docker 容器可以在任何地方运行，无需担心环境差异。</li>
-<li><strong>可扩展性</strong>：Docker 容器可以很容易地进行扩展，支持水平和垂直扩展。</li>
-<li><strong>易于管理</strong>：Docker 容器可以很容易地进行管理，支持自动化部署和运维。</li>
-</ul>
-<h2 id="Docker-的基本概念"><a href="#Docker-的基本概念" class="headerlink" title="Docker 的基本概念"></a>Docker 的基本概念</h2><p>在使用 Docker 之前，需要了解一些基本概念：</p>
-<ul>
-<li><strong>镜像（Image）</strong>：Docker 镜像是一个只读的模板，可以用来创建 Docker 容器。镜像可以包含操作系统、应用程序和依赖项等。</li>
-<li><strong>容器（Container）</strong>：Docker 容器是从 Docker 镜像创建的运行实例。容器可以运行、停止、删除和暂停等。</li>
-<li><strong>仓库（Repository）</strong>：Docker 仓库是用来存储 Docker 镜像的地方。Docker 官方提供了 Docker Hub 仓库，也可以使用私有仓库。</li>
-</ul>
-<h2 id="Docker-的安装"><a href="#Docker-的安装" class="headerlink" title="Docker 的安装"></a>Docker 的安装</h2><p>在安装 Docker 之前，需要先安装 Docker 的依赖项：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
-
-<p>然后，添加 Docker 的 GPG 密钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com$ <span class="built_in">sudo</span> apt-key add -$ <span class="built_in">sudo</span> add-apt-repository <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu <span class="subst">$(lsb_release -cs)</span> stable&quot;</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -385,36 +418,36 @@
       </tags>
   </entry>
   <entry>
-    <title>关于ChatGPT</title>
-    <url>/2023/03/26/ai/aigen/md-writeby-cursor/</url>
+    <title>New Bing 国内正常访问方法</title>
+    <url>/2023/03/18/ai/new-bing-visit/index/</url>
     <content><![CDATA[<blockquote>
-<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
+<p>记录国内正常网络环境直接访问New Bing的方法。<br>之前的插件方法已经失效<br>截止目前以下方法可正常访问，使用 <a href="https://github.com/oldj/SwitchHosts">SwitchHosts</a> 插件<br>note abstract info tip success question warning failure danger bug example quote</p>
 </blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome">申请地址</a>,不知道个人需要多长时间可以通过申请。<br>最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com&#x2F;new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。</p>
+<p>前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！</p>
 <span id="more"></span>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote>
+<p>使用 <a href="https://github.com/oldj/SwitchHosts">SwitchHosts</a><br>SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个免费开源软件，支持 Windows、Mac、Linux 三大桌面操作系统。</p>
+</blockquote>
+<ul>
+<li>快速切换 Hosts 方案</li>
+<li>Hosts 语法高亮</li>
+<li>支持从网络加载远程 Hosts 配置</li>
+<li>可从系统菜单栏图标快速切换 Hosts</li>
+</ul>
+<p>下载后 注意使用 <strong>管理员身份运行</strong><br>新增-本地-确定，然后在右边输入以下配置hosts方案<br>操作如下图</p>
+<p><img src="/imgs/posts/230318-switchhosts.png" alt="配置" title="配置"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Windows 推荐管理工具：SwitchHosts</span><br><span class="line"># 新必应主页：https://www.bing.com/new</span><br><span class="line"></span><br><span class="line"># 说明1：如果失效，请在编辑里点击刷新，查看 Hosts 配置否有更新</span><br><span class="line"># 说明2：如果配置获取失败，网址打不开，请连接手机热点尝试</span><br><span class="line"># 说明3：以下Hosts配置内容可以自行复制使用，本地址仅为方便导入和后续更新</span><br><span class="line"></span><br><span class="line">#必应主页相关</span><br><span class="line">20.196.210.19 bing.com</span><br><span class="line">20.196.210.19 www.bing.com </span><br><span class="line">20.196.210.19 r.bing.com</span><br><span class="line">20.196.210.19 cn.bing.com</span><br><span class="line"></span><br><span class="line">#Edge浏览器侧边栏相关</span><br><span class="line">20.196.210.19 edgeservices.bing.com</span><br><span class="line">20.196.210.19 sydney.bing.com</span><br></pre></td></tr></table></figure>
 
-<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>ChatGPT是一个基于GPT-2的聊天机器人，它可以与用户进行自然语言交互。ChatGPT使用了GPT-2的预训练模型，可以生成高质量的自然语言文本，从而实现了智能聊天的功能。</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>ChatGPT可以回答用户的问题、提供建议、进行闲聊等。用户可以通过输入文本与ChatGPT进行交互，ChatGPT会根据用户的输入生成相应的回复。ChatGPT还可以进行多轮对话，从而更好地理解用户的意图和需求。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>用户可以通过访问ChatGPT的网站或者使用ChatGPT的API进行交互。在网站上，用户可以直接输入文本与ChatGPT进行交互；在API上，用户可以通过发送HTTP请求与ChatGPT进行交互。ChatGPT的API支持多种编程语言，包括Python、Java、JavaScript等。</p>
-<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>相比于传统的聊天机器人，ChatGPT具有以下优势：</p>
-<ul>
-<li>生成的回复更加自然、流畅，更接近人类的表达方式；</li>
-<li>可以进行多轮对话，更好地理解用户的意图和需求；</li>
-<li>可以根据用户的输入进行个性化的回复，从而提高用户的满意度。</li>
-</ul>
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>虽然ChatGPT具有很多优势，但它也存在一些局限性：</p>
-<ul>
-<li>由于使用了预训练模型，ChatGPT的回复可能会受到模型训练数据的影响，从而出现一些不合理的回复；</li>
-<li>ChatGPT无法理解一些复杂的语言结构，例如双关语、歧义等；</li>
-<li>ChatGPT无法进行真正的理解和推理，只能生成基于模型的回复。虽然ChatGPT存在一些局限性，但它仍然是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。例如，在客服领域，ChatGPT可以代替人工客服进行自然语言交互，从而提高客户服务的效率和质量；在教育领域，ChatGPT可以作为智能辅导工具，帮助学生进行学习和答疑；在娱乐领域，ChatGPT可以作为智能聊天伴侣，陪伴用户度过闲暇时光。随着ChatGPT技术的不断发展，它的应用场景也将越来越广泛。ChatGPT是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。它具有很多优势，例如生成的回复更加自然、流畅，可以进行多轮对话，可以根据用户的输入进行个性化的回复，从而提高用户的满意度。虽然ChatGPT存在一些局限性，但随着人工智能技术的不断发展，它的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。一次性写完，让我们期待ChatGPT的未来发展。ChatGPT的未来发展将会受到人工智能技术的不断发展和应用场景的不断扩大的影响。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，例如可以更好地理解复杂的语言结构、进行真正的理解和推理等。同时，ChatGPT的应用场景也将不断扩大，例如可以用于医疗、金融、法律等领域。在医疗领域，ChatGPT可以作为智能诊断工具，帮助医生进行疾病诊断和治疗方案的制定；在金融领域，ChatGPT可以作为智能投资顾问，帮助投资者进行投资决策；在法律领域，ChatGPT可以作为智能法律顾问，帮助律师进行法律咨询和案件分析。随着ChatGPT技术的不断发展和应用场景的不断扩大，它将成为人们进行自然语言交互的重要工具之一，为人们的生活和工作带来更多的便利和效率。</li>
-</ul>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>接下来就可以正常在浏览器输入 <a href="https://www.bing.com/new">https://www.bing.com/new</a><br>就能愉快的和new bing玩耍了。</p>
+<p><img src="/imgs/posts/230318164630-new-bing.png" alt="new bing" title="new bing chat"></p>
 ]]></content>
       <categories>
         <category>AI</category>
       </categories>
       <tags>
         <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
+        <tag>New Bing</tag>
       </tags>
   </entry>
   <entry>
@@ -499,83 +532,6 @@
       </categories>
   </entry>
   <entry>
-    <title>New Bing 国内正常访问方法</title>
-    <url>/2023/03/18/ai/new-bing-visit/index/</url>
-    <content><![CDATA[<blockquote>
-<p>记录国内正常网络环境直接访问New Bing的方法。<br>之前的插件方法已经失效<br>截止目前以下方法可正常访问，使用 <a href="https://github.com/oldj/SwitchHosts">SwitchHosts</a> 插件<br>note abstract info tip success question warning failure danger bug example quote</p>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome">申请地址</a>,不知道个人需要多长时间可以通过申请。<br>最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com&#x2F;new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。</p>
-<p>前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！</p>
-<span id="more"></span>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote>
-<p>使用 <a href="https://github.com/oldj/SwitchHosts">SwitchHosts</a><br>SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个免费开源软件，支持 Windows、Mac、Linux 三大桌面操作系统。</p>
-</blockquote>
-<ul>
-<li>快速切换 Hosts 方案</li>
-<li>Hosts 语法高亮</li>
-<li>支持从网络加载远程 Hosts 配置</li>
-<li>可从系统菜单栏图标快速切换 Hosts</li>
-</ul>
-<p>下载后 注意使用 <strong>管理员身份运行</strong><br>新增-本地-确定，然后在右边输入以下配置hosts方案<br>操作如下图</p>
-<p><img src="/imgs/posts/230318-switchhosts.png" alt="配置" title="配置"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Windows 推荐管理工具：SwitchHosts</span><br><span class="line"># 新必应主页：https://www.bing.com/new</span><br><span class="line"></span><br><span class="line"># 说明1：如果失效，请在编辑里点击刷新，查看 Hosts 配置否有更新</span><br><span class="line"># 说明2：如果配置获取失败，网址打不开，请连接手机热点尝试</span><br><span class="line"># 说明3：以下Hosts配置内容可以自行复制使用，本地址仅为方便导入和后续更新</span><br><span class="line"></span><br><span class="line">#必应主页相关</span><br><span class="line">20.196.210.19 bing.com</span><br><span class="line">20.196.210.19 www.bing.com </span><br><span class="line">20.196.210.19 r.bing.com</span><br><span class="line">20.196.210.19 cn.bing.com</span><br><span class="line"></span><br><span class="line">#Edge浏览器侧边栏相关</span><br><span class="line">20.196.210.19 edgeservices.bing.com</span><br><span class="line">20.196.210.19 sydney.bing.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>接下来就可以正常在浏览器输入 <a href="https://www.bing.com/new">https://www.bing.com/new</a><br>就能愉快的和new bing玩耍了。</p>
-<p><img src="/imgs/posts/230318164630-new-bing.png" alt="new bing" title="new bing chat"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>New Bing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-blog-encrypt加密测试Demo</title>
-    <url>/2023/05/30/demo/demo-blog-encrypt/index/</url>
-    <content><![CDATA[<h2 id="hexo-blog-encrypt插件"><a href="#hexo-blog-encrypt插件" class="headerlink" title="hexo-blog-encrypt插件"></a>hexo-blog-encrypt插件</h2><p>插件地址：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a><br>中文文档：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
-<h2 id="加密插件安装"><a href="#加密插件安装" class="headerlink" title="加密插件安装"></a>加密插件安装</h2><blockquote>
-<p>安装命令</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
-
-<h2 id="加密使用"><a href="#加密使用" class="headerlink" title="加密使用"></a>加密使用</h2><blockquote>
-<p>Front matter配置方法</p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 有东西被加密了, 请输入密码查看.</span><br><span class="line">message: 您好, 这里需要密码.</span><br><span class="line"><span class="section"># </span></span><br><span class="line">theme: xray</span><br><span class="line">wrong<span class="emphasis">_pass_</span>message: 抱歉, 这个密码看着不太对, 请再试试.</span><br><span class="line">wrong<span class="emphasis">_hash_</span>message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在·_config.yml·中配置使用</p>
-</blockquote>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-blog-encrypt 文章加密插件</span></span><br><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码[提示：demo].</span></span><br><span class="line">  <span class="comment"># 加密指定tag 只要文章包含了该tag都会被加密，</span></span><br><span class="line">  <span class="comment">#如果特定一篇不需要加密可以在文章头部front-matter中添加[password: &#x27;&#x27;]</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">encrypt</span>, <span class="attr">password:</span> <span class="number">1234</span>&#125;</span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">demo</span>, <span class="attr">password:</span> <span class="string">demo</span>&#125;</span><br><span class="line">  <span class="comment"># default blink shrink flip up surge wave xray</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">shrink</span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>theme</code>配置参数预览可以参考</p>
-</blockquote>
-<p>你可以在线挑选你喜欢的主题,并应用到你的博客中:</p>
-<ul>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Default/">default</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Blink/">blink</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Shrink/">shrink</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Flip/">flip</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Up/">up</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Surge/">surge</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Wave/">wave</a></li>
-<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Xray/">xray</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>demo</category>
-      </categories>
-      <tags>
-        <tag>示例</tag>
-        <tag>demo</tag>
-        <tag>Hexo</tag>
-        <tag>encrypt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-theme-Anzhiyu Tag-Plugins Demo</title>
     <url>/2023/05/30/demo/demo-tags-plugins/index/</url>
     <content><![CDATA[<p><a href="https://www.iconfont.cn/collections/detail?cid=44481">anzhiyu-icon</a></p>
@@ -658,369 +614,53 @@
       <tags>
         <tag>示例</tag>
         <tag>demo</tag>
-        <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+        <tag>Hexo</tag>
         <tag>Tag-Plugins</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo添加RSS订阅</title>
-    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
-    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
-<blockquote>
-<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo常用命令</title>
-    <url>/2023/06/04/hexo/hexo-basic-usage/index/</url>
-    <content><![CDATA[<p>Hexo 常用命令</p>
-<p>Hexo是一款基于Node.js的静态博客生成器，它可以帮助我们快速搭建自己的博客网站。本文将介绍一些常用的Hexo命令，帮助你更好地使用Hexo。</p>
-<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo脚手架</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化站点</span></span><br><span class="line">hexo init my_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清楚 clean 生成 generate 运行 server</span></span><br><span class="line">hexo cl | hexo g | hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment">## new post 指定目录和标题</span></span><br><span class="line">hexo new post -p notes/hexo-basic-usage/index <span class="string">&quot;Hexo常用命令&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装与卸载</span></span><br><span class="line">npm install hexo-blog-encrypt --save</span><br><span class="line">npm uninstall hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>首先需要安装Node.js和npm,然后通过npm安装Hexo:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建博客网站"><a href="#创建博客网站" class="headerlink" title="创建博客网站"></a>创建博客网站</h2><p>使用Hexo创建博客网站非常简单，只需要执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my_blog</span><br></pre></td></tr></table></figure>
-
-<p>其中，my_blog是你想要创建的博客主题名称。执行完该命令后，Hexo会自动下载主题包并进行安装。</p>
-<h2 id="写作文章"><a href="#写作文章" class="headerlink" title="写作文章"></a>写作文章</h2><p>在Hexo中，可以使用Markdown语法编写文章。首先，在博客根目录下创建一个 _posts 文件夹，然后在该文件夹下创建一个新文件，例如article.md,内容如下：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 标题</span></span><br><span class="line">正文内容</span><br></pre></td></tr></table></figure>
-
-<p>然后执行以下命令即可生成文章：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d _posts/article.md &gt; article.html</span><br><span class="line"></span><br><span class="line"><span class="comment">## new post 指定目录和标题</span></span><br><span class="line">hexo new post -p notes/hexo-basic-usage/index <span class="string">&quot;Hexo常用命令&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>其中，g表示生成整个页面，-d参数指定了生成的文章路径为_posts&#x2F;article.md。生成完成后，会在当前目录下生成一个名为article.html的文件。</p>
-<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在完成文章编写后，可以使用以下命令将文章发布到本地：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --quiet <span class="comment"># 静默模式发布文章</span></span><br><span class="line">hexo server <span class="comment"># 启动默认的发布模式，会弹出浏览器窗口显示发布结果</span></span><br></pre></td></tr></table></figure>
-
-<p>其中，server命令用于启动Hexo服务器，–quiet参数表示静默模式发布文章，不会弹出任何提示信息；而启动默认的发布模式则会弹出浏览器窗口显示发布结果。</p>
-<h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><p>除了以上提到的常用命令外，Hexo还有很多其他实用的命令。例如：</p>
-<ul>
-<li>hexo clean:清除博客生成的所有缓存文件；</li>
-<li>hexo generate:重新生成所有页面；</li>
-<li>hexo deploy:将博客部署到远程服务器上。</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo是一款非常强大的静态博客生成器，通过掌握其常用命令，可以轻松地搭建自己的博客网站。希望本文能够帮助你更好地使用Hexo。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
-    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
-    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
-<blockquote>
-<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
-<blockquote>
-<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
-</blockquote>
-<blockquote>
-<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
-</blockquote>
-<p>本文参考：</p>
-<ul>
-<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Twikoo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客网站添加FPS显示</title>
-    <url>/2023/06/30/hexo/hexo-fps/index/</url>
-    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
-<blockquote>
-<p>fps.js</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>fps.css</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客使用gulp插件压缩网站资源</title>
-    <url>/2023/06/30/hexo/hexo-gulp/index/</url>
-    <content><![CDATA[<p><code>gulp</code>能够帮助用户自动压缩静态资源，配合各类下属插件，能够压缩包括css、js、html乃至各类格式的图片文件。（图片文件的压缩往往只能节省几十KB，效果远远不如imagine、tinypng等压缩方式，所以此处不再写使用gulp压缩图片的内容）。</p>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#gulp</span></span><br><span class="line">npm install --global gulp-cli <span class="comment">#全局安装gulp指令集</span></span><br><span class="line">npm install gulp --save <span class="comment">#安装gulp插件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用gulp-html-minifier-terser可以压缩HTML中的ES6语法</span></span><br><span class="line">npm install gulp-htmlclean --save-dev</span><br><span class="line">npm install gulp-html-minifier-terser --save-dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩css</span></span><br><span class="line">npm install gulp-clean-css --save-dev</span><br><span class="line">          </span><br><span class="line"><span class="comment"># 压缩js</span></span><br><span class="line">npm install gulp-terser --save-dev</span><br><span class="line">          </span><br><span class="line"><span class="comment"># 压缩字体</span></span><br><span class="line">npm install gulp-fontmin --save-dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="新建gulpfile-js文件"><a href="#新建gulpfile-js文件" class="headerlink" title="新建gulpfile.js文件"></a>新建<code>gulpfile.js</code>文件</h2><p>gulp-terser只会直接压缩js代码，所以不存在因为语法变动导致的错误 。事实上，当我们使用jsdelivr的CDN服务时，只需要在css或者js的后缀前添加.min,例如example.js-&gt;example.min.js,JsDelivr就会自动使用terser帮我们压缩好代码<br>在博客根目录下新建<code>gulpfile.js</code>文件,内容如下</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//用到的各个插件</span></span><br><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">&#x27;gulp-clean-css&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-html-minifier-terser&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">&#x27;gulp-htmlclean&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> fontmin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-fontmin&#x27;</span>);</span><br><span class="line"><span class="comment">// gulp-tester</span></span><br><span class="line"><span class="keyword">var</span> terser = <span class="built_in">require</span>(<span class="string">&#x27;gulp-terser&#x27;</span>);</span><br><span class="line"><span class="comment">// 压缩js</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;compress&#x27;</span>, <span class="title function_">async</span>() =&gt;&#123;</span><br><span class="line">  gulp.<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.js&#x27;</span>, <span class="string">&#x27;!./public/**/*.min.js&#x27;</span>])</span><br><span class="line">    .<span class="title function_">pipe</span>(<span class="title function_">terser</span>())</span><br><span class="line">    .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩css</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;minify-css&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.css&#x27;</span>])</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">cleanCSS</span>(&#123;</span><br><span class="line">            <span class="attr">compatibility</span>: <span class="string">&#x27;ie11&#x27;</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩html</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;minify-html&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.<span class="title function_">src</span>(<span class="string">&#x27;./public/**/*.html&#x27;</span>)</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">htmlclean</span>())</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">htmlmin</span>(&#123;</span><br><span class="line">            <span class="attr">removeComments</span>: <span class="literal">true</span>, <span class="comment">//清除html注释</span></span><br><span class="line">            <span class="attr">collapseWhitespace</span>: <span class="literal">true</span>, <span class="comment">//压缩html</span></span><br><span class="line">            <span class="attr">collapseBooleanAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//省略布尔属性的值，例如：&lt;input checked=&quot;true&quot;/&gt; ==&gt; &lt;input /&gt;</span></span><br><span class="line">            <span class="attr">removeEmptyAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除所有空格作属性值，例如：&lt;input id=&quot;&quot; /&gt; ==&gt; &lt;input /&gt;</span></span><br><span class="line">            <span class="attr">removeScriptTypeAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除&lt;script&gt;的type=&quot;text/javascript&quot;</span></span><br><span class="line">            <span class="attr">removeStyleLinkTypeAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除&lt;style&gt;和&lt;link&gt;的 type=&quot;text/css&quot;</span></span><br><span class="line">            <span class="attr">minifyJS</span>: <span class="literal">true</span>, <span class="comment">//压缩页面 JS</span></span><br><span class="line">            <span class="attr">minifyCSS</span>: <span class="literal">true</span>, <span class="comment">//压缩页面 CSS</span></span><br><span class="line">            <span class="attr">minifyURLs</span>: <span class="literal">true</span>  <span class="comment">//压缩页面URL</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩字体</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">minifyFont</span>(<span class="params">text, cb</span>) &#123;</span><br><span class="line">  gulp</span><br><span class="line">    .<span class="title function_">src</span>(<span class="string">&#x27;./public/fonts/*.ttf&#x27;</span>) <span class="comment">//原字体所在目录</span></span><br><span class="line">    .<span class="title function_">pipe</span>(<span class="title function_">fontmin</span>(&#123;</span><br><span class="line">      <span class="attr">text</span>: text</span><br><span class="line">    &#125;))</span><br><span class="line">    .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public/fontsdest/&#x27;</span>)) <span class="comment">//压缩后的输出目录</span></span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, cb);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;mini-font&#x27;</span>, <span class="function">(<span class="params">cb</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> buffers = [];</span><br><span class="line">  gulp</span><br><span class="line">    .<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.html&#x27;</span>]) <span class="comment">//HTML文件所在目录请根据自身情况修改</span></span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="keyword">function</span>(<span class="params">file</span>) &#123;</span><br><span class="line">      buffers.<span class="title function_">push</span>(file.<span class="property">contents</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> text = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(buffers).<span class="title function_">toString</span>(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">      <span class="title function_">minifyFont</span>(text, cb);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 运行gulp命令时依次执行以下任务</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;default&#x27;</span>, gulp.<span class="title function_">parallel</span>(</span><br><span class="line">  <span class="string">&#x27;compress&#x27;</span>, <span class="string">&#x27;minify-css&#x27;</span>, <span class="string">&#x27;minify-html&#x27;</span>,<span class="string">&#x27;mini-font&#x27;</span></span><br><span class="line">))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译预览"><a href="#编译预览" class="headerlink" title="编译预览"></a>编译预览</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | gulp | hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>本文参考：<br><a href="https://akilar.top/posts/49b73b87/">使用gulp压缩博客静态资源</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo主题及Anzhiyu常见问题处理</title>
-    <url>/2023/06/06/hexo/hexo-theme-issues/index/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录使用Hexo-theme-Anzhiyu中遇到的问题及解决方法。</p>
-<blockquote>
-<p>遇到问题请先查阅 <a href="https://gavinblog.github.io/anzhiyu-docs/">Anzhiyu主题文档</a>,这里是最快的解决方法，其次搜索&#96;&#96;<br>本站基于 <a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">Hexo-theme-Anzhiyu</a> 主题，未改动主题源码，只增加了自定义css和js。<br>本博客完全开源仓库地址：<a href="https://github.com/gavinblog/blog-anzhiyu">https://github.com/gavinblog/blog-anzhiyu</a></p>
-</blockquote>
-<h2 id="音乐馆无法正常播放"><a href="#音乐馆无法正常播放" class="headerlink" title="音乐馆无法正常播放"></a>音乐馆无法正常播放</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>由于<code>MetingJs</code>自带官方api无法正常访问.</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>更换API接口,搜索可用接口或者自建api接口。<br>在配置文件中<code>_config.anzhiyu.yml</code>,修改<code>meting_api</code>自定义meting_api</p>
-<ul>
-<li>自建API: <code>https://api-meting.geekswg.top/api</code>,来自<a href="https://github.com/geekswg/vercel-meting-api/">开源仓库</a>。</li>
-<li>其他API: <code>https://api.injahow.cn/meting/</code></li>
-</ul>
-<blockquote>
-<p>Anzhiyu主题使用下面的方法即可：</p>
-</blockquote>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#自定义 meting_api</span></span><br><span class="line"><span class="comment"># https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r</span></span><br><span class="line"><span class="attr">meting_api:</span> <span class="string">&#x27;https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意</strong>：改完后一定要重新<code>编译</code>生成静态页面,命令如下。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其他通用解决方法,适用于所有html中引入的，官方文档有说明自定义 <a href="https://github.com/metowolf/MetingJS#readme">meting_api</a>。</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">// 自定义 meting_api</span></span><br><span class="line">  <span class="keyword">var</span> meting_api=<span class="string">&#x27;https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r&#x27;</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="文章加密功能实现"><a href="#文章加密功能实现" class="headerlink" title="文章加密功能实现"></a>文章加密功能实现</h2><h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><blockquote>
+    <title>hexo-blog-encrypt加密测试Demo</title>
+    <url>/2023/05/30/demo/demo-blog-encrypt/index/</url>
+    <content><![CDATA[<h2 id="hexo-blog-encrypt插件"><a href="#hexo-blog-encrypt插件" class="headerlink" title="hexo-blog-encrypt插件"></a>hexo-blog-encrypt插件</h2><p>插件地址：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a><br>中文文档：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
+<h2 id="加密插件安装"><a href="#加密插件安装" class="headerlink" title="加密插件安装"></a>加密插件安装</h2><blockquote>
 <p>安装命令</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
 
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><blockquote>
-<p>在文章中的Front matter配置方法</p>
+<h2 id="加密使用"><a href="#加密使用" class="headerlink" title="加密使用"></a>加密使用</h2><blockquote>
+<p>Front matter配置方法</p>
 </blockquote>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">password:</span> <span class="number">1234</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">xray</span></span><br><span class="line"><span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line"><span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span></span><br><span class="line"><span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line"><span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 有东西被加密了, 请输入密码查看.</span><br><span class="line">message: 您好, 这里需要密码.</span><br><span class="line"><span class="section"># </span></span><br><span class="line">theme: xray</span><br><span class="line">wrong<span class="emphasis">_pass_</span>message: 抱歉, 这个密码看着不太对, 请再试试.</span><br><span class="line">wrong<span class="emphasis">_hash_</span>message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</span><br></pre></td></tr></table></figure>
 
-<h2 id="Github-Action自动部署"><a href="#Github-Action自动部署" class="headerlink" title="Github-Action自动部署"></a>Github-Action自动部署</h2><blockquote>
-<p>该action实现功能，提交源码到github自动部署生成hexo静态博客到gh-pages分支。<br>可根据自己需求改造aciton，步骤通用</p>
-</blockquote>
-<h3 id="实现源码"><a href="#实现源码" class="headerlink" title="实现源码"></a>实现源码</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 部署名称随意</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">自动发布-auto-deploay-hexo</span></span><br><span class="line"><span class="comment"># 触发条件：在 push 到 master 分支后触发</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span>  <span class="comment"># 可以添加多个分支</span></span><br><span class="line"><span class="comment"># 设置时区</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 任务</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">blog-deploy:</span></span><br><span class="line">  </span><br><span class="line">    <span class="attr">name:</span> <span class="string">Hexo</span> <span class="string">blog</span> <span class="string">build</span> <span class="string">&amp;</span> <span class="string">deploy</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span> <span class="comment"># 使用最新的 Ubuntu 系统作为编译部署的环境</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">codes</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">submodules:</span> <span class="literal">true</span> <span class="comment"># 加载子模块，避免初始化过程中的额外加载。</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">node</span></span><br><span class="line">        <span class="comment"># 设置 node.js 环境</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;16.x&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 下载网站源码</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">node</span> <span class="string">modules</span></span><br><span class="line">        <span class="comment"># 设置包缓存目录，避免每次下载</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">~/.npm</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 安装依赖</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="comment"># 下载 hexo-cli 脚手架及相关安装包</span></span><br><span class="line">        <span class="comment"># hexo-offline pwa 依赖</span></span><br><span class="line">        <span class="comment"># hexo-abbrlink 文章短链接</span></span><br><span class="line">        <span class="comment"># hexo-blog-encrypt 文章加密插件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          npm install -g hexo-cli</span></span><br><span class="line"><span class="string">          npm install --no-fund</span></span><br><span class="line"><span class="string">          npm install hexo-renderer-pug hexo-renderer-stylus --save</span></span><br><span class="line"><span class="string">          npm install hexo-generator-search --save</span></span><br><span class="line"><span class="string">          npm install hexo-abbrlink --save</span></span><br><span class="line"><span class="string">          npm install hexo-offline --save</span></span><br><span class="line"><span class="string">          npm install --save hexo-blog-encrypt</span></span><br><span class="line"><span class="string">          npm ls --depth 0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># hexo 编译生成网站</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">files</span></span><br><span class="line">        <span class="comment"># 编译 markdown 文件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          hexo clean</span></span><br><span class="line"><span class="string">          hexo generate</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># 自动发布到当前仓库的gh-pages分支，如需部署到其它仓库的，参考下面文档修改配置即可</span></span><br><span class="line">      <span class="comment"># 更多高级用法查看文档，https://github.com/peaceiris/actions-gh-pages</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 1.如何生成 github_token，github主页,Settings / Developer settings / Personal access tokens (classic)</span></span><br><span class="line">          <span class="comment"># 2.github_token 在 仓库 Settings,Actions secrets and variables,设置</span></span><br><span class="line">          <span class="comment"># github_token: $&#123;&#123; secrets.ACCESS_TOKEN &#125;&#125; 无需自定义 </span></span><br><span class="line">          <span class="comment"># GITHUB_TOKEN secret to authenticate in your workflow. So, you can start to deploy immediately without any configuration.</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line"></span><br><span class="line">          <span class="comment"># Deploy to external repository external_repository</span></span><br><span class="line">          <span class="comment"># 发布到其他仓库的配置，注意必须使用deploy_key，获取和设置方法同上。</span></span><br><span class="line">          <span class="comment">#deploy_key: $&#123;&#123; secrets.ACTIONS_DEPLOY_KEY &#125;&#125;</span></span><br><span class="line">          <span class="comment">#external_repository: username/external-repository</span></span><br><span class="line">          <span class="comment">#publish_branch: your-branch  # default: gh-pages</span></span><br><span class="line">          <span class="comment">#publish_dir: ./public</span></span><br><span class="line"></span><br><span class="line">          <span class="comment"># 以下配置可忽略，测试功能，设置提交信息相关配置</span></span><br><span class="line">          <span class="attr">user_name:</span> <span class="string">&#x27;github-actions[bot]&#x27;</span></span><br><span class="line">          <span class="attr">user_email:</span> <span class="string">&#x27;github-actions[bot]@users.noreply.github.com&#x27;</span></span><br><span class="line">          <span class="attr">commit_message:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="comment">#full_commit_message: $&#123;&#123; github.event.head_commit.message &#125;&#125;</span></span><br><span class="line">          <span class="attr">tag_name:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.prepare_tag.outputs.DEPLOY_TAG_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">tag_message:</span> <span class="string">&#x27;Deployment $<span class="template-variable">&#123;&#123; github.ref_name &#125;&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="转载文章配置"><a href="#转载文章配置" class="headerlink" title="转载文章配置"></a>转载文章配置</h2><blockquote>
-<p>在文章的头部Front-matter中配置以下信息</p>
-</blockquote>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文章版权 Front-matter配置</span></span><br><span class="line"><span class="comment">#copyright: true</span></span><br><span class="line"><span class="comment">#copyright_author: Cusor</span></span><br><span class="line"><span class="comment">#copyright_author_href: https://www.cursor.so/ </span></span><br><span class="line"><span class="comment">#copyright_url: https://www.cursor.so/</span></span><br><span class="line"><span class="comment">#copyright_info: 文章转载于[Cusor](https://www.cursor.so/)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="持续更新中"><a href="#持续更新中" class="headerlink" title="持续更新中~~~"></a>持续更新中~~~</h2><blockquote>
-<p>遇到常见问题记录更新中。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Hexo-Theme-Anzhiyu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一个域名</title>
-    <url>/2023/04/13/notes/my-first-domain/index/</url>
-    <content><![CDATA[<blockquote>
-<p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/">geekswg.top</a><br>用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>
-<span id="more"></span>
-
-<p>前端时间苦于，github自带的<a href="https://geekswg.github.io/">Github Pages</a> 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。</p>
-<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>域名购买商 ：<a href="https://www.namesilo.com/">Namesilo</a></p>
 <blockquote>
-<p>Bing搜索了好长时间，选择他的原因。</p>
+<p>在·_config.yml·中配置使用</p>
 </blockquote>
-<ol>
-<li>便宜，相对稳定靠谱，</li>
-<li>国外域名，不用备案。</li>
-<li>支持支付宝支付方式。</li>
-</ol>
-<h2 id="域名使用"><a href="#域名使用" class="headerlink" title="域名使用"></a>域名使用</h2><p>使用<a href="https://dash.cloudflare.com/">CloudFlare-DNS域名解析</a></p>
-<ol>
-<li>登录<a href="https://dash.cloudflare.com/">CloudFlare控制台</a>, 点击<code>网站</code>，添加网站，按照指引一步步操作即可。</li>
-<li>登录 Namesilo，添加dns记录，绑定成功后，即可使用。</li>
-</ol>
-<h3 id="子域名管理"><a href="#子域名管理" class="headerlink" title="子域名管理"></a>子域名管理</h3><p>Namesilo供应商可支持50个子域名。<br>使用CloudFlare管理子域名。<br>在CloudFlare的控制台主页，<code>网站</code> 选择自己已经绑定的域名，点击 <code>DNS</code> ,然后 <code>添加记录</code>。<br>常用的两种类型：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-blog-encrypt 文章加密插件</span></span><br><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码[提示：demo].</span></span><br><span class="line">  <span class="comment"># 加密指定tag 只要文章包含了该tag都会被加密，</span></span><br><span class="line">  <span class="comment">#如果特定一篇不需要加密可以在文章头部front-matter中添加[password: &#x27;&#x27;]</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">encrypt</span>, <span class="attr">password:</span> <span class="number">1234</span>&#125;</span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">demo</span>, <span class="attr">password:</span> <span class="string">demo</span>&#125;</span><br><span class="line">  <span class="comment"># default blink shrink flip up surge wave xray</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">shrink</span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>theme</code>配置参数预览可以参考</p>
+</blockquote>
+<p>你可以在线挑选你喜欢的主题,并应用到你的博客中:</p>
 <ul>
-<li>A     : 用于绑定IP的。</li>
-<li>CNAME : 用于绑定名称的。不过，名称可以是任意大写字母或空格字符的完整子串</li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Default/">default</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Blink/">blink</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Shrink/">shrink</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Flip/">flip</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Up/">up</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Surge/">surge</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Wave/">wave</a></li>
+<li><a href="https://mhexo.github.io/2020/12/23/Theme-Test-Xray/">xray</a></li>
 </ul>
-<blockquote>
-<p>绑定步骤主要两个步骤</p>
-</blockquote>
-<ol>
-<li>在CloudFlare DNS中添加CNAME类型记录（这个最常用）</li>
-<li>在你需要自定义域名的地方，输入第一步骤中你生成的子域名，然后按照提示一步步绑定即可成功</li>
-<li>成功后需要几分钟更新DNS记录，大概十分钟后，即可正常访问你的子域名了。</li>
-</ol>
-<p>如我的子域名：<br><a href="https://hexo.geekswg.top/">hexo.geekswg.top</a><br><a href="https://blog.geekswg.top/">blog.geekswg.top</a></p>
-<h2 id="CloudFlare加速"><a href="#CloudFlare加速" class="headerlink" title="CloudFlare加速"></a>CloudFlare加速</h2><p>CloudFlare控制台的pages页面操作简单<br>传送地址： <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> 选择<code>Workers和Pages</code>服务。<br><code>创建应用程序</code>，<code>Pages</code></p>
-<h2 id="Netlify加速"><a href="#Netlify加速" class="headerlink" title="Netlify加速"></a>Netlify加速</h2><p>Netlify加速Github-Pags 操作简单，目前国内可直接访问<br>传送地址： <a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
-<h2 id="图床使用"><a href="#图床使用" class="headerlink" title="图床使用"></a>图床使用</h2><p><a href="https://picx.xpoet.cn/">Pixc</a>超级好用的免费图床，Github仓库作为存储，CDN加速。<br>传送地址： <a href="https://picx.xpoet.cn/">https://picx.xpoet.cn/</a></p>
 ]]></content>
       <categories>
-        <category>notes</category>
+        <category>demo</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>notes1</title>
-    <url>/2023/02/27/notes/notes1/index/</url>
-    <content><![CDATA[<p>Hello world<br>这里使用MD语法编写你的文章</p>
-<span id="more"></span>]]></content>
-      <categories>
-        <category>notes</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Funny 404 Gif</title>
-    <url>/2023/05/27/share/funny-404-gif/index/</url>
-    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
-<blockquote>
-<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
-<span id="more"></span>
-<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
-<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
-<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>404</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
-</blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
+        <tag>示例</tag>
+        <tag>demo</tag>
+        <tag>Hexo</tag>
+        <tag>encrypt</tag>
       </tags>
   </entry>
   <entry>
@@ -2427,9 +2067,369 @@
       <tags>
         <tag>示例</tag>
         <tag>demo</tag>
-        <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+        <tag>Hexo</tag>
         <tag>转载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Funny 404 Gif</title>
+    <url>/2023/05/27/share/funny-404-gif/index/</url>
+    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
+<blockquote>
+<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
+<span id="more"></span>
+<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
+<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
+<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>404</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+</blockquote>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>notes1</title>
+    <url>/2023/02/27/notes/notes1/index/</url>
+    <content><![CDATA[<p>Hello world<br>这里使用MD语法编写你的文章</p>
+<span id="more"></span>]]></content>
+      <categories>
+        <category>notes</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一个域名</title>
+    <url>/2023/04/13/notes/my-first-domain/index/</url>
+    <content><![CDATA[<blockquote>
+<p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/">geekswg.top</a><br>用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
+</blockquote>
+<span id="more"></span>
+
+<p>前端时间苦于，github自带的<a href="https://geekswg.github.io/">Github Pages</a> 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。</p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>域名购买商 ：<a href="https://www.namesilo.com/">Namesilo</a></p>
+<blockquote>
+<p>Bing搜索了好长时间，选择他的原因。</p>
+</blockquote>
+<ol>
+<li>便宜，相对稳定靠谱，</li>
+<li>国外域名，不用备案。</li>
+<li>支持支付宝支付方式。</li>
+</ol>
+<h2 id="域名使用"><a href="#域名使用" class="headerlink" title="域名使用"></a>域名使用</h2><p>使用<a href="https://dash.cloudflare.com/">CloudFlare-DNS域名解析</a></p>
+<ol>
+<li>登录<a href="https://dash.cloudflare.com/">CloudFlare控制台</a>, 点击<code>网站</code>，添加网站，按照指引一步步操作即可。</li>
+<li>登录 Namesilo，添加dns记录，绑定成功后，即可使用。</li>
+</ol>
+<h3 id="子域名管理"><a href="#子域名管理" class="headerlink" title="子域名管理"></a>子域名管理</h3><p>Namesilo供应商可支持50个子域名。<br>使用CloudFlare管理子域名。<br>在CloudFlare的控制台主页，<code>网站</code> 选择自己已经绑定的域名，点击 <code>DNS</code> ,然后 <code>添加记录</code>。<br>常用的两种类型：</p>
+<ul>
+<li>A     : 用于绑定IP的。</li>
+<li>CNAME : 用于绑定名称的。不过，名称可以是任意大写字母或空格字符的完整子串</li>
+</ul>
+<blockquote>
+<p>绑定步骤主要两个步骤</p>
+</blockquote>
+<ol>
+<li>在CloudFlare DNS中添加CNAME类型记录（这个最常用）</li>
+<li>在你需要自定义域名的地方，输入第一步骤中你生成的子域名，然后按照提示一步步绑定即可成功</li>
+<li>成功后需要几分钟更新DNS记录，大概十分钟后，即可正常访问你的子域名了。</li>
+</ol>
+<p>如我的子域名：<br><a href="https://hexo.geekswg.top/">hexo.geekswg.top</a><br><a href="https://blog.geekswg.top/">blog.geekswg.top</a></p>
+<h2 id="CloudFlare加速"><a href="#CloudFlare加速" class="headerlink" title="CloudFlare加速"></a>CloudFlare加速</h2><p>CloudFlare控制台的pages页面操作简单<br>传送地址： <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> 选择<code>Workers和Pages</code>服务。<br><code>创建应用程序</code>，<code>Pages</code></p>
+<h2 id="Netlify加速"><a href="#Netlify加速" class="headerlink" title="Netlify加速"></a>Netlify加速</h2><p>Netlify加速Github-Pags 操作简单，目前国内可直接访问<br>传送地址： <a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
+<h2 id="图床使用"><a href="#图床使用" class="headerlink" title="图床使用"></a>图床使用</h2><p><a href="https://picx.xpoet.cn/">Pixc</a>超级好用的免费图床，Github仓库作为存储，CDN加速。<br>传送地址： <a href="https://picx.xpoet.cn/">https://picx.xpoet.cn/</a></p>
+]]></content>
+      <categories>
+        <category>notes</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客网站添加FPS显示</title>
+    <url>/2023/06/30/hexo/hexo-fps/index/</url>
+    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
+<blockquote>
+<p>fps.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>fps.css</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Share Cursor</title>
+    <url>/2023/03/23/share/share-cursor/index/</url>
+    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
+<blockquote>
+<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
+</blockquote>
+<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
+</li>
+<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
+</li>
+</ol>
+<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
+<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
+</li>
+<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
+</li>
+</ul>
+<blockquote>
+<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
+</blockquote>
+<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>Cursor</tag>
+        <tag>AI</tag>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
+    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
+    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
+<blockquote>
+<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
+<blockquote>
+<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
+</blockquote>
+<blockquote>
+<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
+</blockquote>
+<p>本文参考：</p>
+<ul>
+<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Twikoo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo常用命令</title>
+    <url>/2023/06/04/hexo/hexo-basic-usage/index/</url>
+    <content><![CDATA[<p>Hexo 常用命令</p>
+<p>Hexo是一款基于Node.js的静态博客生成器，它可以帮助我们快速搭建自己的博客网站。本文将介绍一些常用的Hexo命令，帮助你更好地使用Hexo。</p>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo脚手架</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化站点</span></span><br><span class="line">hexo init my_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清楚 clean 生成 generate 运行 server</span></span><br><span class="line">hexo cl | hexo g | hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment">## new post 指定目录和标题</span></span><br><span class="line">hexo new post -p notes/hexo-basic-usage/index <span class="string">&quot;Hexo常用命令&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装与卸载</span></span><br><span class="line">npm install hexo-blog-encrypt --save</span><br><span class="line">npm uninstall hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>首先需要安装Node.js和npm,然后通过npm安装Hexo:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建博客网站"><a href="#创建博客网站" class="headerlink" title="创建博客网站"></a>创建博客网站</h2><p>使用Hexo创建博客网站非常简单，只需要执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my_blog</span><br></pre></td></tr></table></figure>
+
+<p>其中，my_blog是你想要创建的博客主题名称。执行完该命令后，Hexo会自动下载主题包并进行安装。</p>
+<h2 id="写作文章"><a href="#写作文章" class="headerlink" title="写作文章"></a>写作文章</h2><p>在Hexo中，可以使用Markdown语法编写文章。首先，在博客根目录下创建一个 _posts 文件夹，然后在该文件夹下创建一个新文件，例如article.md,内容如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 标题</span></span><br><span class="line">正文内容</span><br></pre></td></tr></table></figure>
+
+<p>然后执行以下命令即可生成文章：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d _posts/article.md &gt; article.html</span><br><span class="line"></span><br><span class="line"><span class="comment">## new post 指定目录和标题</span></span><br><span class="line">hexo new post -p notes/hexo-basic-usage/index <span class="string">&quot;Hexo常用命令&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，g表示生成整个页面，-d参数指定了生成的文章路径为_posts&#x2F;article.md。生成完成后，会在当前目录下生成一个名为article.html的文件。</p>
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在完成文章编写后，可以使用以下命令将文章发布到本地：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --quiet <span class="comment"># 静默模式发布文章</span></span><br><span class="line">hexo server <span class="comment"># 启动默认的发布模式，会弹出浏览器窗口显示发布结果</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，server命令用于启动Hexo服务器，–quiet参数表示静默模式发布文章，不会弹出任何提示信息；而启动默认的发布模式则会弹出浏览器窗口显示发布结果。</p>
+<h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><p>除了以上提到的常用命令外，Hexo还有很多其他实用的命令。例如：</p>
+<ul>
+<li>hexo clean:清除博客生成的所有缓存文件；</li>
+<li>hexo generate:重新生成所有页面；</li>
+<li>hexo deploy:将博客部署到远程服务器上。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo是一款非常强大的静态博客生成器，通过掌握其常用命令，可以轻松地搭建自己的博客网站。希望本文能够帮助你更好地使用Hexo。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客使用gulp插件压缩网站资源</title>
+    <url>/2023/06/30/hexo/hexo-gulp/index/</url>
+    <content><![CDATA[<p><code>gulp</code>能够帮助用户自动压缩静态资源，配合各类下属插件，能够压缩包括css、js、html乃至各类格式的图片文件。（图片文件的压缩往往只能节省几十KB，效果远远不如imagine、tinypng等压缩方式，所以此处不再写使用gulp压缩图片的内容）。</p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#gulp</span></span><br><span class="line">npm install --global gulp-cli <span class="comment">#全局安装gulp指令集</span></span><br><span class="line">npm install gulp --save <span class="comment">#安装gulp插件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用gulp-html-minifier-terser可以压缩HTML中的ES6语法</span></span><br><span class="line">npm install gulp-htmlclean --save-dev</span><br><span class="line">npm install gulp-html-minifier-terser --save-dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩css</span></span><br><span class="line">npm install gulp-clean-css --save-dev</span><br><span class="line">          </span><br><span class="line"><span class="comment"># 压缩js</span></span><br><span class="line">npm install gulp-terser --save-dev</span><br><span class="line">          </span><br><span class="line"><span class="comment"># 压缩字体</span></span><br><span class="line">npm install gulp-fontmin --save-dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="新建gulpfile-js文件"><a href="#新建gulpfile-js文件" class="headerlink" title="新建gulpfile.js文件"></a>新建<code>gulpfile.js</code>文件</h2><p>gulp-terser只会直接压缩js代码，所以不存在因为语法变动导致的错误 。事实上，当我们使用jsdelivr的CDN服务时，只需要在css或者js的后缀前添加.min,例如example.js-&gt;example.min.js,JsDelivr就会自动使用terser帮我们压缩好代码<br>在博客根目录下新建<code>gulpfile.js</code>文件,内容如下</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//用到的各个插件</span></span><br><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> cleanCSS = <span class="built_in">require</span>(<span class="string">&#x27;gulp-clean-css&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-html-minifier-terser&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">&#x27;gulp-htmlclean&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> fontmin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-fontmin&#x27;</span>);</span><br><span class="line"><span class="comment">// gulp-tester</span></span><br><span class="line"><span class="keyword">var</span> terser = <span class="built_in">require</span>(<span class="string">&#x27;gulp-terser&#x27;</span>);</span><br><span class="line"><span class="comment">// 压缩js</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;compress&#x27;</span>, <span class="title function_">async</span>() =&gt;&#123;</span><br><span class="line">  gulp.<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.js&#x27;</span>, <span class="string">&#x27;!./public/**/*.min.js&#x27;</span>])</span><br><span class="line">    .<span class="title function_">pipe</span>(<span class="title function_">terser</span>())</span><br><span class="line">    .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩css</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;minify-css&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.css&#x27;</span>])</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">cleanCSS</span>(&#123;</span><br><span class="line">            <span class="attr">compatibility</span>: <span class="string">&#x27;ie11&#x27;</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩html</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;minify-html&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.<span class="title function_">src</span>(<span class="string">&#x27;./public/**/*.html&#x27;</span>)</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">htmlclean</span>())</span><br><span class="line">        .<span class="title function_">pipe</span>(<span class="title function_">htmlmin</span>(&#123;</span><br><span class="line">            <span class="attr">removeComments</span>: <span class="literal">true</span>, <span class="comment">//清除html注释</span></span><br><span class="line">            <span class="attr">collapseWhitespace</span>: <span class="literal">true</span>, <span class="comment">//压缩html</span></span><br><span class="line">            <span class="attr">collapseBooleanAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//省略布尔属性的值，例如：&lt;input checked=&quot;true&quot;/&gt; ==&gt; &lt;input /&gt;</span></span><br><span class="line">            <span class="attr">removeEmptyAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除所有空格作属性值，例如：&lt;input id=&quot;&quot; /&gt; ==&gt; &lt;input /&gt;</span></span><br><span class="line">            <span class="attr">removeScriptTypeAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除&lt;script&gt;的type=&quot;text/javascript&quot;</span></span><br><span class="line">            <span class="attr">removeStyleLinkTypeAttributes</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="comment">//删除&lt;style&gt;和&lt;link&gt;的 type=&quot;text/css&quot;</span></span><br><span class="line">            <span class="attr">minifyJS</span>: <span class="literal">true</span>, <span class="comment">//压缩页面 JS</span></span><br><span class="line">            <span class="attr">minifyCSS</span>: <span class="literal">true</span>, <span class="comment">//压缩页面 CSS</span></span><br><span class="line">            <span class="attr">minifyURLs</span>: <span class="literal">true</span>  <span class="comment">//压缩页面URL</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public&#x27;</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//压缩字体</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">minifyFont</span>(<span class="params">text, cb</span>) &#123;</span><br><span class="line">  gulp</span><br><span class="line">    .<span class="title function_">src</span>(<span class="string">&#x27;./public/fonts/*.ttf&#x27;</span>) <span class="comment">//原字体所在目录</span></span><br><span class="line">    .<span class="title function_">pipe</span>(<span class="title function_">fontmin</span>(&#123;</span><br><span class="line">      <span class="attr">text</span>: text</span><br><span class="line">    &#125;))</span><br><span class="line">    .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="string">&#x27;./public/fontsdest/&#x27;</span>)) <span class="comment">//压缩后的输出目录</span></span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, cb);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;mini-font&#x27;</span>, <span class="function">(<span class="params">cb</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> buffers = [];</span><br><span class="line">  gulp</span><br><span class="line">    .<span class="title function_">src</span>([<span class="string">&#x27;./public/**/*.html&#x27;</span>]) <span class="comment">//HTML文件所在目录请根据自身情况修改</span></span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="keyword">function</span>(<span class="params">file</span>) &#123;</span><br><span class="line">      buffers.<span class="title function_">push</span>(file.<span class="property">contents</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> text = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(buffers).<span class="title function_">toString</span>(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">      <span class="title function_">minifyFont</span>(text, cb);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 运行gulp命令时依次执行以下任务</span></span><br><span class="line">gulp.<span class="title function_">task</span>(<span class="string">&#x27;default&#x27;</span>, gulp.<span class="title function_">parallel</span>(</span><br><span class="line">  <span class="string">&#x27;compress&#x27;</span>, <span class="string">&#x27;minify-css&#x27;</span>, <span class="string">&#x27;minify-html&#x27;</span>,<span class="string">&#x27;mini-font&#x27;</span></span><br><span class="line">))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译预览"><a href="#编译预览" class="headerlink" title="编译预览"></a>编译预览</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | gulp | hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>本文参考：<br><a href="https://akilar.top/posts/49b73b87/">使用gulp压缩博客静态资源</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加RSS订阅</title>
+    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
+    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
+<blockquote>
+<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo主题及Anzhiyu常见问题处理</title>
+    <url>/2023/06/06/hexo/hexo-theme-issues/index/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录使用Hexo-theme-Anzhiyu中遇到的问题及解决方法。</p>
+<blockquote>
+<p>遇到问题请先查阅 <a href="https://gavinblog.github.io/anzhiyu-docs/">Anzhiyu主题文档</a>,这里是最快的解决方法，其次搜索&#96;&#96;<br>本站基于 <a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">Hexo-theme-Anzhiyu</a> 主题，未改动主题源码，只增加了自定义css和js。<br>本博客完全开源仓库地址：<a href="https://github.com/gavinblog/blog-anzhiyu">https://github.com/gavinblog/blog-anzhiyu</a></p>
+</blockquote>
+<h2 id="音乐馆无法正常播放"><a href="#音乐馆无法正常播放" class="headerlink" title="音乐馆无法正常播放"></a>音乐馆无法正常播放</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>由于<code>MetingJs</code>自带官方api无法正常访问.</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>更换API接口,搜索可用接口或者自建api接口。<br>在配置文件中<code>_config.anzhiyu.yml</code>,修改<code>meting_api</code>自定义meting_api</p>
+<ul>
+<li>自建API: <code>https://api-meting.geekswg.top/api</code>,来自<a href="https://github.com/geekswg/vercel-meting-api/">开源仓库</a>。</li>
+<li>其他API: <code>https://api.injahow.cn/meting/</code></li>
+</ul>
+<blockquote>
+<p>Anzhiyu主题使用下面的方法即可：</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#自定义 meting_api</span></span><br><span class="line"><span class="comment"># https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r</span></span><br><span class="line"><span class="attr">meting_api:</span> <span class="string">&#x27;https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：改完后一定要重新<code>编译</code>生成静态页面,命令如下。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其他通用解决方法,适用于所有html中引入的，官方文档有说明自定义 <a href="https://github.com/metowolf/MetingJS#readme">meting_api</a>。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">// 自定义 meting_api</span></span><br><span class="line">  <span class="keyword">var</span> meting_api=<span class="string">&#x27;https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r&#x27;</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章加密功能实现"><a href="#文章加密功能实现" class="headerlink" title="文章加密功能实现"></a>文章加密功能实现</h2><h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><blockquote>
+<p>安装命令</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><blockquote>
+<p>在文章中的Front matter配置方法</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">password:</span> <span class="number">1234</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">xray</span></span><br><span class="line"><span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line"><span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span></span><br><span class="line"><span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line"><span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Github-Action自动部署"><a href="#Github-Action自动部署" class="headerlink" title="Github-Action自动部署"></a>Github-Action自动部署</h2><blockquote>
+<p>该action实现功能，提交源码到github自动部署生成hexo静态博客到gh-pages分支。<br>可根据自己需求改造aciton，步骤通用</p>
+</blockquote>
+<h3 id="实现源码"><a href="#实现源码" class="headerlink" title="实现源码"></a>实现源码</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 部署名称随意</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">自动发布-auto-deploay-hexo</span></span><br><span class="line"><span class="comment"># 触发条件：在 push 到 master 分支后触发</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span>  <span class="comment"># 可以添加多个分支</span></span><br><span class="line"><span class="comment"># 设置时区</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 任务</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">blog-deploy:</span></span><br><span class="line">  </span><br><span class="line">    <span class="attr">name:</span> <span class="string">Hexo</span> <span class="string">blog</span> <span class="string">build</span> <span class="string">&amp;</span> <span class="string">deploy</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span> <span class="comment"># 使用最新的 Ubuntu 系统作为编译部署的环境</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">codes</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">submodules:</span> <span class="literal">true</span> <span class="comment"># 加载子模块，避免初始化过程中的额外加载。</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">node</span></span><br><span class="line">        <span class="comment"># 设置 node.js 环境</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;16.x&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 下载网站源码</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">node</span> <span class="string">modules</span></span><br><span class="line">        <span class="comment"># 设置包缓存目录，避免每次下载</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">~/.npm</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 安装依赖</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="comment"># 下载 hexo-cli 脚手架及相关安装包</span></span><br><span class="line">        <span class="comment"># hexo-offline pwa 依赖</span></span><br><span class="line">        <span class="comment"># hexo-abbrlink 文章短链接</span></span><br><span class="line">        <span class="comment"># hexo-blog-encrypt 文章加密插件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          npm install -g hexo-cli</span></span><br><span class="line"><span class="string">          npm install --no-fund</span></span><br><span class="line"><span class="string">          npm install hexo-renderer-pug hexo-renderer-stylus --save</span></span><br><span class="line"><span class="string">          npm install hexo-generator-search --save</span></span><br><span class="line"><span class="string">          npm install hexo-abbrlink --save</span></span><br><span class="line"><span class="string">          npm install hexo-offline --save</span></span><br><span class="line"><span class="string">          npm install --save hexo-blog-encrypt</span></span><br><span class="line"><span class="string">          npm ls --depth 0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># hexo 编译生成网站</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">files</span></span><br><span class="line">        <span class="comment"># 编译 markdown 文件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          hexo clean</span></span><br><span class="line"><span class="string">          hexo generate</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># 自动发布到当前仓库的gh-pages分支，如需部署到其它仓库的，参考下面文档修改配置即可</span></span><br><span class="line">      <span class="comment"># 更多高级用法查看文档，https://github.com/peaceiris/actions-gh-pages</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 1.如何生成 github_token，github主页,Settings / Developer settings / Personal access tokens (classic)</span></span><br><span class="line">          <span class="comment"># 2.github_token 在 仓库 Settings,Actions secrets and variables,设置</span></span><br><span class="line">          <span class="comment"># github_token: $&#123;&#123; secrets.ACCESS_TOKEN &#125;&#125; 无需自定义 </span></span><br><span class="line">          <span class="comment"># GITHUB_TOKEN secret to authenticate in your workflow. So, you can start to deploy immediately without any configuration.</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line"></span><br><span class="line">          <span class="comment"># Deploy to external repository external_repository</span></span><br><span class="line">          <span class="comment"># 发布到其他仓库的配置，注意必须使用deploy_key，获取和设置方法同上。</span></span><br><span class="line">          <span class="comment">#deploy_key: $&#123;&#123; secrets.ACTIONS_DEPLOY_KEY &#125;&#125;</span></span><br><span class="line">          <span class="comment">#external_repository: username/external-repository</span></span><br><span class="line">          <span class="comment">#publish_branch: your-branch  # default: gh-pages</span></span><br><span class="line">          <span class="comment">#publish_dir: ./public</span></span><br><span class="line"></span><br><span class="line">          <span class="comment"># 以下配置可忽略，测试功能，设置提交信息相关配置</span></span><br><span class="line">          <span class="attr">user_name:</span> <span class="string">&#x27;github-actions[bot]&#x27;</span></span><br><span class="line">          <span class="attr">user_email:</span> <span class="string">&#x27;github-actions[bot]@users.noreply.github.com&#x27;</span></span><br><span class="line">          <span class="attr">commit_message:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="comment">#full_commit_message: $&#123;&#123; github.event.head_commit.message &#125;&#125;</span></span><br><span class="line">          <span class="attr">tag_name:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.prepare_tag.outputs.DEPLOY_TAG_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">tag_message:</span> <span class="string">&#x27;Deployment $<span class="template-variable">&#123;&#123; github.ref_name &#125;&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="转载文章配置"><a href="#转载文章配置" class="headerlink" title="转载文章配置"></a>转载文章配置</h2><blockquote>
+<p>在文章的头部Front-matter中配置以下信息</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文章版权 Front-matter配置</span></span><br><span class="line"><span class="comment">#copyright: true</span></span><br><span class="line"><span class="comment">#copyright_author: Cusor</span></span><br><span class="line"><span class="comment">#copyright_author_href: https://www.cursor.so/ </span></span><br><span class="line"><span class="comment">#copyright_url: https://www.cursor.so/</span></span><br><span class="line"><span class="comment">#copyright_info: 文章转载于[Cusor](https://www.cursor.so/)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="持续更新中"><a href="#持续更新中" class="headerlink" title="持续更新中~~~"></a>持续更新中~~~</h2><blockquote>
+<p>遇到常见问题记录更新中。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo-Theme-Anzhiyu</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2457,8 +2457,8 @@
         <category>AI</category>
       </categories>
       <tags>
-        <tag>AI</tag>
         <tag>Cursor</tag>
+        <tag>AI</tag>
         <tag>Electron</tag>
       </tags>
   </entry>
