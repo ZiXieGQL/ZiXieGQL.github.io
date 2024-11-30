@@ -26,6 +26,22 @@
       </tags>
   </entry>
   <entry>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>stm32 GPIO有8种状态，分为输入和输出两大类<br>输入：<br>  上拉输入<br>  下拉输入<br>  浮空输入<br>  复用输入<br>输出：<br>  推挽输出<br>  开漏输出<br>  复用推挽<br>  复用开漏</p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux应用</category>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git常用命令</title>
     <url>/2023/04/17/notes/git-usage/</url>
     <content><![CDATA[<p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>记录经常使用到git命令，以便查用.</p>
@@ -135,17 +151,6 @@
         <tag>分享</tag>
         <tag>vscode</tag>
         <tag>plugins</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="这是标题"><a href="#这是标题" class="headerlink" title="这是标题"></a>这是标题</h1>]]></content>
-      <categories>
-        <category>STM32</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
       </tags>
   </entry>
   <entry>
@@ -391,6 +396,94 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-theme-Anzhiyu Tag-Plugins Demo</title>
+    <url>/2023/05/30/demo/demo-tags-plugins/index/</url>
+    <content><![CDATA[<p><a href="https://www.iconfont.cn/collections/detail?cid=44481">anzhiyu-icon</a></p>
+<blockquote>
+<p>标签外挂是 Hexo 独有的功能，并不是标准的 Markdown 格式。 以下的写法，只适用于 AnZhiYu 主题，用在其它主题上不会有效果，甚至可能会报错。使用前请留意</p>
+</blockquote>
+<h2 id="Note-Bootstrap-Callout"><a href="#Note-Bootstrap-Callout" class="headerlink" title="Note (Bootstrap Callout)"></a>Note (Bootstrap Callout)</h2><div class="tabs" id="tab-note"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-note-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-note-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-note-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-note-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note default simple %&#125;default 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary simple %&#125;primary 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success simple %&#125;success 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info simple %&#125;info 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning simple %&#125;warning 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger simple %&#125;danger 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-note-2"><p><strong>This is Tab 2.</strong></p>
+<p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-note-3"><blockquote>
+<p><code>simple</code>样式</p>
+</blockquote>
+<div class="note simple"><p>默认 提示块标签</p>
+</div>
+<div class="note default simple"><p>default 提示块标签</p>
+</div>
+<div class="note primary simple"><p>primary 提示块标签</p>
+</div>
+<div class="note success simple"><p>success 提示块标签</p>
+</div>
+<div class="note info simple"><p>info 提示块标签</p>
+</div>
+<div class="note warning simple"><p>warning 提示块标签</p>
+</div>
+<div class="note danger simple"><p>danger 提示块标签</p>
+</div>
+
+<blockquote>
+<p><code>modern</code>样式</p>
+</blockquote>
+<div class="note modern"><p>默认 提示块标签</p>
+</div>
+<div class="note default modern"><p>default 提示块标签</p>
+</div>
+<div class="note primary modern"><p>primary 提示块标签</p>
+</div>
+<div class="note success modern"><p>success 提示块标签</p>
+</div>
+<div class="note info modern"><p>info 提示块标签</p>
+</div>
+<div class="note warning modern"><p>warning 提示块标签</p>
+</div>
+<div class="note danger modern"><p>danger 提示块标签</p>
+</div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+
+<h2 id="Gallery-相册图库"><a href="#Gallery-相册图库" class="headerlink" title="Gallery 相册图库"></a>Gallery 相册图库</h2><div class="tabs" id="tab-gallery"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-gallery-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-gallery-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-gallery-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-gallery-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-gallery-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-gallery-3"></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+
+<h2 id="HideToggle"><a href="#HideToggle" class="headerlink" title="HideToggle"></a>HideToggle</h2><div class="tabs" id="tab-hidetoggle"><ul class="nav-tabs"><button type="button" class="tab " data-href="tab-hidetoggle-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-hidetoggle-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab  active" data-href="tab-hidetoggle-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content" id="tab-hidetoggle-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% hideToggle Butterfly安装方法 %&#125;</span><br><span class="line">在你的博客根目录里</span><br><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line">如果想要安装比较新的dev分支，可以</span><br><span class="line">git <span class="built_in">clone</span> -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line">&#123;% endhideToggle %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-hidetoggle-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content active" id="tab-hidetoggle-3"><details class="toggle" ><summary class="toggle-button" style="">Butterfly安装方法</summary><div class="toggle-content"><p>在你的博客根目录里<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly<br>如果想要安装比较新的dev分支，可以<br>git clone -b dev <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
+</div></details></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+
+<h2 id="分栏-Tabs"><a href="#分栏-Tabs" class="headerlink" title="分栏 Tabs"></a>分栏 Tabs</h2><div class="tabs" id="tab-tabs"><ul class="nav-tabs"><button type="button" class="tab " data-href="tab-tabs-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-tabs-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab  active" data-href="tab-tabs-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content" id="tab-tabs-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test2, 3 %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab t1@far fa-paper-plane --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-tabs-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content active" id="tab-tabs-3"><div class="tabs" id="test2"><ul class="nav-tabs"><button type="button" class="tab " data-href="test2-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>t1</button><button type="button" class="tab " data-href="test2-2">test2 2</button><button type="button" class="tab  active" data-href="test2-3">test2 3</button></ul><div class="tab-contents"><div class="tab-item-content" id="test2-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-item-content" id="test2-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-item-content active" id="test2-3"><p><strong>This is Tab 3.</strong></p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><div class="tabs" id="tab-note"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-note-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-note-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-note-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-note-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-note-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-note-3"></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+
+<h2 id="加密插件安装"><a href="#加密插件安装" class="headerlink" title="加密插件安装"></a>加密插件安装</h2><blockquote>
+<p>安装命令</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
+
+<h2 id="加密使用"><a href="#加密使用" class="headerlink" title="加密使用"></a>加密使用</h2><blockquote>
+<p>Front matter配置方法</p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 有东西被加密了, 请输入密码查看.</span><br><span class="line">message: 您好, 这里需要密码.</span><br><span class="line">theme: xray</span><br><span class="line">wrong<span class="emphasis">_pass_</span>message: 抱歉, 这个密码看着不太对, 请再试试.</span><br><span class="line">wrong<span class="emphasis">_hash_</span>message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</span><br></pre></td></tr></table></figure>
+
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>demo</category>
+      </categories>
+      <tags>
+        <tag>示例</tag>
+        <tag>demo</tag>
+        <tag>Hexo</tag>
+        <tag>Hexo-Theme-Anzhiyu</tag>
+        <tag>Tag-Plugins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>New Bing 申请教程</title>
     <url>/2023/02/20/ai/new-bing/index/</url>
     <content><![CDATA[<p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>记录申请过程中遇到各种问题以及解决办法。</p>
@@ -441,6 +534,27 @@
       <tags>
         <tag>bing</tag>
         <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加RSS订阅</title>
+    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
+    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
+<blockquote>
+<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -554,24 +668,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo添加RSS订阅</title>
-    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
-    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
+    <title>博客网站添加FPS显示</title>
+    <url>/2023/06/30/hexo/hexo-fps/index/</url>
+    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
 <blockquote>
-<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
+<p>fps.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>fps.css</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
 </blockquote>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>demo</tag>
         <tag>Hexo</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -605,6 +729,35 @@
       <tags>
         <tag>AI</tag>
         <tag>New Bing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
+    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
+    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
+<blockquote>
+<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
+<blockquote>
+<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
+</blockquote>
+<blockquote>
+<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
+</blockquote>
+<p>本文参考：</p>
+<ul>
+<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Twikoo</tag>
       </tags>
   </entry>
   <entry>
@@ -646,66 +799,6 @@
       <tags>
         <tag>demo</tag>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客网站添加FPS显示</title>
-    <url>/2023/06/30/hexo/hexo-fps/index/</url>
-    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
-<blockquote>
-<p>fps.js</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>fps.css</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
-    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
-    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
-<blockquote>
-<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
-<blockquote>
-<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
-</blockquote>
-<blockquote>
-<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
-</blockquote>
-<p>本文参考：</p>
-<ul>
-<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Twikoo</tag>
       </tags>
   </entry>
   <entry>
@@ -2263,21 +2356,37 @@
       </tags>
   </entry>
   <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+    <title>Share Cursor</title>
+    <url>/2023/03/23/share/share-cursor/index/</url>
+    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
+<blockquote>
+<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
 </blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
+</li>
+<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
+</li>
+</ol>
+<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
+<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
+</li>
+<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
+</li>
+</ul>
+<blockquote>
+<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
+</blockquote>
+<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
 ]]></content>
       <categories>
         <category>share</category>
       </categories>
       <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
+        <tag>ChatGPT</tag>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
       </tags>
   </entry>
   <entry>
@@ -2322,125 +2431,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
 </blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>share</category>
       </categories>
       <tags>
-        <tag>ChatGPT</tag>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-theme-Anzhiyu Tag-Plugins Demo</title>
-    <url>/2023/05/30/demo/demo-tags-plugins/index/</url>
-    <content><![CDATA[<p><a href="https://www.iconfont.cn/collections/detail?cid=44481">anzhiyu-icon</a></p>
-<blockquote>
-<p>标签外挂是 Hexo 独有的功能，并不是标准的 Markdown 格式。 以下的写法，只适用于 AnZhiYu 主题，用在其它主题上不会有效果，甚至可能会报错。使用前请留意</p>
-</blockquote>
-<h2 id="Note-Bootstrap-Callout"><a href="#Note-Bootstrap-Callout" class="headerlink" title="Note (Bootstrap Callout)"></a>Note (Bootstrap Callout)</h2><div class="tabs" id="tab-note"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-note-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-note-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-note-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-note-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note default simple %&#125;default 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary simple %&#125;primary 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success simple %&#125;success 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info simple %&#125;info 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning simple %&#125;warning 提示块标签&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger simple %&#125;danger 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-note-2"><p><strong>This is Tab 2.</strong></p>
-<p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-note-3"><blockquote>
-<p><code>simple</code>样式</p>
-</blockquote>
-<div class="note simple"><p>默认 提示块标签</p>
-</div>
-<div class="note default simple"><p>default 提示块标签</p>
-</div>
-<div class="note primary simple"><p>primary 提示块标签</p>
-</div>
-<div class="note success simple"><p>success 提示块标签</p>
-</div>
-<div class="note info simple"><p>info 提示块标签</p>
-</div>
-<div class="note warning simple"><p>warning 提示块标签</p>
-</div>
-<div class="note danger simple"><p>danger 提示块标签</p>
-</div>
-
-<blockquote>
-<p><code>modern</code>样式</p>
-</blockquote>
-<div class="note modern"><p>默认 提示块标签</p>
-</div>
-<div class="note default modern"><p>default 提示块标签</p>
-</div>
-<div class="note primary modern"><p>primary 提示块标签</p>
-</div>
-<div class="note success modern"><p>success 提示块标签</p>
-</div>
-<div class="note info modern"><p>info 提示块标签</p>
-</div>
-<div class="note warning modern"><p>warning 提示块标签</p>
-</div>
-<div class="note danger modern"><p>danger 提示块标签</p>
-</div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
-
-<h2 id="Gallery-相册图库"><a href="#Gallery-相册图库" class="headerlink" title="Gallery 相册图库"></a>Gallery 相册图库</h2><div class="tabs" id="tab-gallery"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-gallery-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-gallery-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-gallery-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-gallery-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-gallery-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-gallery-3"></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
-
-<h2 id="HideToggle"><a href="#HideToggle" class="headerlink" title="HideToggle"></a>HideToggle</h2><div class="tabs" id="tab-hidetoggle"><ul class="nav-tabs"><button type="button" class="tab " data-href="tab-hidetoggle-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-hidetoggle-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab  active" data-href="tab-hidetoggle-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content" id="tab-hidetoggle-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% hideToggle Butterfly安装方法 %&#125;</span><br><span class="line">在你的博客根目录里</span><br><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line">如果想要安装比较新的dev分支，可以</span><br><span class="line">git <span class="built_in">clone</span> -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line">&#123;% endhideToggle %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-hidetoggle-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content active" id="tab-hidetoggle-3"><details class="toggle" ><summary class="toggle-button" style="">Butterfly安装方法</summary><div class="toggle-content"><p>在你的博客根目录里<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly<br>如果想要安装比较新的dev分支，可以<br>git clone -b dev <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
-</div></details></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
-
-<h2 id="分栏-Tabs"><a href="#分栏-Tabs" class="headerlink" title="分栏 Tabs"></a>分栏 Tabs</h2><div class="tabs" id="tab-tabs"><ul class="nav-tabs"><button type="button" class="tab " data-href="tab-tabs-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-tabs-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab  active" data-href="tab-tabs-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content" id="tab-tabs-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test2, 3 %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab t1@far fa-paper-plane --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-tabs-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content active" id="tab-tabs-3"><div class="tabs" id="test2"><ul class="nav-tabs"><button type="button" class="tab " data-href="test2-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>t1</button><button type="button" class="tab " data-href="test2-2">test2 2</button><button type="button" class="tab  active" data-href="test2-3">test2 3</button></ul><div class="tab-contents"><div class="tab-item-content" id="test2-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-item-content" id="test2-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-item-content active" id="test2-3"><p><strong>This is Tab 3.</strong></p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
-
-<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><div class="tabs" id="tab-note"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="tab-note-1"><i class="far fa-paper-plane fa-fw fa-sm"></i>代码</button><button type="button" class="tab " data-href="tab-note-2"><i class="fa-solid fa-book"></i>参数</button><button type="button" class="tab " data-href="tab-note-3"><i class="fa-solid fa-book"></i>预览</button></ul><div class="tab-contents"><div class="tab-item-content active" id="tab-note-1"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;默认 提示块标签&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="tab-note-2"><p>样式 : <code>simple</code> <code>modern</code> <code>flat</code> <code>disabled</code> <code>no-icon</code></p></div><div class="tab-item-content" id="tab-note-3"></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
-
-<h2 id="加密插件安装"><a href="#加密插件安装" class="headerlink" title="加密插件安装"></a>加密插件安装</h2><blockquote>
-<p>安装命令</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
-
-<h2 id="加密使用"><a href="#加密使用" class="headerlink" title="加密使用"></a>加密使用</h2><blockquote>
-<p>Front matter配置方法</p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 有东西被加密了, 请输入密码查看.</span><br><span class="line">message: 您好, 这里需要密码.</span><br><span class="line">theme: xray</span><br><span class="line">wrong<span class="emphasis">_pass_</span>message: 抱歉, 这个密码看着不太对, 请再试试.</span><br><span class="line">wrong<span class="emphasis">_hash_</span>message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</span><br></pre></td></tr></table></figure>
-
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>demo</category>
-      </categories>
-      <tags>
-        <tag>示例</tag>
-        <tag>demo</tag>
-        <tag>Hexo</tag>
-        <tag>Hexo-Theme-Anzhiyu</tag>
-        <tag>Tag-Plugins</tag>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
