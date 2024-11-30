@@ -42,58 +42,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git常用命令</title>
-    <url>/2023/04/17/notes/git-usage/</url>
-    <content><![CDATA[<p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>记录经常使用到git命令，以便查用.</p>
-<span id="more"></span>
-
-<h2 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置默认主分支名称 为main </span></span><br><span class="line">git config --global init.defaultBranch main </span><br><span class="line"></span><br><span class="line"><span class="comment">#配置 http.sslVerify 为 false, 如下：</span></span><br><span class="line">git config --global http.sslVerify <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 快速开始命令</span></span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/geekswg/test.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-
-<h2 id="子模块相关"><a href="#子模块相关" class="headerlink" title="子模块相关"></a>子模块相关</h2><blockquote>
-<p>Git 子模块是 Git 仓库中嵌套的另一个 Git 仓库，它允许你将一个 Git 仓库作为另一个 Git 仓库的一个子目录，方便管理多个子项目的代码。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 初始化git ，使用git子模块 添加主题</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加子模块</span></span><br><span class="line">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</span><br><span class="line"><span class="comment"># 更新同步子模块</span></span><br><span class="line">git submodule update --remote --merge</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动克隆子模块 在执行 git clone 时加上 --recursive 参数</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive https://github.com/example/example.git</span><br><span class="line"><span class="comment"># 如果克隆的项目包含子模块，使用下面方法更新下载子模块</span></span><br><span class="line">git submodule update --init</span><br><span class="line"></span><br><span class="line"><span class="comment"># Git 子模块相关的命令：</span></span><br><span class="line">git submodule add &lt;repository&gt; &lt;path&gt;：将一个 Git 仓库添加为子模块。</span><br><span class="line"></span><br><span class="line">git submodule init：初始化子模块，将 .gitmodules 配置文件中列出的子模块拉取到本地。</span><br><span class="line"></span><br><span class="line">git submodule update：更新子模块，将子模块更新到最新的 commit。</span><br><span class="line"></span><br><span class="line">git submodule foreach &lt;<span class="built_in">command</span>&gt;：对每个子模块执行命令。</span><br><span class="line"></span><br><span class="line">git submodule status：查看子模块的状态，包括子模块的 commit ID 和是否有未提交的修改。</span><br><span class="line"></span><br><span class="line">git submodule <span class="built_in">sync</span>：同步子模块的 URL 和路径。</span><br><span class="line"></span><br><span class="line">git submodule update --remote：更新子模块到最新的远程分支。</span><br><span class="line"></span><br><span class="line">git submodule deinit &lt;submodule&gt;：从父仓库中删除子模块。</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意，对于子模块的操作需要在父仓库中进行。在进行子模块的操作时，需要切换到子模块所在的目录中进行。</p>
-</blockquote>
-<h2 id="由ChatGPT生成"><a href="#由ChatGPT生成" class="headerlink" title="由ChatGPT生成"></a>由ChatGPT生成</h2><p>以下是一些常用的 Git 命令：<br>初始化仓库：创建一个新的 Git 仓库或将现有项目初始化为 Git 仓库。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<p>克隆仓库：将远程仓库克隆到本地。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone &lt;repository_url&gt;</span><br></pre></td></tr></table></figure>
-
-<p>添加文件：将文件添加到暂存区。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add &lt;file_name&gt;</span><br><span class="line">git add .  # 将所有文件添加到暂存区</span><br></pre></td></tr></table></figure>
-
-<p>提交更改：将暂存区中的更改提交到本地仓库。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;Commit message&quot;</span><br></pre></td></tr></table></figure>
-
-<p>查看状态：查看文件的更改状态。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<p>查看日志：查看提交历史。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-
-<p>检出分支：切换到指定分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
-
-<p>创建分支：创建一个新的分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch &lt;new_branch_name&gt;</span><br></pre></td></tr></table></figure>
-
-<p>合并分支：将指定分支的更改合并到当前分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge &lt;source_branch&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>notes</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分享VSCode插件</title>
     <url>/2023/03/04/share/share-vscode-plugins/</url>
     <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
@@ -151,6 +99,58 @@
         <tag>分享</tag>
         <tag>vscode</tag>
         <tag>plugins</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git常用命令</title>
+    <url>/2023/04/17/notes/git-usage/</url>
+    <content><![CDATA[<p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>记录经常使用到git命令，以便查用.</p>
+<span id="more"></span>
+
+<h2 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置默认主分支名称 为main </span></span><br><span class="line">git config --global init.defaultBranch main </span><br><span class="line"></span><br><span class="line"><span class="comment">#配置 http.sslVerify 为 false, 如下：</span></span><br><span class="line">git config --global http.sslVerify <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 快速开始命令</span></span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/geekswg/test.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<h2 id="子模块相关"><a href="#子模块相关" class="headerlink" title="子模块相关"></a>子模块相关</h2><blockquote>
+<p>Git 子模块是 Git 仓库中嵌套的另一个 Git 仓库，它允许你将一个 Git 仓库作为另一个 Git 仓库的一个子目录，方便管理多个子项目的代码。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 初始化git ，使用git子模块 添加主题</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加子模块</span></span><br><span class="line">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</span><br><span class="line"><span class="comment"># 更新同步子模块</span></span><br><span class="line">git submodule update --remote --merge</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动克隆子模块 在执行 git clone 时加上 --recursive 参数</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive https://github.com/example/example.git</span><br><span class="line"><span class="comment"># 如果克隆的项目包含子模块，使用下面方法更新下载子模块</span></span><br><span class="line">git submodule update --init</span><br><span class="line"></span><br><span class="line"><span class="comment"># Git 子模块相关的命令：</span></span><br><span class="line">git submodule add &lt;repository&gt; &lt;path&gt;：将一个 Git 仓库添加为子模块。</span><br><span class="line"></span><br><span class="line">git submodule init：初始化子模块，将 .gitmodules 配置文件中列出的子模块拉取到本地。</span><br><span class="line"></span><br><span class="line">git submodule update：更新子模块，将子模块更新到最新的 commit。</span><br><span class="line"></span><br><span class="line">git submodule foreach &lt;<span class="built_in">command</span>&gt;：对每个子模块执行命令。</span><br><span class="line"></span><br><span class="line">git submodule status：查看子模块的状态，包括子模块的 commit ID 和是否有未提交的修改。</span><br><span class="line"></span><br><span class="line">git submodule <span class="built_in">sync</span>：同步子模块的 URL 和路径。</span><br><span class="line"></span><br><span class="line">git submodule update --remote：更新子模块到最新的远程分支。</span><br><span class="line"></span><br><span class="line">git submodule deinit &lt;submodule&gt;：从父仓库中删除子模块。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意，对于子模块的操作需要在父仓库中进行。在进行子模块的操作时，需要切换到子模块所在的目录中进行。</p>
+</blockquote>
+<h2 id="由ChatGPT生成"><a href="#由ChatGPT生成" class="headerlink" title="由ChatGPT生成"></a>由ChatGPT生成</h2><p>以下是一些常用的 Git 命令：<br>初始化仓库：创建一个新的 Git 仓库或将现有项目初始化为 Git 仓库。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>克隆仓库：将远程仓库克隆到本地。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone &lt;repository_url&gt;</span><br></pre></td></tr></table></figure>
+
+<p>添加文件：将文件添加到暂存区。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add &lt;file_name&gt;</span><br><span class="line">git add .  # 将所有文件添加到暂存区</span><br></pre></td></tr></table></figure>
+
+<p>提交更改：将暂存区中的更改提交到本地仓库。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;Commit message&quot;</span><br></pre></td></tr></table></figure>
+
+<p>查看状态：查看文件的更改状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p>查看日志：查看提交历史。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<p>检出分支：切换到指定分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>创建分支：创建一个新的分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch &lt;new_branch_name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>合并分支：将指定分支的更改合并到当前分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge &lt;source_branch&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>notes</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -309,45 +309,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于Docker</title>
-    <url>/2023/04/02/ai/aigen/cursor-docker/</url>
-    <content><![CDATA[<blockquote>
-<p>这一片关于Docker的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a><br><code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="Docker-从入门到精通"><a href="#Docker-从入门到精通" class="headerlink" title="Docker: 从入门到精通"></a>Docker: 从入门到精通</h1><h2 id="什么是-Docker？"><a href="#什么是-Docker？" class="headerlink" title="什么是 Docker？"></a>什么是 Docker？</h2><p>Docker 是一个开源的容器化平台，可以让开发者将应用程序和依赖项打包到一个可移植的容器中，然后在任何地方运行。</p>
-<h2 id="Docker-的优势"><a href="#Docker-的优势" class="headerlink" title="Docker 的优势"></a>Docker 的优势</h2><p>Docker 的优势主要有以下几点：</p>
-<ul>
-<li><strong>轻量级</strong>：Docker 容器非常轻量级，启动速度快，占用资源少。</li>
-<li><strong>可移植性</strong>：Docker 容器可以在任何地方运行，无需担心环境差异。</li>
-<li><strong>可扩展性</strong>：Docker 容器可以很容易地进行扩展，支持水平和垂直扩展。</li>
-<li><strong>易于管理</strong>：Docker 容器可以很容易地进行管理，支持自动化部署和运维。</li>
-</ul>
-<h2 id="Docker-的基本概念"><a href="#Docker-的基本概念" class="headerlink" title="Docker 的基本概念"></a>Docker 的基本概念</h2><p>在使用 Docker 之前，需要了解一些基本概念：</p>
-<ul>
-<li><strong>镜像（Image）</strong>：Docker 镜像是一个只读的模板，可以用来创建 Docker 容器。镜像可以包含操作系统、应用程序和依赖项等。</li>
-<li><strong>容器（Container）</strong>：Docker 容器是从 Docker 镜像创建的运行实例。容器可以运行、停止、删除和暂停等。</li>
-<li><strong>仓库（Repository）</strong>：Docker 仓库是用来存储 Docker 镜像的地方。Docker 官方提供了 Docker Hub 仓库，也可以使用私有仓库。</li>
-</ul>
-<h2 id="Docker-的安装"><a href="#Docker-的安装" class="headerlink" title="Docker 的安装"></a>Docker 的安装</h2><p>在安装 Docker 之前，需要先安装 Docker 的依赖项：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
-
-<p>然后，添加 Docker 的 GPG 密钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com$ <span class="built_in">sudo</span> apt-key add -$ <span class="built_in">sudo</span> add-apt-repository <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu <span class="subst">$(lsb_release -cs)</span> stable&quot;</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-Theme-Anzhiyu常用Demo</title>
     <url>/2023/06/08/demo/demo-anzhiyu/index/</url>
     <content><![CDATA[<h2 id="主题图标"><a href="#主题图标" class="headerlink" title="主题图标"></a>主题图标</h2><p><a href="https://www.iconfont.cn/collections/detail?cid=44481">anzhiyu-icon</a></p>
@@ -429,28 +390,34 @@
       </categories>
   </entry>
   <entry>
-    <title>关于ChatGPT</title>
-    <url>/2023/03/26/ai/aigen/md-writeby-cursor/</url>
+    <title>关于Docker</title>
+    <url>/2023/04/02/ai/aigen/cursor-docker/</url>
     <content><![CDATA[<blockquote>
-<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
+<p>这一片关于Docker的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a><br><code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>ChatGPT是一个基于GPT-2的聊天机器人，它可以与用户进行自然语言交互。ChatGPT使用了GPT-2的预训练模型，可以生成高质量的自然语言文本，从而实现了智能聊天的功能。</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>ChatGPT可以回答用户的问题、提供建议、进行闲聊等。用户可以通过输入文本与ChatGPT进行交互，ChatGPT会根据用户的输入生成相应的回复。ChatGPT还可以进行多轮对话，从而更好地理解用户的意图和需求。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>用户可以通过访问ChatGPT的网站或者使用ChatGPT的API进行交互。在网站上，用户可以直接输入文本与ChatGPT进行交互；在API上，用户可以通过发送HTTP请求与ChatGPT进行交互。ChatGPT的API支持多种编程语言，包括Python、Java、JavaScript等。</p>
-<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>相比于传统的聊天机器人，ChatGPT具有以下优势：</p>
+<h1 id="Docker-从入门到精通"><a href="#Docker-从入门到精通" class="headerlink" title="Docker: 从入门到精通"></a>Docker: 从入门到精通</h1><h2 id="什么是-Docker？"><a href="#什么是-Docker？" class="headerlink" title="什么是 Docker？"></a>什么是 Docker？</h2><p>Docker 是一个开源的容器化平台，可以让开发者将应用程序和依赖项打包到一个可移植的容器中，然后在任何地方运行。</p>
+<h2 id="Docker-的优势"><a href="#Docker-的优势" class="headerlink" title="Docker 的优势"></a>Docker 的优势</h2><p>Docker 的优势主要有以下几点：</p>
 <ul>
-<li>生成的回复更加自然、流畅，更接近人类的表达方式；</li>
-<li>可以进行多轮对话，更好地理解用户的意图和需求；</li>
-<li>可以根据用户的输入进行个性化的回复，从而提高用户的满意度。</li>
+<li><strong>轻量级</strong>：Docker 容器非常轻量级，启动速度快，占用资源少。</li>
+<li><strong>可移植性</strong>：Docker 容器可以在任何地方运行，无需担心环境差异。</li>
+<li><strong>可扩展性</strong>：Docker 容器可以很容易地进行扩展，支持水平和垂直扩展。</li>
+<li><strong>易于管理</strong>：Docker 容器可以很容易地进行管理，支持自动化部署和运维。</li>
 </ul>
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>虽然ChatGPT具有很多优势，但它也存在一些局限性：</p>
+<h2 id="Docker-的基本概念"><a href="#Docker-的基本概念" class="headerlink" title="Docker 的基本概念"></a>Docker 的基本概念</h2><p>在使用 Docker 之前，需要了解一些基本概念：</p>
 <ul>
-<li>由于使用了预训练模型，ChatGPT的回复可能会受到模型训练数据的影响，从而出现一些不合理的回复；</li>
-<li>ChatGPT无法理解一些复杂的语言结构，例如双关语、歧义等；</li>
-<li>ChatGPT无法进行真正的理解和推理，只能生成基于模型的回复。虽然ChatGPT存在一些局限性，但它仍然是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。例如，在客服领域，ChatGPT可以代替人工客服进行自然语言交互，从而提高客户服务的效率和质量；在教育领域，ChatGPT可以作为智能辅导工具，帮助学生进行学习和答疑；在娱乐领域，ChatGPT可以作为智能聊天伴侣，陪伴用户度过闲暇时光。随着ChatGPT技术的不断发展，它的应用场景也将越来越广泛。ChatGPT是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。它具有很多优势，例如生成的回复更加自然、流畅，可以进行多轮对话，可以根据用户的输入进行个性化的回复，从而提高用户的满意度。虽然ChatGPT存在一些局限性，但随着人工智能技术的不断发展，它的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。一次性写完，让我们期待ChatGPT的未来发展。ChatGPT的未来发展将会受到人工智能技术的不断发展和应用场景的不断扩大的影响。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，例如可以更好地理解复杂的语言结构、进行真正的理解和推理等。同时，ChatGPT的应用场景也将不断扩大，例如可以用于医疗、金融、法律等领域。在医疗领域，ChatGPT可以作为智能诊断工具，帮助医生进行疾病诊断和治疗方案的制定；在金融领域，ChatGPT可以作为智能投资顾问，帮助投资者进行投资决策；在法律领域，ChatGPT可以作为智能法律顾问，帮助律师进行法律咨询和案件分析。随着ChatGPT技术的不断发展和应用场景的不断扩大，它将成为人们进行自然语言交互的重要工具之一，为人们的生活和工作带来更多的便利和效率。</li>
+<li><strong>镜像（Image）</strong>：Docker 镜像是一个只读的模板，可以用来创建 Docker 容器。镜像可以包含操作系统、应用程序和依赖项等。</li>
+<li><strong>容器（Container）</strong>：Docker 容器是从 Docker 镜像创建的运行实例。容器可以运行、停止、删除和暂停等。</li>
+<li><strong>仓库（Repository）</strong>：Docker 仓库是用来存储 Docker 镜像的地方。Docker 官方提供了 Docker Hub 仓库，也可以使用私有仓库。</li>
 </ul>
+<h2 id="Docker-的安装"><a href="#Docker-的安装" class="headerlink" title="Docker 的安装"></a>Docker 的安装</h2><p>在安装 Docker 之前，需要先安装 Docker 的依赖项：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
+
+<p>然后，添加 Docker 的 GPG 密钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com$ <span class="built_in">sudo</span> apt-key add -$ <span class="built_in">sudo</span> add-apt-repository <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu <span class="subst">$(lsb_release -cs)</span> stable&quot;</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+
 ]]></content>
       <categories>
         <category>AI</category>
@@ -458,60 +425,7 @@
       <tags>
         <tag>AI</tag>
         <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>New Bing 申请教程</title>
-    <url>/2023/02/20/ai/new-bing/index/</url>
-    <content><![CDATA[<p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>记录申请过程中遇到各种问题以及解决办法。</p>
-<span id="more"></span>
-
-<h2 id="申请New-Bing"><a href="#申请New-Bing" class="headerlink" title="申请New Bing"></a>申请New Bing</h2><blockquote>
-<p>申请地址 ： <a href="https://bing.com/new">https://bing.com/new</a></p>
-</blockquote>
-<p>由于某些原因，国内无法直接访问 new bing 。</p>
-<ol>
-<li>通过科学上网方式直接访问</li>
-<li>使用 HeaderEditor 插件 下载链接：<a href="https://microsoftedge.microsoft.com/addons/detail/header-editor/afopnekiinpekooejpchnkgfffaeceko">点击下载</a><br>启用插件<br>配置插件<br><img src="/imgs/t.png" alt="配置截图" title="配置截图"><br><img src="/imgs/posts/newbing-header-editor.png" alt="配置截图" title="配置截图"><br>配置参数<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 匹配规则</span><br><span class="line">^http(s?)://(.*).bing\.com/(.*)</span><br><span class="line"></span><br><span class="line">// 头名称</span><br><span class="line">x-forwarded-for</span><br><span class="line"></span><br><span class="line">// 头内容</span><br><span class="line">8.8.8.8   或者  4.2.2.2</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="老账户无法加入waitlist"><a href="#老账户无法加入waitlist" class="headerlink" title="老账户无法加入waitlist"></a>老账户无法加入waitlist</h2><p>老的微软账户是不是提示<br><img src="/imgs/posts/newbing.png" alt="new bing 申请waitlist错误" title="new bing 申请waitlist错误"></p>
-<ol>
-<li><p>使用科学上网地址非国内地址，申请一个新的微软账户加入 new bing <a href="https://www.bing.com/new">waitlist</a></p>
-</li>
-<li><p>继续使用老账户申请</p>
-<blockquote>
-<p>如果在申请 new bing waitlist 等候名单遇到 错误提示信息</p>
-</blockquote>
-</li>
-<li><p>出错了，请重试</p>
-</li>
-<li><p>Something went wrong, please try again later.</p>
-</li>
-</ol>
-<p>原因就是 Microsoft rewards 已经在国内使用过了，账户被禁用了。</p>
-<p>解决方案如下：</p>
-<ol>
-<li>退出Bing Rewards计划: <a href="https://rewards.bing.com/optout">https://rewards.bing.com/optout</a> ,请注意退出计划会清除积分</li>
-<li>重新加入Bing Rewards计划: <a href="https://rewards.bing.com/">https://rewards.bing.com</a></li>
-<li>清除cookie后，再次申请加入新版必应( <a href="https://www.bing.com/new">https://www.bing.com/new</a> )，即可正常加入候补列表</li>
-</ol>
-<h2 id="New-Bing-上手体验"><a href="#New-Bing-上手体验" class="headerlink" title="New Bing 上手体验"></a>New Bing 上手体验</h2><blockquote>
-<p>使用体验非常好，尤其是上下文语境做的让人非常舒服，总之是一个合格而且优秀的助手<br>推荐下载 <a href="https://www.microsoftedgeinsider.com/zh-cn/download/dev">Edge-Dev</a> 体验效果非常好</p>
-</blockquote>
-<p><img src="/imgs/posts/newbing.gif" alt="Edge-Dev new bing 使用预览" title="Edge-Dev new bing 使用预览"></p>
-<blockquote>
-<p>网页中使用bing-chat</p>
-</blockquote>
-<p><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx">https://www.bing.com/search?q=Bing+AI&amp;showconv=1&amp;FORM=hpcodx</a></p>
-<p><img src="/imgs/posts/newbing.png" alt="web new bing 使用预览" title="web new bing 使用预览"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
-        <tag>bing</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -603,6 +517,39 @@
       </tags>
   </entry>
   <entry>
+    <title>关于ChatGPT</title>
+    <url>/2023/03/26/ai/aigen/md-writeby-cursor/</url>
+    <content><![CDATA[<blockquote>
+<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>ChatGPT是一个基于GPT-2的聊天机器人，它可以与用户进行自然语言交互。ChatGPT使用了GPT-2的预训练模型，可以生成高质量的自然语言文本，从而实现了智能聊天的功能。</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>ChatGPT可以回答用户的问题、提供建议、进行闲聊等。用户可以通过输入文本与ChatGPT进行交互，ChatGPT会根据用户的输入生成相应的回复。ChatGPT还可以进行多轮对话，从而更好地理解用户的意图和需求。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>用户可以通过访问ChatGPT的网站或者使用ChatGPT的API进行交互。在网站上，用户可以直接输入文本与ChatGPT进行交互；在API上，用户可以通过发送HTTP请求与ChatGPT进行交互。ChatGPT的API支持多种编程语言，包括Python、Java、JavaScript等。</p>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>相比于传统的聊天机器人，ChatGPT具有以下优势：</p>
+<ul>
+<li>生成的回复更加自然、流畅，更接近人类的表达方式；</li>
+<li>可以进行多轮对话，更好地理解用户的意图和需求；</li>
+<li>可以根据用户的输入进行个性化的回复，从而提高用户的满意度。</li>
+</ul>
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>虽然ChatGPT具有很多优势，但它也存在一些局限性：</p>
+<ul>
+<li>由于使用了预训练模型，ChatGPT的回复可能会受到模型训练数据的影响，从而出现一些不合理的回复；</li>
+<li>ChatGPT无法理解一些复杂的语言结构，例如双关语、歧义等；</li>
+<li>ChatGPT无法进行真正的理解和推理，只能生成基于模型的回复。虽然ChatGPT存在一些局限性，但它仍然是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。例如，在客服领域，ChatGPT可以代替人工客服进行自然语言交互，从而提高客户服务的效率和质量；在教育领域，ChatGPT可以作为智能辅导工具，帮助学生进行学习和答疑；在娱乐领域，ChatGPT可以作为智能聊天伴侣，陪伴用户度过闲暇时光。随着ChatGPT技术的不断发展，它的应用场景也将越来越广泛。ChatGPT是一种非常有用的工具，可以帮助人们更好地进行自然语言交互。它具有很多优势，例如生成的回复更加自然、流畅，可以进行多轮对话，可以根据用户的输入进行个性化的回复，从而提高用户的满意度。虽然ChatGPT存在一些局限性，但随着人工智能技术的不断发展，它的性能也将不断提高，未来它有望成为人们进行自然语言交互的首选工具之一。ChatGPT的应用场景非常广泛，可以用于客服、教育、娱乐等领域。一次性写完，让我们期待ChatGPT的未来发展。ChatGPT的未来发展将会受到人工智能技术的不断发展和应用场景的不断扩大的影响。随着人工智能技术的不断发展，ChatGPT的性能也将不断提高，例如可以更好地理解复杂的语言结构、进行真正的理解和推理等。同时，ChatGPT的应用场景也将不断扩大，例如可以用于医疗、金融、法律等领域。在医疗领域，ChatGPT可以作为智能诊断工具，帮助医生进行疾病诊断和治疗方案的制定；在金融领域，ChatGPT可以作为智能投资顾问，帮助投资者进行投资决策；在法律领域，ChatGPT可以作为智能法律顾问，帮助律师进行法律咨询和案件分析。随着ChatGPT技术的不断发展和应用场景的不断扩大，它将成为人们进行自然语言交互的重要工具之一，为人们的生活和工作带来更多的便利和效率。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo-blog-encrypt加密测试Demo</title>
     <url>/2023/05/30/demo/demo-blog-encrypt/index/</url>
     <content><![CDATA[<h2 id="hexo-blog-encrypt插件"><a href="#hexo-blog-encrypt插件" class="headerlink" title="hexo-blog-encrypt插件"></a>hexo-blog-encrypt插件</h2><p>插件地址：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a><br>中文文档：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
@@ -647,6 +594,59 @@
       </tags>
   </entry>
   <entry>
+    <title>New Bing 申请教程</title>
+    <url>/2023/02/20/ai/new-bing/index/</url>
+    <content><![CDATA[<p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>记录申请过程中遇到各种问题以及解决办法。</p>
+<span id="more"></span>
+
+<h2 id="申请New-Bing"><a href="#申请New-Bing" class="headerlink" title="申请New Bing"></a>申请New Bing</h2><blockquote>
+<p>申请地址 ： <a href="https://bing.com/new">https://bing.com/new</a></p>
+</blockquote>
+<p>由于某些原因，国内无法直接访问 new bing 。</p>
+<ol>
+<li>通过科学上网方式直接访问</li>
+<li>使用 HeaderEditor 插件 下载链接：<a href="https://microsoftedge.microsoft.com/addons/detail/header-editor/afopnekiinpekooejpchnkgfffaeceko">点击下载</a><br>启用插件<br>配置插件<br><img src="/imgs/t.png" alt="配置截图" title="配置截图"><br><img src="/imgs/posts/newbing-header-editor.png" alt="配置截图" title="配置截图"><br>配置参数<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 匹配规则</span><br><span class="line">^http(s?)://(.*).bing\.com/(.*)</span><br><span class="line"></span><br><span class="line">// 头名称</span><br><span class="line">x-forwarded-for</span><br><span class="line"></span><br><span class="line">// 头内容</span><br><span class="line">8.8.8.8   或者  4.2.2.2</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="老账户无法加入waitlist"><a href="#老账户无法加入waitlist" class="headerlink" title="老账户无法加入waitlist"></a>老账户无法加入waitlist</h2><p>老的微软账户是不是提示<br><img src="/imgs/posts/newbing.png" alt="new bing 申请waitlist错误" title="new bing 申请waitlist错误"></p>
+<ol>
+<li><p>使用科学上网地址非国内地址，申请一个新的微软账户加入 new bing <a href="https://www.bing.com/new">waitlist</a></p>
+</li>
+<li><p>继续使用老账户申请</p>
+<blockquote>
+<p>如果在申请 new bing waitlist 等候名单遇到 错误提示信息</p>
+</blockquote>
+</li>
+<li><p>出错了，请重试</p>
+</li>
+<li><p>Something went wrong, please try again later.</p>
+</li>
+</ol>
+<p>原因就是 Microsoft rewards 已经在国内使用过了，账户被禁用了。</p>
+<p>解决方案如下：</p>
+<ol>
+<li>退出Bing Rewards计划: <a href="https://rewards.bing.com/optout">https://rewards.bing.com/optout</a> ,请注意退出计划会清除积分</li>
+<li>重新加入Bing Rewards计划: <a href="https://rewards.bing.com/">https://rewards.bing.com</a></li>
+<li>清除cookie后，再次申请加入新版必应( <a href="https://www.bing.com/new">https://www.bing.com/new</a> )，即可正常加入候补列表</li>
+</ol>
+<h2 id="New-Bing-上手体验"><a href="#New-Bing-上手体验" class="headerlink" title="New Bing 上手体验"></a>New Bing 上手体验</h2><blockquote>
+<p>使用体验非常好，尤其是上下文语境做的让人非常舒服，总之是一个合格而且优秀的助手<br>推荐下载 <a href="https://www.microsoftedgeinsider.com/zh-cn/download/dev">Edge-Dev</a> 体验效果非常好</p>
+</blockquote>
+<p><img src="/imgs/posts/newbing.gif" alt="Edge-Dev new bing 使用预览" title="Edge-Dev new bing 使用预览"></p>
+<blockquote>
+<p>网页中使用bing-chat</p>
+</blockquote>
+<p><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx">https://www.bing.com/search?q=Bing+AI&amp;showconv=1&amp;FORM=hpcodx</a></p>
+<p><img src="/imgs/posts/newbing.png" alt="web new bing 使用预览" title="web new bing 使用预览"></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
+        <tag>bing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>New Bing 国内正常访问方法</title>
     <url>/2023/03/18/ai/new-bing-visit/index/</url>
     <content><![CDATA[<blockquote>
@@ -680,34 +680,24 @@
       </tags>
   </entry>
   <entry>
-    <title>博客网站添加FPS显示</title>
-    <url>/2023/06/30/hexo/hexo-fps/index/</url>
-    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
+    <title>Hexo添加RSS订阅</title>
+    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
+    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
 <blockquote>
-<p>fps.js</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>fps.css</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
+<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
 </blockquote>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
+        <tag>demo</tag>
         <tag>Hexo</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -752,6 +742,37 @@
       </tags>
   </entry>
   <entry>
+    <title>博客网站添加FPS显示</title>
+    <url>/2023/06/30/hexo/hexo-fps/index/</url>
+    <content><![CDATA[<h2 id="创建自定义文件JS-CSS"><a href="#创建自定义文件JS-CSS" class="headerlink" title="创建自定义文件JS,CSS"></a>创建自定义文件JS,CSS</h2><p>在hexo博客根目录新建 <code>source/custom/fps/fps.js</code>和<code>source/custom/fps/fps.css</code><br>文件内容分别如下</p>
+<blockquote>
+<p>fps.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="literal">undefined</span> || <span class="variable language_">window</span>.<span class="property">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;fpson&quot;</span>) == <span class="string">&quot;1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> rAF = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">requestAnimationFrame</span> ||</span><br><span class="line">            <span class="variable language_">window</span>.<span class="property">webkitRequestAnimationFrame</span> ||</span><br><span class="line">            <span class="keyword">function</span> (<span class="params">callback</span>) &#123;</span><br><span class="line">                <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;();</span><br><span class="line">    <span class="keyword">var</span> frame = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> allFrameCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> lastFameTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">var</span> loop = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">var</span> fs = (now - lastFameTime);</span><br><span class="line">        <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="number">1000</span> / fs);</span><br><span class="line"></span><br><span class="line">        lastFameTime = now;</span><br><span class="line">        <span class="comment">// 不置 0，在动画的开头及结尾记录此值的差值算出 FPS</span></span><br><span class="line">        allFrameCount++;</span><br><span class="line">        frame++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (now &gt; <span class="number">1000</span> + lastTime) &#123;</span><br><span class="line">            <span class="keyword">var</span> fps = <span class="title class_">Math</span>.<span class="title function_">round</span>((frame * <span class="number">1000</span>) / (now - lastTime));</span><br><span class="line">            <span class="keyword">if</span> (fps &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#bd0000&quot;&gt;卡成ppt🤢&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">15</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:red&quot;&gt;电竞级帧率😖&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">25</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:orange&quot;&gt;有点难受😨&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt; <span class="number">35</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#9338e6&quot;&gt;不太流畅🙄&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fps &lt;= <span class="number">45</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#08b7e4&quot;&gt;还不错哦😁&lt;/span&gt;`</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> kd = <span class="string">`&lt;span style=&quot;color:#39c5bb&quot;&gt;十分流畅🤣&lt;/span&gt;`</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">innerHTML</span> = <span class="string">`FPS:<span class="subst">$&#123;fps&#125;</span> <span class="subst">$&#123;kd&#125;</span>`</span>;</span><br><span class="line">            frame = <span class="number">0</span>;</span><br><span class="line">            lastTime = now;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">rAF</span>(loop);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">loop</span>();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;fps&quot;</span>).<span class="property">style</span> = <span class="string">&quot;display:none!important&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>fps.css</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 帧率检测 */</span></span><br><span class="line"><span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="comment">/* 指定位置 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">88px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1919810</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;light&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> <span class="selector-id">#fps</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.72</span>);</span><br><span class="line">    backdrop-<span class="attribute">filter</span>: <span class="built_in">var</span>(--backdrop-filter);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引入自定义资源文件"><a href="#引入自定义资源文件" class="headerlink" title="引入自定义资源文件"></a>引入自定义资源文件</h2><p>在<code>hexo</code>主题的配置文件中引入上面新建的<code>fps.js</code>和<code>fps.css</code>文件即可。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># 自定义css</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># FPS显示</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;span</span> <span class="string">id=&quot;fps&quot;&gt;&lt;/span&gt;</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/custom/fps/fps.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom/fps/fps.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编译运行预览效果"><a href="#编译运行预览效果" class="headerlink" title="编译运行预览效果"></a>编译运行预览效果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl | hexo g | hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>本文参考：<br><a href="https://www.fomal.cc/posts/d739261b.html">https://www.fomal.cc/posts/d739261b.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客使用gulp插件压缩网站资源</title>
     <url>/2023/06/30/hexo/hexo-gulp/index/</url>
     <content><![CDATA[<p><code>gulp</code>能够帮助用户自动压缩静态资源，配合各类下属插件，能够压缩包括css、js、html乃至各类格式的图片文件。（图片文件的压缩往往只能节省几十KB，效果远远不如imagine、tinypng等压缩方式，所以此处不再写使用gulp压缩图片的内容）。</p>
@@ -775,53 +796,52 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo添加RSS订阅</title>
-    <url>/2023/06/13/hexo/hexo-add-rss/index/</url>
-    <content><![CDATA[<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+    <title>我的第一个域名</title>
+    <url>/2023/04/13/notes/my-first-domain/index/</url>
+    <content><![CDATA[<blockquote>
+<p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/">geekswg.top</a><br>用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
+</blockquote>
+<span id="more"></span>
 
-<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><p><code>_config.yml</code>文件中添加如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment"># npm install --save hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rss</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">rss.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment">#content_limit: 1024</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">/imgs/avatar.webp</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编译测试"><a href="#编译测试" class="headerlink" title="编译测试"></a>编译测试</h2><p>如本站 <a href="/rss.xml">RSS订阅</a></p>
+<p>前端时间苦于，github自带的<a href="https://geekswg.github.io/">Github Pages</a> 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。</p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>域名购买商 ：<a href="https://www.namesilo.com/">Namesilo</a></p>
 <blockquote>
-<p><code>注意</code> : 本地预览时，可用rss.xml里面的内容可能会出现乱码，但是推送到Github-Pages后不会乱码，本地乱码原因暂时未知。</p>
+<p>Bing搜索了好长时间，选择他的原因。</p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
-    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
-    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
-<blockquote>
-<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
-<blockquote>
-<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
-</blockquote>
-<blockquote>
-<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
-</blockquote>
-<p>本文参考：</p>
+<ol>
+<li>便宜，相对稳定靠谱，</li>
+<li>国外域名，不用备案。</li>
+<li>支持支付宝支付方式。</li>
+</ol>
+<h2 id="域名使用"><a href="#域名使用" class="headerlink" title="域名使用"></a>域名使用</h2><p>使用<a href="https://dash.cloudflare.com/">CloudFlare-DNS域名解析</a></p>
+<ol>
+<li>登录<a href="https://dash.cloudflare.com/">CloudFlare控制台</a>, 点击<code>网站</code>，添加网站，按照指引一步步操作即可。</li>
+<li>登录 Namesilo，添加dns记录，绑定成功后，即可使用。</li>
+</ol>
+<h3 id="子域名管理"><a href="#子域名管理" class="headerlink" title="子域名管理"></a>子域名管理</h3><p>Namesilo供应商可支持50个子域名。<br>使用CloudFlare管理子域名。<br>在CloudFlare的控制台主页，<code>网站</code> 选择自己已经绑定的域名，点击 <code>DNS</code> ,然后 <code>添加记录</code>。<br>常用的两种类型：</p>
 <ul>
-<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
+<li>A     : 用于绑定IP的。</li>
+<li>CNAME : 用于绑定名称的。不过，名称可以是任意大写字母或空格字符的完整子串</li>
 </ul>
+<blockquote>
+<p>绑定步骤主要两个步骤</p>
+</blockquote>
+<ol>
+<li>在CloudFlare DNS中添加CNAME类型记录（这个最常用）</li>
+<li>在你需要自定义域名的地方，输入第一步骤中你生成的子域名，然后按照提示一步步绑定即可成功</li>
+<li>成功后需要几分钟更新DNS记录，大概十分钟后，即可正常访问你的子域名了。</li>
+</ol>
+<p>如我的子域名：<br><a href="https://hexo.geekswg.top/">hexo.geekswg.top</a><br><a href="https://blog.geekswg.top/">blog.geekswg.top</a></p>
+<h2 id="CloudFlare加速"><a href="#CloudFlare加速" class="headerlink" title="CloudFlare加速"></a>CloudFlare加速</h2><p>CloudFlare控制台的pages页面操作简单<br>传送地址： <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> 选择<code>Workers和Pages</code>服务。<br><code>创建应用程序</code>，<code>Pages</code></p>
+<h2 id="Netlify加速"><a href="#Netlify加速" class="headerlink" title="Netlify加速"></a>Netlify加速</h2><p>Netlify加速Github-Pags 操作简单，目前国内可直接访问<br>传送地址： <a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
+<h2 id="图床使用"><a href="#图床使用" class="headerlink" title="图床使用"></a>图床使用</h2><p><a href="https://picx.xpoet.cn/">Pixc</a>超级好用的免费图床，Github仓库作为存储，CDN加速。<br>传送地址： <a href="https://picx.xpoet.cn/">https://picx.xpoet.cn/</a></p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>notes</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Twikoo</tag>
+        <tag>笔记</tag>
+        <tag>建站</tag>
       </tags>
   </entry>
   <entry>
@@ -885,6 +905,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-留言板全屏弹幕滚动-Twikoo</title>
+    <url>/2023/06/13/hexo/hexo-guestbook-barrager/index/</url>
+    <content><![CDATA[<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><p>直接在需要显示的全屏弹幕页面的<code>md文件</code>中直接添加如下代码<br>只需要修改openBarrage(your-twikoo-server-url)地址。<br>js全部本地化保存到<code>source/custom/barrage/</code>下</p>
+<blockquote>
+<p>本博客完全开源：<a href="https://github.com/gavinblog/blog-anzhiyu">仓库源码地址</a></p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery_3.6.0_jquery.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/jquery.barrager-1.1.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/custom/barrage/barrage-twikoo.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span></span><br><span class="line">/* 评论弹幕 <span class="emphasis">*/</span></span><br><span class="line"><span class="emphasis">.barrage &#123;</span></span><br><span class="line"><span class="emphasis">    position: fixed;</span></span><br><span class="line"><span class="emphasis">    right: -500px;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    width: fit-content;</span></span><br><span class="line"><span class="emphasis">    z-index: 9999</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box &#123;</span></span><br><span class="line"><span class="emphasis">    display: flex;</span></span><br><span class="line"><span class="emphasis">    background-color: rgba(0, 0, 0, .5);</span></span><br><span class="line"><span class="emphasis">    padding-right: 8px;</span></span><br><span class="line"><span class="emphasis">    height: 40px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 25px;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    margin-top: 4px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 4px;</span></span><br><span class="line"><span class="emphasis">    width: 32px;</span></span><br><span class="line"><span class="emphasis">    height: 32px;</span></span><br><span class="line"><span class="emphasis">    border-radius: 50%;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box .portrait img &#123;</span></span><br><span class="line"><span class="emphasis">    width: 100%;</span></span><br><span class="line"><span class="emphasis">    height: 100%;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a &#123;</span></span><br><span class="line"><span class="emphasis">    display: inline-block;</span></span><br><span class="line"><span class="emphasis">    white-space: nowrap;</span></span><br><span class="line"><span class="emphasis">    max-width: 25rem;</span></span><br><span class="line"><span class="emphasis">    margin-right: 2px;</span></span><br><span class="line"><span class="emphasis">    font-size: 14px;</span></span><br><span class="line"><span class="emphasis">    line-height: 40px;</span></span><br><span class="line"><span class="emphasis">    margin-left: 10px;</span></span><br><span class="line"><span class="emphasis">    overflow: hidden;</span></span><br><span class="line"><span class="emphasis">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="emphasis">    text-decoration: none;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis">.barrage_box div.p a:hover &#123;</span></span><br><span class="line"><span class="emphasis">    text-decoration: underline;</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&gt; 欢迎留言</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:openBarrage();&#x27;,&quot;开启弹幕&quot;,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% btn &#x27;javascript:closeBarrage();&#x27;,关闭弹幕,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %&#125;</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;loading&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis">//location.reload();</span></span><br><span class="line"><span class="emphasis">let lastUrl = window.location.href || &#x27;xx&#x27;;</span></span><br><span class="line"><span class="emphasis">//alert(&#x27;lastUrl =&#x27;+ lastUrl);</span></span><br><span class="line"><span class="emphasis">if ( lastUrl.indexOf(&#x27;/guestbook&#x27;)&lt; 0 )&#123;</span></span><br><span class="line"><span class="emphasis">    //alert(&#x27;reload&#x27;)</span></span><br><span class="line"><span class="emphasis">    setTimeout(function()&#123;location.reload();&#125;,100);</span></span><br><span class="line"><span class="emphasis">&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">window.addEventListener(&#x27;load&#x27;, (event) =&gt; &#123;</span></span><br><span class="line"><span class="emphasis">    // twikooEnVid twikoo服务地址获取所有弹幕</span></span><br><span class="line"><span class="emphasis">    openBarrage(&#x27;https://twikoo.geekswg.top/&#x27;);</span></span><br><span class="line"><span class="emphasis">&#125;);</span></span><br><span class="line"><span class="emphasis"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p><a href="/guestbook/">我的留言板-全屏弹幕</a></p>
+<blockquote>
+<p>已经完善,添加开启和关闭弹幕功能按钮。</p>
+</blockquote>
+<blockquote>
+<p><del>目前已知问题，无法关闭弹幕，别的页面也会一直显示全屏滚动的弹幕。</del></p>
+</blockquote>
+<p>本文参考：</p>
+<ul>
+<li><a href="https://blog.leonus.cn/2022/barrage.html">弹幕升级版——全屏弹幕</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Twikoo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Funny 404 Gif</title>
     <url>/2023/05/27/share/funny-404-gif/index/</url>
     <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
@@ -939,6 +988,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Share Cursor</title>
+    <url>/2023/03/23/share/share-cursor/index/</url>
+    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
+<blockquote>
+<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
+</blockquote>
+<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
+</li>
+<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
+</li>
+</ol>
+<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
+<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
+</li>
+<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
+</li>
+</ul>
+<blockquote>
+<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
+</blockquote>
+<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>史上最牛Hello World</title>
     <url>/2023/06/04/share/hello-world-js/index/</url>
     <content><![CDATA[<blockquote>
@@ -954,6 +1037,36 @@
         <tag>分享</tag>
         <tag>js</tag>
         <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Electron是什么？</title>
+    <url>/2023/03/26/ai/aigen/cursor-electron/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
+</blockquote>
+<span id="more"></span>
+<blockquote>
+<p><code>Ctrl + K</code>: 使用md写一篇管理electron的博文，并且告诉我如何学习他。</p>
+</blockquote>
+<h2 id="管理Electron"><a href="#管理Electron" class="headerlink" title="管理Electron"></a>管理Electron</h2><p>Electron是一个流行的框架，用于构建跨平台的桌面应用程序。在本文中，我们将讨论如何管理Electron应用程序。</p>
+<h2 id="安装Electron"><a href="#安装Electron" class="headerlink" title="安装Electron"></a>安装Electron</h2><p>要开始使用Electron，您需要安装它。您可以使用npm安装Electron：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install electron --save-dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建Electron应用程序"><a href="#创建Electron应用程序" class="headerlink" title="创建Electron应用程序"></a>创建Electron应用程序</h2><p>要创建Electron应用程序，请使用Electron Quick Start模板。您可以从Electron官方网站下载模板，或者使用以下命令从GitHub克隆模板：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/electron/electron-quick-start</span><br></pre></td></tr></table></figure>
+
+<h2 id="学习Electron"><a href="#学习Electron" class="headerlink" title="学习Electron"></a>学习Electron</h2><p>要学习Electron，您可以阅读Electron官方文档。官方文档提供了有关Electron的详细信息，包括如何使用Electron构建应用程序的指南和教程。</p>
+<p>您还可以参考Electron社区中的其他资源，例如Electron应用程序的示例和教程。这些资源可以帮助您更深入地了解Electron，并学习如何使用它构建更复杂的应用程序。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在本文中，我们讨论了如何管理Electron应用程序，并提供了一些学习Electron的资源。希望这些信息对您有所帮助！</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
+        <tag>Electron</tag>
       </tags>
   </entry>
   <entry>
@@ -2363,119 +2476,6 @@
         <tag>Hexo-Theme-Anzhiyu</tag>
         <tag>Hexo</tag>
         <tag>转载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一个域名</title>
-    <url>/2023/04/13/notes/my-first-domain/index/</url>
-    <content><![CDATA[<blockquote>
-<p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/">geekswg.top</a><br>用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>
-<span id="more"></span>
-
-<p>前端时间苦于，github自带的<a href="https://geekswg.github.io/">Github Pages</a> 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。</p>
-<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>域名购买商 ：<a href="https://www.namesilo.com/">Namesilo</a></p>
-<blockquote>
-<p>Bing搜索了好长时间，选择他的原因。</p>
-</blockquote>
-<ol>
-<li>便宜，相对稳定靠谱，</li>
-<li>国外域名，不用备案。</li>
-<li>支持支付宝支付方式。</li>
-</ol>
-<h2 id="域名使用"><a href="#域名使用" class="headerlink" title="域名使用"></a>域名使用</h2><p>使用<a href="https://dash.cloudflare.com/">CloudFlare-DNS域名解析</a></p>
-<ol>
-<li>登录<a href="https://dash.cloudflare.com/">CloudFlare控制台</a>, 点击<code>网站</code>，添加网站，按照指引一步步操作即可。</li>
-<li>登录 Namesilo，添加dns记录，绑定成功后，即可使用。</li>
-</ol>
-<h3 id="子域名管理"><a href="#子域名管理" class="headerlink" title="子域名管理"></a>子域名管理</h3><p>Namesilo供应商可支持50个子域名。<br>使用CloudFlare管理子域名。<br>在CloudFlare的控制台主页，<code>网站</code> 选择自己已经绑定的域名，点击 <code>DNS</code> ,然后 <code>添加记录</code>。<br>常用的两种类型：</p>
-<ul>
-<li>A     : 用于绑定IP的。</li>
-<li>CNAME : 用于绑定名称的。不过，名称可以是任意大写字母或空格字符的完整子串</li>
-</ul>
-<blockquote>
-<p>绑定步骤主要两个步骤</p>
-</blockquote>
-<ol>
-<li>在CloudFlare DNS中添加CNAME类型记录（这个最常用）</li>
-<li>在你需要自定义域名的地方，输入第一步骤中你生成的子域名，然后按照提示一步步绑定即可成功</li>
-<li>成功后需要几分钟更新DNS记录，大概十分钟后，即可正常访问你的子域名了。</li>
-</ol>
-<p>如我的子域名：<br><a href="https://hexo.geekswg.top/">hexo.geekswg.top</a><br><a href="https://blog.geekswg.top/">blog.geekswg.top</a></p>
-<h2 id="CloudFlare加速"><a href="#CloudFlare加速" class="headerlink" title="CloudFlare加速"></a>CloudFlare加速</h2><p>CloudFlare控制台的pages页面操作简单<br>传送地址： <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> 选择<code>Workers和Pages</code>服务。<br><code>创建应用程序</code>，<code>Pages</code></p>
-<h2 id="Netlify加速"><a href="#Netlify加速" class="headerlink" title="Netlify加速"></a>Netlify加速</h2><p>Netlify加速Github-Pags 操作简单，目前国内可直接访问<br>传送地址： <a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
-<h2 id="图床使用"><a href="#图床使用" class="headerlink" title="图床使用"></a>图床使用</h2><p><a href="https://picx.xpoet.cn/">Pixc</a>超级好用的免费图床，Github仓库作为存储，CDN加速。<br>传送地址： <a href="https://picx.xpoet.cn/">https://picx.xpoet.cn/</a></p>
-]]></content>
-      <categories>
-        <category>notes</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
-</blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Electron是什么？</title>
-    <url>/2023/03/26/ai/aigen/cursor-electron/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这一片关于ChatGPT的文章，由AI工具Cursor写作<br>作者: <a href="https://www.cursor.so/">Cursor</a></p>
-</blockquote>
-<span id="more"></span>
-<blockquote>
-<p><code>Ctrl + K</code>: 使用md写一篇管理electron的博文，并且告诉我如何学习他。</p>
-</blockquote>
-<h2 id="管理Electron"><a href="#管理Electron" class="headerlink" title="管理Electron"></a>管理Electron</h2><p>Electron是一个流行的框架，用于构建跨平台的桌面应用程序。在本文中，我们将讨论如何管理Electron应用程序。</p>
-<h2 id="安装Electron"><a href="#安装Electron" class="headerlink" title="安装Electron"></a>安装Electron</h2><p>要开始使用Electron，您需要安装它。您可以使用npm安装Electron：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install electron --save-dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建Electron应用程序"><a href="#创建Electron应用程序" class="headerlink" title="创建Electron应用程序"></a>创建Electron应用程序</h2><p>要创建Electron应用程序，请使用Electron Quick Start模板。您可以从Electron官方网站下载模板，或者使用以下命令从GitHub克隆模板：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/electron/electron-quick-start</span><br></pre></td></tr></table></figure>
-
-<h2 id="学习Electron"><a href="#学习Electron" class="headerlink" title="学习Electron"></a>学习Electron</h2><p>要学习Electron，您可以阅读Electron官方文档。官方文档提供了有关Electron的详细信息，包括如何使用Electron构建应用程序的指南和教程。</p>
-<p>您还可以参考Electron社区中的其他资源，例如Electron应用程序的示例和教程。这些资源可以帮助您更深入地了解Electron，并学习如何使用它构建更复杂的应用程序。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在本文中，我们讨论了如何管理Electron应用程序，并提供了一些学习Electron的资源。希望这些信息对您有所帮助！</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>Electron</tag>
       </tags>
   </entry>
 </search>
