@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>platform</title>
-    <url>/2024/12/03/linux/platform/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1>]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2011/01/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -35,6 +23,82 @@
       <tags>
         <tag>示例</tag>
         <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>stm32 GPIO有8种状态，分为输入和输出两大类<br>输入：<br>  上拉输入<br>  下拉输入<br>  浮空输入<br>  复用输入<br>输出：<br>  推挽输出<br>  开漏输出<br>  复用推挽<br>  复用开漏</p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux应用</category>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分享VSCode插件</title>
+    <url>/2023/03/04/share/share-vscode-plugins/</url>
+    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
+</blockquote>
+<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
+<span id="more"></span>
+<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
+<thead>
+<tr>
+<th align="left"><center><strong>插件链接</strong></center></th>
+<th align="left"><strong>描述</strong></th>
+<th align="left"><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
+<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
+<td align="left">国产，免费</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
+<td align="left">AI-assisted development</td>
+<td align="left">微软自家的</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
+<td align="left">Your AI pair programmer</td>
+<td align="left">代码能力比较强</td>
+</tr>
+</tbody></table>
+<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
+<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">链接</th>
+<th align="left">描述</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
+<td align="left">View git log, file history, compare branches or commits</td>
+<td align="left">查看git提交记录和比较提交信息</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>vscode</tag>
+        <tag>plugins</tag>
       </tags>
   </entry>
   <entry>
@@ -155,79 +219,15 @@
       </tags>
   </entry>
   <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>stm32 GPIO有8种状态，分为输入和输出两大类<br>输入：<br>  上拉输入<br>  下拉输入<br>  浮空输入<br>  复用输入<br>输出：<br>  推挽输出<br>  开漏输出<br>  复用推挽<br>  复用开漏</p>
-]]></content>
+    <title>platform</title>
+    <url>/2024/12/03/linux/platform/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1>]]></content>
       <categories>
-        <category>STM32</category>
-        <category>linux应用</category>
         <category>linux驱动</category>
       </categories>
       <tags>
         <tag>嵌入式</tag>
         <tag>Linux</tag>
-        <tag>STM32</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分享VSCode插件</title>
-    <url>/2023/03/04/share/share-vscode-plugins/</url>
-    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
-<blockquote>
-<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
-</blockquote>
-<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
-<span id="more"></span>
-<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
-<thead>
-<tr>
-<th align="left"><center><strong>插件链接</strong></center></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
-<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
-<td align="left">国产，免费</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
-<td align="left">AI-assisted development</td>
-<td align="left">微软自家的</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
-<td align="left">Your AI pair programmer</td>
-<td align="left">代码能力比较强</td>
-</tr>
-</tbody></table>
-<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
-<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">链接</th>
-<th align="left">描述</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
-<td align="left">View git log, file history, compare branches or commits</td>
-<td align="left">查看git提交记录和比较提交信息</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>vscode</tag>
-        <tag>plugins</tag>
       </tags>
   </entry>
   <entry>
@@ -287,6 +287,40 @@
         <tag>分享</tag>
         <tag>js</tag>
         <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Share Cursor</title>
+    <url>/2023/03/23/share/share-cursor/index/</url>
+    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
+<blockquote>
+<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
+</blockquote>
+<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
+</li>
+<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
+</li>
+</ol>
+<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
+<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
+</li>
+<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
+</li>
+</ul>
+<blockquote>
+<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
+</blockquote>
+<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
+        <tag>ChatGPT</tag>
       </tags>
   </entry>
   <entry>
@@ -1696,40 +1730,6 @@
         <tag>转载</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
-</blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
       </tags>
   </entry>
 </search>
