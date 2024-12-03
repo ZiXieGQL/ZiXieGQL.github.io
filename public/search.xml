@@ -26,19 +26,38 @@
       </tags>
   </entry>
   <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>stm32 GPIO有8种状态，分为输入和输出两大类<br>输入：<br>  上拉输入<br>  下拉输入<br>  浮空输入<br>  复用输入<br>输出：<br>  推挽输出<br>  开漏输出<br>  复用推挽<br>  复用开漏</p>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><h2 id="一、驱动的分隔与分离"><a href="#一、驱动的分隔与分离" class="headerlink" title="一、驱动的分隔与分离"></a>一、驱动的分隔与分离</h2><p> &emsp;linux系统是一个很庞大的系统，并且已经适配了许多开发板，这些开发板或多或少都有一些外设资源，比如LED，IIC总线等，这些资源都有一些地址信息，像是LED控制寄存器的地址，如果把这些和硬件相关的数据全都硬编码进驱动程序中，此时如果LED的控制寄存器地址更改了，那这些驱动程序中的硬件数据也需要进行相应修改，毫无疑问，这对程序维护是相当致命的，因此需要将驱动和硬件数据分开编码，将硬件数据全部存在一颗”树”上，这棵树就是<em><strong>设备树</strong></em>了，当然这部分内容属于设备树的范畴，看样子和platform总线没有什么关系，但是这里边存在一个思想，那就是<em><strong>驱动的分隔与分离</strong></em>，将驱动代码和硬件数据分开编码，当硬件数据改变时只需要更改对应设备树的数据，而无需更改驱动程序，使得程序维护变得不那么令人恐惧。<br> &emsp; 假如现在有三个平台 A、B 和 C,这三个平台(这里的平台说的是 SOC)上都有 MPU6050 这个 I2C 接口的六轴传感器,按照写裸机 I2C 驱动的时候的思路,每个平台都有一个 MPU6050的驱动,因此编写出来的最简单的驱动框架如下图所示:<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160036.png" alt="20241203160036"></p>
+<center><font size=2>图1 传统的IIC驱动框架</font></center>  
+
+<p> &emsp;从上图可以看出，无论是哪一个平台A，B或C，都需要编写一个主机驱动，但是设备驱动没必要都写一遍，因为MPU6050都是一样的，完全可以共用一套代码，但是如果此时又来了几个IIC设备，比如四线OLED什么的，那还得需要再写一套OLED的设备驱动代码，但是真的需要再写一套IIC驱动OLED的代码吗？为什么不可以只写一套IIC驱动的代码，既然都是IIC通信，那通信的逻辑就绝对一样，像是读写一个字节，开始信号，结束信号等，他们的时序逻辑是完全一样的，唯一不同的是驱动的设备不同，需要读写的地址不同等等，那是不是就可以将这些和设备地址有关的数据单独编码为设备驱动，将IIC总线编码为总线驱动，将主机上的驱动代码编码为主机代码，这样的话，主机驱动先去读取设备的信息，然后通过总线驱动去控制设备，框图如图2所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160117.png" alt="20241203160117"><br> <center><font size=2>图2 分隔后的驱动框架</font></center>  </p>
+<p>  &emsp;这个就是驱动的分隔,也就是将主机驱动和设备驱动分隔开来,比如 I2C、SPI 等等都会采用驱动分隔的方式来简化驱动的开发。在实际的驱动开发中,一般 I2C 主机控制器驱动已经由半导体厂家编写好了,而设备驱动一般也由设备器件的厂家编写好了,我们只需要提供设备信息即可,比如 I2C 设备的话提供设备连接到了哪个 I2C 接口上,I2C 的速度是多少等等。相当于将设备信息从设备驱动中剥离开来,驱动使用标准方法去获取到设备信息(比如从设备树中获取到设备信息),然后根据获取到的设备信息来初始化设备。 这样就相当于驱动只负责驱动,设备只负责设备,想办法将两者进行匹配即可。这个就是 Linux 中的总线(bus)、驱动(driver)和设备(device)模型,也就是常说的驱动分离。总线就是驱动和设备信息的月老,负责给两者牵线搭桥，如下图3所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160134.png" alt="20241203160134"><br>   <center><font size=2>图3 Linux 总线、驱动和设备模式</font></center>  </p>
+<p>  &emsp;当我们向系统注册一个驱动的时候,总线就会在右侧的设备中查找,看看有没有与之匹配的设备,如果有的话就将两者联系起来。同样的,当向系统中注册一个设备的时候,总线就会在左侧的驱动中查找看有没有与之匹配的设备,有的话也联系起来。Linux 内核中大量的驱动程序都采用总线、驱动和设备模式,我们一会要重点讲解的 platform 驱动就是这一思想下的产物。</p>
 ]]></content>
       <categories>
-        <category>STM32</category>
-        <category>linux应用</category>
         <category>linux驱动</category>
       </categories>
       <tags>
         <tag>嵌入式</tag>
-        <tag>STM32</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
+<ul>
+<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
+<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
+</ul>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
       </tags>
   </entry>
   <entry>
@@ -102,48 +121,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Funny 404 Gif</title>
-    <url>/2023/05/27/share/funny-404-gif/index/</url>
-    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
-<blockquote>
-<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
-<span id="more"></span>
-<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
-<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
-<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>404</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ShareAnything-分享一切</title>
+    <title>ShareAnything-分享一�?</title>
     <url>/2023/03/01/share/share/</url>
     <content><![CDATA[<blockquote>
 <p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
@@ -151,30 +129,31 @@
 <blockquote>
 <p>分享 音乐、软件、网站等一切我觉得好玩或者有用的资源</p>
 </blockquote>
-<p>软件都是我用过的，大家可以放心食用，不给任何产品推广。</p>
+<p>软件都是我用过的，大家可以放心食用，不给任何产品推广�?</p>
 <span id="more"></span>
-<h2 id="music-favor-收藏"><a href="#music-favor-收藏" class="headerlink" title="music-favor-收藏"></a>music-favor-收藏</h2><h2 id="Free-Software-软件"><a href="#Free-Software-软件" class="headerlink" title="Free-Software-软件"></a>Free-Software-软件</h2><p>分享一些用过就离不开的开源软件或者免费的软件，免费且实用。<br>注意：并不是所有的开源软件都是免费的，留意开源协议即可。</p>
+
+<h2 id="music-favor-收藏"><a href="#music-favor-收藏" class="headerlink" title="music-favor-收藏"></a>music-favor-收藏</h2><h2 id="Free-Software-软件"><a href="#Free-Software-软件" class="headerlink" title="Free-Software-软件"></a>Free-Software-软件</h2><p>分享一些用过就离不开的开源软件或者免费的软件，免费且实用�?<br>注意：并不是所有的开源软件都是免费的，留意开源协议即可�?</p>
 <table>
 <thead>
 <tr>
-<th align="left"><center><strong>链接</strong></center></th>
+<th align="left"><code>&lt;center&gt;</code><strong>链接</strong><code>&lt;/center&gt;</code></th>
 <th align="left"><strong>描述</strong></th>
 <th align="left"><strong>备注</strong></th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left"><a href="https://otp.landian.vip/zh-cn/download.html">Office部署工具</a></td>
-<td align="left">一个强大且实用的 Office 部署工具。系统要求：Windows 7 SP1 或更高版本，不支持其他操作系统（例如 Linux 或 macOS）。</td>
+<td align="left">一个强大且实用�? Office 部署工具。系统要求：Windows 7 SP1 或更高版本，不支持其他操作系统（例如 Linux �? macOS）。</td>
 <td align="left">推荐安装绿色免费好管理</td>
 </tr>
 <tr>
 <td align="left"><a href="https://verycapture.com/cn/download.html">verycapture</a></td>
 <td align="left">VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务</td>
-<td align="left">截图、免费、</td>
+<td align="left">截图、免费�?</td>
 </tr>
 <tr>
 <td align="left"><a href="https://lxmusic.toside.cn/">音乐-lx-music</a></td>
-<td align="left">一个免费&amp;开源的音乐查找工具</td>
+<td align="left">一个免�?&amp;开源的音乐查找工具</td>
 <td align="left">手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载</td>
 </tr>
 <tr>
@@ -205,7 +184,7 @@
 <tr>
 <td align="left"><a href="https://www.virtualbox.org/">VirtualBox</a></td>
 <td align="left">VirtualBox is a powerful x86 and AMD64&#x2F;Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 3. See “About VirtualBox” for an introduction.</td>
-<td align="left">Oracle旗下免费虚拟机软件,小巧，扔掉VM吧</td>
+<td align="left">Oracle旗下免费虚拟机软�?,小巧，扔掉VM�?</td>
 </tr>
 </tbody></table>
 <h2 id="apps-安卓软件"><a href="#apps-安卓软件" class="headerlink" title="apps-安卓软件"></a>apps-安卓软件</h2><blockquote>
@@ -220,25 +199,25 @@
 </thead>
 <tbody><tr>
 <td align="left"><a href="https://share.weiyun.com/s7FnuI6E">闪电侠</a></td>
-<td align="left">闪电侠-无广告免费手机影视盒子软件，自带影视源</td>
+<td align="left">闪电�?-无广告免费手机影视盒子软件，自带影视源</td>
 <td align="left">别再用爱优腾的vip超级vip了</td>
 </tr>
 <tr>
 <td align="left"><a href="http://饭太硬.ga/">TVBox类影视软件</a></td>
-<td align="left">开源壳子 TVbox相关免费资源推荐，免费影视的软件</td>
+<td align="left">开源壳�? TVbox相关免费资源推荐，免费影视的软件</td>
 <td align="left">各种vip各种套路限制</td>
 </tr>
 </tbody></table>
 </blockquote>
 <h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p>👉 <a href="http://geekswg.js.cool/website/" title="网站收藏">点击这里查看</a></p>
-<h2 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h2><h3 id="nbtab"><a href="#nbtab" class="headerlink" title="nbtab"></a>nbtab</h3><blockquote>
-<p>简约不简单，浏览器tab页<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp" alt="230330-nbtab" title="nbtab"></p>
+<h2 id="浏览器插�"><a href="#浏览器插�" class="headerlink" title="浏览器插�?"></a>浏览器插�?</h2><h3 id="nbtab"><a href="#nbtab" class="headerlink" title="nbtab"></a>nbtab</h3><blockquote>
+<p>简约不简单，浏览器tab�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp" alt="230330-nbtab" title="nbtab"></p>
 </blockquote>
 <h3 id="wetab"><a href="#wetab" class="headerlink" title="wetab"></a>wetab</h3><blockquote>
-<p>wetab, chatgpt组件非常好。<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp" alt="230330-wetab" title="wetab"></p>
+<p>wetab, chatgpt组件非常好�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp" alt="230330-wetab" title="wetab"></p>
 </blockquote>
 <h3 id="itab"><a href="#itab" class="headerlink" title="itab"></a>itab</h3><blockquote>
-<p>功能丰富，插件多。<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp" alt="230330-itab" title="itab"></p>
+<p>功能丰富，插件多�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp" alt="230330-itab" title="itab"></p>
 </blockquote>
 <h2 id="other-其他"><a href="#other-其他" class="headerlink" title="other-其他"></a>other-其他</h2><h3 id="free"><a href="#free" class="headerlink" title="free"></a>free</h3><blockquote>
 <p>v2rayN免费订阅地址:</p>
@@ -257,24 +236,6 @@
         <tag>分享</tag>
         <tag>资源</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><h2 id="一、驱动的分隔与分离"><a href="#一、驱动的分隔与分离" class="headerlink" title="一、驱动的分隔与分离"></a>一、驱动的分隔与分离</h2><p> &emsp;linux系统是一个很庞大的系统，并且已经适配了许多开发板，这些开发板或多或少都有一些外设资源，比如LED，IIC总线等，这些资源都有一些地址信息，像是LED控制寄存器的地址，如果把这些和硬件相关的数据全都硬编码进驱动程序中，此时如果LED的控制寄存器地址更改了，那这些驱动程序中的硬件数据也需要进行相应修改，毫无疑问，这对程序维护是相当致命的，因此需要将驱动和硬件数据分开编码，将硬件数据全部存在一颗”树”上，这棵树就是<em><strong>设备树</strong></em>了，当然这部分内容属于设备树的范畴，看样子和platform总线没有什么关系，但是这里边存在一个思想，那就是<em><strong>驱动的分隔与分离</strong></em>，将驱动代码和硬件数据分开编码，当硬件数据改变时只需要更改对应设备树的数据，而无需更改驱动程序，使得程序维护变得不那么令人恐惧。<br> &emsp; 假如现在有三个平台 A、B 和 C,这三个平台(这里的平台说的是 SOC)上都有 MPU6050 这个 I2C 接口的六轴传感器,按照写裸机 I2C 驱动的时候的思路,每个平台都有一个 MPU6050的驱动,因此编写出来的最简单的驱动框架如下图所示:<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160036.png" alt="20241203160036"></p>
-<center><font size=2>图1 传统的IIC驱动框架</font></center>  
-
-<p> &emsp;从上图可以看出，无论是哪一个平台A，B或C，都需要编写一个主机驱动，但是设备驱动没必要都写一遍，因为MPU6050都是一样的，完全可以共用一套代码，但是如果此时又来了几个IIC设备，比如四线OLED什么的，那还得需要再写一套OLED的设备驱动代码，但是真的需要再写一套IIC驱动OLED的代码吗？为什么不可以只写一套IIC驱动的代码，既然都是IIC通信，那通信的逻辑就绝对一样，像是读写一个字节，开始信号，结束信号等，他们的时序逻辑是完全一样的，唯一不同的是驱动的设备不同，需要读写的地址不同等等，那是不是就可以将这些和设备地址有关的数据单独编码为设备驱动，将IIC总线编码为总线驱动，将主机上的驱动代码编码为主机代码，这样的话，主机驱动先去读取设备的信息，然后通过总线驱动去控制设备，框图如图2所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160117.png" alt="20241203160117"><br> <center><font size=2>图2 分隔后的驱动框架</font></center>  </p>
-<p>  &emsp;这个就是驱动的分隔,也就是将主机驱动和设备驱动分隔开来,比如 I2C、SPI 等等都会采用驱动分隔的方式来简化驱动的开发。在实际的驱动开发中,一般 I2C 主机控制器驱动已经由半导体厂家编写好了,而设备驱动一般也由设备器件的厂家编写好了,我们只需要提供设备信息即可,比如 I2C 设备的话提供设备连接到了哪个 I2C 接口上,I2C 的速度是多少等等。相当于将设备信息从设备驱动中剥离开来,驱动使用标准方法去获取到设备信息(比如从设备树中获取到设备信息),然后根据获取到的设备信息来初始化设备。 这样就相当于驱动只负责驱动,设备只负责设备,想办法将两者进行匹配即可。这个就是 Linux 中的总线(bus)、驱动(driver)和设备(device)模型,也就是常说的驱动分离。总线就是驱动和设备信息的月老,负责给两者牵线搭桥，如下图3所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160134.png" alt="20241203160134"><br>   <center><font size=2>图3 Linux 总线、驱动和设备模式</font></center>  </p>
-<p>  &emsp;当我们向系统注册一个驱动的时候,总线就会在右侧的设备中查找,看看有没有与之匹配的设备,如果有的话就将两者联系起来。同样的,当向系统中注册一个设备的时候,总线就会在左侧的驱动中查找看有没有与之匹配的设备,有的话也联系起来。Linux 内核中大量的驱动程序都采用总线、驱动和设备模式,我们一会要重点讲解的 platform 驱动就是这一思想下的产物。</p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1684,6 +1645,47 @@
         <tag>转载</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Funny 404 Gif</title>
+    <url>/2023/05/27/share/funny-404-gif/index/</url>
+    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
+<blockquote>
+<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
+<span id="more"></span>
+<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
+<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
+<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>404</tag>
       </tags>
   </entry>
   <entry>
