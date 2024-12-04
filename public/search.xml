@@ -43,6 +43,145 @@
       </tags>
   </entry>
   <entry>
+    <title>分享VSCode插件</title>
+    <url>/2023/03/04/share/share-vscode-plugins/</url>
+    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
+</blockquote>
+<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
+<span id="more"></span>
+<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
+<thead>
+<tr>
+<th align="left"><center><strong>插件链接</strong></center></th>
+<th align="left"><strong>描述</strong></th>
+<th align="left"><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
+<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
+<td align="left">国产，免费</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
+<td align="left">AI-assisted development</td>
+<td align="left">微软自家的</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
+<td align="left">Your AI pair programmer</td>
+<td align="left">代码能力比较强</td>
+</tr>
+</tbody></table>
+<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
+<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">链接</th>
+<th align="left">描述</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
+<td align="left">View git log, file history, compare branches or commits</td>
+<td align="left">查看git提交记录和比较提交信息</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>vscode</tag>
+        <tag>plugins</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><!-- ## 一、驱动的分隔与分离 
+ &emsp;linux系统是一个很庞大的系统，并且已经适配了许多开发板，这些开发板或多或少都有一些外设资源，比如LED，IIC总线等，这些资源都有一些地址信息，像是LED控制寄存器的地址，如果把这些和硬件相关的数据全都硬编码进驱动程序中，此时如果LED的控制寄存器地址更改了，那这些驱动程序中的硬件数据也需要进行相应修改，毫无疑问，这对程序维护是相当致命的，因此需要将驱动和硬件数据分开编码，将硬件数据全部存在一颗"树"上，这棵树就是***设备树***了，当然这部分内容属于设备树的范畴，看样子和platform总线没有什么关系，但是这里边存在一个思想，那就是***驱动的分隔与分离***，将驱动代码和硬件数据分开编码，当硬件数据改变时只需要更改对应设备树的数据，而无需更改驱动程序，使得程序维护变得不那么令人恐惧。  
+ &emsp; 假如现在有三个平台 A、B 和 C,这三个平台(这里的平台说的是 SOC)上都有 MPU6050 这个 I2C 接口的六轴传感器,按照写裸机 I2C 驱动的时候的思路,每个平台都有一个 MPU6050的驱动,因此编写出来的最简单的驱动框架如下图所示:
+![20241203160036](https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160036.png)
+<center><font size=2>图1 传统的IIC驱动框架</font></center>  
+
+ &emsp;从上图可以看出，无论是哪一个平台A，B或C，都需要编写一个主机驱动，但是设备驱动没必要都写一遍，因为MPU6050都是一样的，完全可以共用一套代码，但是如果此时又来了几个IIC设备，比如四线OLED什么的，那还得需要再写一套OLED的设备驱动代码，但是真的需要再写一套IIC驱动OLED的代码吗？为什么不可以只写一套IIC驱动的代码，既然都是IIC通信，那通信的逻辑就绝对一样，像是读写一个字节，开始信号，结束信号等，他们的时序逻辑是完全一样的，唯一不同的是驱动的设备不同，需要读写的地址不同等等，那是不是就可以将这些和设备地址有关的数据单独编码为设备驱动，将IIC总线编码为总线驱动，将主机上的驱动代码编码为主机代码，这样的话，主机驱动先去读取设备的信息，然后通过总线驱动去控制设备，框图如图2所示。  
+![20241203160117](https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160117.png)
+ <center><font size=2>图2 分隔后的驱动框架</font></center>  
+
+  &emsp;这个就是驱动的分隔,也就是将主机驱动和设备驱动分隔开来,比如 I2C、SPI 等等都会采用驱动分隔的方式来简化驱动的开发。在实际的驱动开发中,一般 I2C 主机控制器驱动已经由半导体厂家编写好了,而设备驱动一般也由设备器件的厂家编写好了,我们只需要提供设备信息即可,比如 I2C 设备的话提供设备连接到了哪个 I2C 接口上,I2C 的速度是多少等等。相当于将设备信息从设备驱动中剥离开来,驱动使用标准方法去获取到设备信息(比如从设备树中获取到设备信息),然后根据获取到的设备信息来初始化设备。 这样就相当于驱动只负责驱动,设备只负责设备,想办法将两者进行匹配即可。这个就是 Linux 中的总线(bus)、驱动(driver)和设备(device)模型,也就是常说的驱动分离。总线就是驱动和设备信息的月老,负责给两者牵线搭桥，如下图3所示。
+![20241203160134](https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160134.png)
+   <center><font size=2>图3 Linux 总线、驱动和设备模式</font></center>  
+
+  &emsp;当我们向系统注册一个驱动的时候,总线就会在右侧的设备中查找,看看有没有与之匹配的设备,如果有的话就将两者联系起来。同样的,当向系统中注册一个设备的时候,总线就会在左侧的驱动中查找看有没有与之匹配的设备,有的话也联系起来。Linux 内核中大量的驱动程序都采用总线、驱动和设备模式,我们一会要重点讲解的 platform 驱动就是这一思想下的产物。  
+
+## 二、platform总线  
+ &emsp;上边提到了***总线***这个概念，像是IIC总线，SPI总线这些都是物理存在的总线，这些总线比较好理解也比较好实现，但是对于一些没有总线的设备而言，比如说LED，怎么实现驱动的分离和分层呢，这时候就需要***platform总线***了，platform总线是一个虚拟的概念，本质上是不存在的，但是可以把它想象为一条真实存在的总线，上边挂载了一些设备，比如LED，根据驱动的分离和分层思想，我们需要实现对应的主机驱动和设备驱动，设备驱动比较简单，这里只需要LED对应寄存器的地址就可以了，而主机驱动需要做的就是根据LED寄存器的信息设置相应的工作方式，实现LED亮灭的操作就可以了，而主机驱动和设备驱动这两者之间通过platfrom总线进行匹配，当两者匹配成功以后就可以实现驱动的分离和分层。  
+  &emsp; 首先先看一下linux中是怎么定义总线的，内核使用***bus_type***结构体表示总线，其定义在 *include/linux/device.h*文件中，结构体内容如下所示。 
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bus_type</span> &#123;</span></span><br><span class="line">	<span class="type">const</span> <span class="type">char</span>		*name;        <span class="comment">//总线名称</span></span><br><span class="line">	<span class="type">const</span> <span class="type">char</span>		*dev_name;    </span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">device</span>		*<span class="title">dev_root</span>;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">device_attribute</span>	*<span class="title">dev_attrs</span>;</span>	<span class="comment">/* use dev_groups instead */</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">bus_groups</span>;</span>  <span class="comment">//总线属性</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">dev_groups</span>;</span>  <span class="comment">//设备属性</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">drv_groups</span>;</span>  <span class="comment">//驱动属性</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*match)(<span class="keyword">struct</span> device *dev, <span class="keyword">struct</span> device_driver *drv);  <span class="comment">//匹配函数</span></span><br><span class="line">	<span class="type">int</span> (*uevent)(<span class="keyword">struct</span> device *dev, <span class="keyword">struct</span> kobj_uevent_env *env);</span><br><span class="line">	<span class="type">int</span> (*probe)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">int</span> (*remove)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">void</span> (*shutdown)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*online)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">int</span> (*offline)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*suspend)(<span class="keyword">struct</span> device *dev, <span class="type">pm_message_t</span> state);</span><br><span class="line">	<span class="type">int</span> (*resume)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">dev_pm_ops</span> *<span class="title">pm</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">iommu_ops</span> *<span class="title">iommu_ops</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">subsys_private</span> *<span class="title">p</span>;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">lock_class_key</span> <span class="title">lock_key</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p> 最主要的是 name和match属性，name属性表示总线的名称，而match属性则是用来匹配驱动和设备的，也即之前所说的设备驱动和主机驱动的匹配过程，这个属性非常重要，每一条总线都需要实现该属性。接下来看一下platform总线的定义,其定义在 <em>\drivers\base\platform.c</em> 文件中，是struct bus_type类型的一个实例化，其结构如下所示。  </p>
+<pre><code class="c">struct bus_type platform_bus_type = &#123;
+    .name		= &quot;platform&quot;,
+    .dev_groups	= platform_dev_groups,
+    .match		= platform_match,
+    .uevent		= platform_uevent,
+    .pm		= &amp;platform_dev_pm_ops,
+&#125;; 
+</code></pre>
+<p>由上可以看出，platform总线就是对bus_type的一个实例，并且填充了一些基本元素的值，name属性指定总线名为platform，match属性指定匹配的方法，这是一个函数指针，其指向platform_match函数，由bus_type结构体看出，这个函数指针有两个参数，一个是 <em>struct device *dev</em> ,也就是Linux中用来表示设备的结构体，另一个是<em>struct device_driver *drv</em>，表示设备驱动。接下来继续看match这个成员，它指向了<em>platform_match</em>函数，表示匹配的方法，看一下这个函数的定义，其定义在<em>drivers&#x2F;base&#x2F;platform.c</em>中，定义如下所示。 </p>
+<pre><code class="c">static int platform_match(struct device *dev, struct device_driver *drv)
+&#123;
+    struct platform_device *pdev = to_platform_device(dev);
+    struct platform_driver *pdrv = to_platform_driver(drv);
+
+    /* When driver_override is set, only bind to the matching driver */
+    if (pdev-&gt;driver_override)
+        return !strcmp(pdev-&gt;driver_override, drv-&gt;name);
+
+    /* Attempt an OF style match first */
+    if (of_driver_match_device(dev, drv))
+        return 1;
+
+    /* Then try ACPI style match */
+    if (acpi_driver_match_device(dev, drv))
+        return 1;
+
+    /* Then try to match against the id table */
+    if (pdrv-&gt;id_table)
+        return platform_match_id(pdrv-&gt;id_table, pdev) != NULL;
+
+    /* fall-back to driver name match */
+    return (strcmp(pdev-&gt;name, drv-&gt;name) == 0);
+&#125;
+</code></pre>
+<p>首先使用of_driver_match_device进行匹配，也就是比较驱动中of_match_table元素和设备树中设备节点compatible属性是否相等，如果相等则匹配成功，执行设备驱动的probe函数。<br>接着使用ACPI方式匹配。<br>然后使用id_table进行匹配。<br>最后使用驱动名进行匹配。   –&gt;</p>
+<p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
+<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
+<ul>
+<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
+<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
+<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
+<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
+</ul>
+<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
+]]></content>
+      <categories>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ShareAnything-分享一�?</title>
     <url>/2023/03/01/share/share/</url>
     <content><![CDATA[<blockquote>
@@ -161,63 +300,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><h2 id="一、驱动的分隔与分离"><a href="#一、驱动的分隔与分离" class="headerlink" title="一、驱动的分隔与分离"></a>一、驱动的分隔与分离</h2><p> &emsp;linux系统是一个很庞大的系统，并且已经适配了许多开发板，这些开发板或多或少都有一些外设资源，比如LED，IIC总线等，这些资源都有一些地址信息，像是LED控制寄存器的地址，如果把这些和硬件相关的数据全都硬编码进驱动程序中，此时如果LED的控制寄存器地址更改了，那这些驱动程序中的硬件数据也需要进行相应修改，毫无疑问，这对程序维护是相当致命的，因此需要将驱动和硬件数据分开编码，将硬件数据全部存在一颗”树”上，这棵树就是<em><strong>设备树</strong></em>了，当然这部分内容属于设备树的范畴，看样子和platform总线没有什么关系，但是这里边存在一个思想，那就是<em><strong>驱动的分隔与分离</strong></em>，将驱动代码和硬件数据分开编码，当硬件数据改变时只需要更改对应设备树的数据，而无需更改驱动程序，使得程序维护变得不那么令人恐惧。<br> &emsp; 假如现在有三个平台 A、B 和 C,这三个平台(这里的平台说的是 SOC)上都有 MPU6050 这个 I2C 接口的六轴传感器,按照写裸机 I2C 驱动的时候的思路,每个平台都有一个 MPU6050的驱动,因此编写出来的最简单的驱动框架如下图所示:<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160036.png" alt="20241203160036"></p>
-<center><font size=2>图1 传统的IIC驱动框架</font></center>  
-
-<p> &emsp;从上图可以看出，无论是哪一个平台A，B或C，都需要编写一个主机驱动，但是设备驱动没必要都写一遍，因为MPU6050都是一样的，完全可以共用一套代码，但是如果此时又来了几个IIC设备，比如四线OLED什么的，那还得需要再写一套OLED的设备驱动代码，但是真的需要再写一套IIC驱动OLED的代码吗？为什么不可以只写一套IIC驱动的代码，既然都是IIC通信，那通信的逻辑就绝对一样，像是读写一个字节，开始信号，结束信号等，他们的时序逻辑是完全一样的，唯一不同的是驱动的设备不同，需要读写的地址不同等等，那是不是就可以将这些和设备地址有关的数据单独编码为设备驱动，将IIC总线编码为总线驱动，将主机上的驱动代码编码为主机代码，这样的话，主机驱动先去读取设备的信息，然后通过总线驱动去控制设备，框图如图2所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160117.png" alt="20241203160117"><br> <center><font size=2>图2 分隔后的驱动框架</font></center>  </p>
-<p>  &emsp;这个就是驱动的分隔,也就是将主机驱动和设备驱动分隔开来,比如 I2C、SPI 等等都会采用驱动分隔的方式来简化驱动的开发。在实际的驱动开发中,一般 I2C 主机控制器驱动已经由半导体厂家编写好了,而设备驱动一般也由设备器件的厂家编写好了,我们只需要提供设备信息即可,比如 I2C 设备的话提供设备连接到了哪个 I2C 接口上,I2C 的速度是多少等等。相当于将设备信息从设备驱动中剥离开来,驱动使用标准方法去获取到设备信息(比如从设备树中获取到设备信息),然后根据获取到的设备信息来初始化设备。 这样就相当于驱动只负责驱动,设备只负责设备,想办法将两者进行匹配即可。这个就是 Linux 中的总线(bus)、驱动(driver)和设备(device)模型,也就是常说的驱动分离。总线就是驱动和设备信息的月老,负责给两者牵线搭桥，如下图3所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241203160134.png" alt="20241203160134"><br>   <center><font size=2>图3 Linux 总线、驱动和设备模式</font></center>  </p>
-<p>  &emsp;当我们向系统注册一个驱动的时候,总线就会在右侧的设备中查找,看看有没有与之匹配的设备,如果有的话就将两者联系起来。同样的,当向系统中注册一个设备的时候,总线就会在左侧的驱动中查找看有没有与之匹配的设备,有的话也联系起来。Linux 内核中大量的驱动程序都采用总线、驱动和设备模式,我们一会要重点讲解的 platform 驱动就是这一思想下的产物。  </p>
-<h2 id="二、platform总线"><a href="#二、platform总线" class="headerlink" title="二、platform总线"></a>二、platform总线</h2><p> &emsp;上边提到了<em><strong>总线</strong></em>这个概念，像是IIC总线，SPI总线这些都是物理存在的总线，这些总线比较好理解也比较好实现，但是对于一些没有总线的设备而言，比如说LED，怎么实现驱动的分离和分层呢，这时候就需要<em><strong>platform总线</strong></em>了，platform总线是一个虚拟的概念，本质上是不存在的，但是可以把它想象为一条真实存在的总线，上边挂载了一些设备，比如LED，根据驱动的分离和分层思想，我们需要实现对应的主机驱动和设备驱动，设备驱动比较简单，这里只需要LED对应寄存器的地址就可以了，而主机驱动需要做的就是根据LED寄存器的信息设置相应的工作方式，实现LED亮灭的操作就可以了，而主机驱动和设备驱动这两者之间通过platfrom总线进行匹配，当两者匹配成功以后就可以实现驱动的分离和分层。<br>  &emsp; 首先先看一下linux中是怎么定义总线的，内核使用<em><strong>bus_type</strong></em>结构体表示总线，其定义在 <em>include&#x2F;linux&#x2F;device.h</em>文件中，结构体内容如下所示。 </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bus_type</span> &#123;</span></span><br><span class="line">	<span class="type">const</span> <span class="type">char</span>		*name;        <span class="comment">//总线名称</span></span><br><span class="line">	<span class="type">const</span> <span class="type">char</span>		*dev_name;    </span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">device</span>		*<span class="title">dev_root</span>;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">device_attribute</span>	*<span class="title">dev_attrs</span>;</span>	<span class="comment">/* use dev_groups instead */</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">bus_groups</span>;</span>  <span class="comment">//总线属性</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">dev_groups</span>;</span>  <span class="comment">//设备属性</span></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">attribute_group</span> **<span class="title">drv_groups</span>;</span>  <span class="comment">//驱动属性</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*match)(<span class="keyword">struct</span> device *dev, <span class="keyword">struct</span> device_driver *drv);  <span class="comment">//匹配函数</span></span><br><span class="line">	<span class="type">int</span> (*uevent)(<span class="keyword">struct</span> device *dev, <span class="keyword">struct</span> kobj_uevent_env *env);</span><br><span class="line">	<span class="type">int</span> (*probe)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">int</span> (*remove)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">void</span> (*shutdown)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*online)(<span class="keyword">struct</span> device *dev);</span><br><span class="line">	<span class="type">int</span> (*offline)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> (*suspend)(<span class="keyword">struct</span> device *dev, <span class="type">pm_message_t</span> state);</span><br><span class="line">	<span class="type">int</span> (*resume)(<span class="keyword">struct</span> device *dev);</span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">dev_pm_ops</span> *<span class="title">pm</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> <span class="class"><span class="keyword">struct</span> <span class="title">iommu_ops</span> *<span class="title">iommu_ops</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">subsys_private</span> *<span class="title">p</span>;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">lock_class_key</span> <span class="title">lock_key</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p> 最主要的是 name和match属性，name属性表示总线的名称，而match属性则是用来匹配驱动和设备的，也即之前所说的设备驱动和主机驱动的匹配过程，这个属性非常重要，每一条总线都需要实现该属性。接下来看一下platform总线的定义,其定义在 <em>\drivers\base\platform.c</em> 文件中，是struct bus_type类型的一个实例化，其结构如下所示。  </p>
-<pre><code class="c">struct bus_type platform_bus_type = &#123;
-   .name		= &quot;platform&quot;,
-   .dev_groups	= platform_dev_groups,
-   .match		= platform_match,
-   .uevent		= platform_uevent,
-   .pm		= &amp;platform_dev_pm_ops,
-&#125;; 
-</code></pre>
-<p>由上可以看出，platform总线就是对bus_type的一个实例，并且填充了一些基本元素的值，name属性指定总线名为platform，match属性指定匹配的方法，这是一个函数指针，其指向platform_match函数，由bus_type结构体看出，这个函数指针有两个参数，一个是 <em>struct device *dev</em> ,也就是Linux中用来表示设备的结构体，另一个是<em>struct device_driver *drv</em>，表示设备驱动。接下来继续看match这个成员，它指向了<em>platform_match</em>函数，表示匹配的方法，看一下这个函数的定义，其定义在<em>drivers&#x2F;base&#x2F;platform.c</em>中，定义如下所示。 </p>
-<pre><code class="c">static int platform_match(struct device *dev, struct device_driver *drv)
-&#123;
-    struct platform_device *pdev = to_platform_device(dev);
-    struct platform_driver *pdrv = to_platform_driver(drv);
-
-    /* When driver_override is set, only bind to the matching driver */
-    if (pdev-&gt;driver_override)
-        return !strcmp(pdev-&gt;driver_override, drv-&gt;name);
-
-    /* Attempt an OF style match first */
-    if (of_driver_match_device(dev, drv))
-        return 1;
-
-    /* Then try ACPI style match */
-    if (acpi_driver_match_device(dev, drv))
-        return 1;
-
-    /* Then try to match against the id table */
-    if (pdrv-&gt;id_table)
-        return platform_match_id(pdrv-&gt;id_table, pdev) != NULL;
-
-    /* fall-back to driver name match */
-    return (strcmp(pdev-&gt;name, drv-&gt;name) == 0);
-&#125;
-</code></pre>
-<p>首先使用of_driver_match_device进行匹配，也就是比较驱动中<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Funny 404 Gif</title>
     <url>/2023/05/27/share/funny-404-gif/index/</url>
     <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
@@ -274,66 +356,6 @@
         <tag>分享</tag>
         <tag>js</tag>
         <tag>hello world</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分享VSCode插件</title>
-    <url>/2023/03/04/share/share-vscode-plugins/</url>
-    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
-<blockquote>
-<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
-</blockquote>
-<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
-<span id="more"></span>
-<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
-<thead>
-<tr>
-<th align="left"><center><strong>插件链接</strong></center></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
-<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
-<td align="left">国产，免费</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
-<td align="left">AI-assisted development</td>
-<td align="left">微软自家的</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
-<td align="left">Your AI pair programmer</td>
-<td align="left">代码能力比较强</td>
-</tr>
-</tbody></table>
-<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
-<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">链接</th>
-<th align="left">描述</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
-<td align="left">View git log, file history, compare branches or commits</td>
-<td align="left">查看git提交记录和比较提交信息</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>vscode</tag>
-        <tag>plugins</tag>
       </tags>
   </entry>
   <entry>
