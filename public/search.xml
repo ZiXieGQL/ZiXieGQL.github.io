@@ -26,23 +26,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
-<ul>
-<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
-<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
-</ul>
-]]></content>
-      <categories>
-        <category>STM32</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>STM32</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux驱动报错</title>
     <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
@@ -53,27 +36,6 @@
         <category>STM32</category>
         <category>linux驱动</category>
         <category>报错解决</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
-<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
-<ul>
-<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
-<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
-<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
-<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
-</ul>
-<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
       </categories>
       <tags>
         <tag>嵌入式</tag>
@@ -138,6 +100,85 @@
         <tag>分享</tag>
         <tag>vscode</tag>
         <tag>plugins</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
+<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
+<ul>
+<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
+<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
+<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
+<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
+</ul>
+<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
+]]></content>
+      <categories>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
+<ul>
+<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
+<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
+</ul>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Funny 404 Gif</title>
+    <url>/2023/05/27/share/funny-404-gif/index/</url>
+    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
+<blockquote>
+<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
+<span id="more"></span>
+<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
+<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
+<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>404</tag>
       </tags>
   </entry>
   <entry>
@@ -256,81 +297,6 @@
         <tag>分享</tag>
         <tag>资源</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
-</blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Funny 404 Gif</title>
-    <url>/2023/05/27/share/funny-404-gif/index/</url>
-    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
-<blockquote>
-<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
-<span id="more"></span>
-<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
-<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
-<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>404</tag>
       </tags>
   </entry>
   <entry>
@@ -1740,6 +1706,40 @@
         <tag>转载</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Share Cursor</title>
+    <url>/2023/03/23/share/share-cursor/index/</url>
+    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
+<blockquote>
+<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
+</blockquote>
+<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
+</li>
+<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
+</li>
+</ol>
+<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
+<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
+</li>
+<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
+</li>
+</ul>
+<blockquote>
+<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
+</blockquote>
+<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Cursor</tag>
+        <tag>ChatGPT</tag>
       </tags>
   </entry>
   <entry>
