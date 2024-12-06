@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2011/01/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
+<ul>
+<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
+<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
+</ul>
 ]]></content>
       <categories>
-        <category>demo</category>
+        <category>STM32</category>
       </categories>
       <tags>
-        <tag>示例</tag>
-        <tag>demo</tag>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
+<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
+<ul>
+<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
+<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
+<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
+<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
+</ul>
+<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
+]]></content>
+      <categories>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -39,6 +52,23 @@
       </categories>
       <tags>
         <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux中断</title>
+    <url>/2024/12/06/linux/%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<a href="/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/" title="linux驱动报错">linux驱动报错</a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux应用</category>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -103,44 +133,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
-<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
-<ul>
-<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
-<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
-<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
-<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
-</ul>
-<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
-<ul>
-<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
-<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
-</ul>
-]]></content>
-      <categories>
-        <category>STM32</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>STM32</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Funny 404 Gif</title>
     <url>/2023/05/27/share/funny-404-gif/index/</url>
     <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
@@ -182,121 +174,20 @@
       </tags>
   </entry>
   <entry>
-    <title>ShareAnything-分享一�?</title>
-    <url>/2023/03/01/share/share/</url>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
     <content><![CDATA[<blockquote>
-<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
 </blockquote>
-<blockquote>
-<p>分享 音乐、软件、网站等一切我觉得好玩或者有用的资源</p>
-</blockquote>
-<p>软件都是我用过的，大家可以放心食用，不给任何产品推广�?</p>
-<span id="more"></span>
-
-<h2 id="music-favor-收藏"><a href="#music-favor-收藏" class="headerlink" title="music-favor-收藏"></a>music-favor-收藏</h2><h2 id="Free-Software-软件"><a href="#Free-Software-软件" class="headerlink" title="Free-Software-软件"></a>Free-Software-软件</h2><p>分享一些用过就离不开的开源软件或者免费的软件，免费且实用�?<br>注意：并不是所有的开源软件都是免费的，留意开源协议即可�?</p>
-<table>
-<thead>
-<tr>
-<th align="left"><code>&lt;center&gt;</code><strong>链接</strong><code>&lt;/center&gt;</code></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://otp.landian.vip/zh-cn/download.html">Office部署工具</a></td>
-<td align="left">一个强大且实用�? Office 部署工具。系统要求：Windows 7 SP1 或更高版本，不支持其他操作系统（例如 Linux �? macOS）。</td>
-<td align="left">推荐安装绿色免费好管理</td>
-</tr>
-<tr>
-<td align="left"><a href="https://verycapture.com/cn/download.html">verycapture</a></td>
-<td align="left">VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务</td>
-<td align="left">截图、免费�?</td>
-</tr>
-<tr>
-<td align="left"><a href="https://lxmusic.toside.cn/">音乐-lx-music</a></td>
-<td align="left">一个免�?&amp;开源的音乐查找工具</td>
-<td align="left">手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/dotnetcore/FastGithub/releases">FastGithub</a></td>
-<td align="left">github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。</td>
-<td align="left">国内稳定访问</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/2dust/v2rayN/releases">V2rayN科学上网</a></td>
-<td align="left">科学上网客户端软件</td>
-<td align="left"><a href="#free">#订阅地址</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.7-zip.org/">7-Zip</a></td>
-<td align="left">7-Zip is free software with open source. 高效，高压，开源，小巧</td>
-<td align="left">别再用winrar了，缺点UI丑了点</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/M2Team/NanaZip/releases/">NanaZip</a></td>
-<td align="left">基于7-zip开发</td>
-<td align="left">支持适配win11右键菜单</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/torchgm/RoundedTB/releases">RoundedTB</a></td>
-<td align="left">Add margins, rounded corners and segments to your taskbars!</td>
-<td align="left">win11任务栏美化</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.virtualbox.org/">VirtualBox</a></td>
-<td align="left">VirtualBox is a powerful x86 and AMD64&#x2F;Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 3. See “About VirtualBox” for an introduction.</td>
-<td align="left">Oracle旗下免费虚拟机软�?,小巧，扔掉VM�?</td>
-</tr>
-</tbody></table>
-<h2 id="apps-安卓软件"><a href="#apps-安卓软件" class="headerlink" title="apps-安卓软件"></a>apps-安卓软件</h2><blockquote>
-<p>android 手机软件分享</p>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>下载地址</strong></th>
-<th align="left"><strong>功能描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://share.weiyun.com/s7FnuI6E">闪电侠</a></td>
-<td align="left">闪电�?-无广告免费手机影视盒子软件，自带影视源</td>
-<td align="left">别再用爱优腾的vip超级vip了</td>
-</tr>
-<tr>
-<td align="left"><a href="http://饭太硬.ga/">TVBox类影视软件</a></td>
-<td align="left">开源壳�? TVbox相关免费资源推荐，免费影视的软件</td>
-<td align="left">各种vip各种套路限制</td>
-</tr>
-</tbody></table>
-</blockquote>
-<h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p>👉 <a href="http://geekswg.js.cool/website/" title="网站收藏">点击这里查看</a></p>
-<h2 id="浏览器插�"><a href="#浏览器插�" class="headerlink" title="浏览器插�?"></a>浏览器插�?</h2><h3 id="nbtab"><a href="#nbtab" class="headerlink" title="nbtab"></a>nbtab</h3><blockquote>
-<p>简约不简单，浏览器tab�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp" alt="230330-nbtab" title="nbtab"></p>
-</blockquote>
-<h3 id="wetab"><a href="#wetab" class="headerlink" title="wetab"></a>wetab</h3><blockquote>
-<p>wetab, chatgpt组件非常好�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp" alt="230330-wetab" title="wetab"></p>
-</blockquote>
-<h3 id="itab"><a href="#itab" class="headerlink" title="itab"></a>itab</h3><blockquote>
-<p>功能丰富，插件多�?<br><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp" alt="230330-itab" title="itab"></p>
-</blockquote>
-<h2 id="other-其他"><a href="#other-其他" class="headerlink" title="other-其他"></a>other-其他</h2><h3 id="free"><a href="#free" class="headerlink" title="free"></a>free</h3><blockquote>
-<p>v2rayN免费订阅地址:</p>
-</blockquote>
-<ol>
-<li><a href="https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2">https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2</a></li>
-<li><a href="https://raw.fastgit.org/Pawdroid/Free-servers/main/sub">https://raw.fastgit.org/Pawdroid/Free-servers/main/sub</a></li>
-<li><a href="https://kxswa.tk/v2ray">https://kxswa.tk/v2ray</a></li>
-</ol>
-<p>其他内容</p>
-]]></content>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>share</category>
       </categories>
       <tags>
         <tag>分享</tag>
-        <tag>资源</tag>
-        <tag>软件</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -1701,62 +1592,11 @@
         <category>repost</category>
       </categories>
       <tags>
+        <tag>转载</tag>
         <tag>示例</tag>
         <tag>demo</tag>
-        <tag>转载</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Share Cursor</title>
-    <url>/2023/03/23/share/share-cursor/index/</url>
-    <content><![CDATA[<p><img src="/imgs/posts/230323185021-cursor-home.png" alt="Cursor Home"></p>
-<blockquote>
-<p><a href="https://www.cursor.so/">Cursor</a><br>最重要的是这个是 开源免费，国内直接访问的AI助手小工具.<br>开源地址 <a href="https://github.com/getcursor/cursor">https://github.com/getcursor/cursor</a></p>
-</blockquote>
-<p>Build Software. Fast.<br>Write, edit, and chat about your code with a pful AI</p>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
-<li><p>快捷键：<code>Ctrl + K</code> 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。</p>
-</li>
-<li><p>快捷键 <code>Ctrl + L</code> 可以和他自然聊天，比如问题某段代码什么意思，或者问他写的代码如何运行，经过测试，他的回答都十分的智能，而且上下文理解的非常顺畅，就像和一个助理在正常聊天。</p>
-</li>
-</ol>
-<h3 id="食用预览"><a href="#食用预览" class="headerlink" title="食用预览"></a>食用预览</h3><ul>
-<li><p><code>Ctrl + K</code> 让他帮你写代码<br><img src="/imgs/posts/230323185021-cursor1.png" alt="Cursor Home"><br><img src="/imgs/posts/230323185021-cursor2.png" alt="Cursor Home"></p>
-</li>
-<li><p><code>Ctrl + L</code> 帮助你运行程序，有什么问题都可以直接问他，比如让如何安装依赖，翻译代码，解释代码的含义。<br><img src="/imgs/posts/230323185021-cursor3.png" alt="Cursor Home"></p>
-</li>
-</ul>
-<blockquote>
-<p>总结下来，使用虽然比较简单，但是还是需要有一定的编程思维和判断能力，因为在测试的时候，使用pthon代码的时候用到了一个库，调用库的时候居然自己创造了一个方法。我在调试的运行他帮我写的代码时。居然报错了，说不存在这个方法，我去搜下这个库，确实没发现他使用的这个方法！让我哭笑不得，一方面说明这个代码应该是AI自己借鉴别人代码，如何根据我的需求，他自己编写的。2.说明这个程序呀有时候会胡诌一些不存在的东西，或者自己创造一些，但是肯定有问题，需要自己判断去修改。 </p>
-</blockquote>
-<p>整体使用下来，效果令人吃惊，值得尝试一下。<br><a href="https://www.cursor.so/">官方地址</a></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>Cursor</tag>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
       </tags>
   </entry>
 </search>
