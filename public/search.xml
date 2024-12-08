@@ -39,6 +39,40 @@
       </tags>
   </entry>
   <entry>
+    <title>linux中断</title>
+    <url>/2024/12/06/linux/%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<a href="/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/" title="linux驱动报错">linux驱动报错</a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux应用</category>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux驱动报错</title>
+    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
+<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
+<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux驱动</category>
+        <category>报错解决</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分享VSCode插件</title>
     <url>/2023/03/04/share/share-vscode-plugins/</url>
     <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
@@ -99,37 +133,20 @@
       </tags>
   </entry>
   <entry>
-    <title>linux中断</title>
-    <url>/2024/12/06/linux/%E4%B8%AD%E6%96%AD/</url>
-    <content><![CDATA[<a href="/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/" title="linux驱动报错">linux驱动报错</a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+</blockquote>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>STM32</category>
-        <category>linux应用</category>
-        <category>linux驱动</category>
+        <category>share</category>
       </categories>
       <tags>
-        <tag>嵌入式</tag>
-        <tag>STM32</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux驱动报错</title>
-    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
-<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
-<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>STM32</category>
-        <category>linux驱动</category>
-        <category>报错解决</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -171,23 +188,6 @@
       <tags>
         <tag>分享</tag>
         <tag>404</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
