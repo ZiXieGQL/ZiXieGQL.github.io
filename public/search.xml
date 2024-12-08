@@ -18,6 +18,23 @@
       </tags>
   </entry>
   <entry>
+    <title>linux中断</title>
+    <url>/2024/12/06/linux/%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<a href="/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/" title="linux驱动报错">linux驱动报错</a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux应用</category>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux驱动学习--platform总线</title>
     <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
     <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
@@ -35,23 +52,6 @@
       </categories>
       <tags>
         <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux中断</title>
-    <url>/2024/12/06/linux/%E4%B8%AD%E6%96%AD/</url>
-    <content><![CDATA[<a href="/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/" title="linux驱动报错">linux驱动报错</a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>STM32</category>
-        <category>linux应用</category>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>STM32</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
