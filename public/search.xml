@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux驱动报错</title>
+    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
+<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
+<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>STM32</category>
+        <category>linux驱动</category>
+        <category>报错解决</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GPIO</title>
     <url>/2024/11/30/STM32/GPIO/</url>
     <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
@@ -32,49 +49,6 @@
 ]]></content>
       <categories>
         <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux驱动学习--中断</title>
-    <url>/2024/12/06/linux/linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--%E4%B8%AD%E6%96%AD/</url>
-    <content><![CDATA[<h2 id="linux驱动–基于platform和设备树下的按键中断"><a href="#linux驱动–基于platform和设备树下的按键中断" class="headerlink" title="linux驱动–基于platform和设备树下的按键中断"></a>linux驱动–基于platform和设备树下的按键中断</h2><h3 id="一、linux中断管理"><a href="#一、linux中断管理" class="headerlink" title="一、linux中断管理"></a>一、linux中断管理</h3><p>&emsp;&emsp;首先先看一下裸机下中断的管理，以STM32为例，实现一个按键的外部中断流程如下：</p>
-<ul>
-<li>设置按键为输入</li>
-<li>映射中断线，即将对应引脚映射到对应的中断线上，比如PB5映射到5号中断线 </li>
-<li>设置中断触发方式和中断优先级 </li>
-<li>编写中断服务函数 </li>
-<li>使能外部中断线</li>
-<li>中断触发时执行中断服务函数</li>
-</ul>
-<p>&emsp;&emsp;需要注意的是，上述的中断服务函数名已经在启动文件中定义好了，不可以随意更改。<br>&emsp;&emsp;接下来看一下linux下的中断，和STM32不同的是，linux使用中断前首先需要先向内核申请，而且中断服务函数名可以自定义，向内核申请中断的过程中其实就是<em><strong>映射中断线</strong></em>，<em><strong>注册中断服务函数</strong></em>，<em><strong>使能中断</strong></em>这三个步骤，向内核申请中断使用<em><strong>request_irq()</strong></em> 函数，该函数实现上述三个步骤，函数原型如下。  </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">request_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq,</span></span><br><span class="line"><span class="params">                <span class="type">irq_handler_t</span>  handler,</span></span><br><span class="line"><span class="params">                <span class="type">unsigned</span> <span class="type">long</span> flags,</span></span><br><span class="line"><span class="params">                <span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                <span class="type">void</span> *dev)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参数： </span><br><span class="line">- irq：中断号</span><br><span class="line">- handler：中断服务函数</span><br><span class="line">- flags：中断标志</span><br><span class="line">- name：中断名</span><br><span class="line">- dev：设备结构体  </span><br><span class="line"></span><br><span class="line">返回值：</span><br><span class="line">- 0：申请成功</span><br><span class="line">- -EBUSY：已经被申请了</span><br><span class="line">- 其他负数：申请失败</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;irg为需要申请中断的中断号，可以通过查找芯片手册的中断表来查看，当然该值一般都在设备树节点中体现了，可以直接使用相关的API函数来获取，比如<em><strong>platform_get_irq</strong></em>函数，该函数从设备树节点中获取<em>interrupts</em>属性的值，该值即为中断号(interrupts属性不止有中断号，还有触发方式等的描述)。<br>&emsp;&emsp;handler为中断服务函数，也就是发生中断后执行的函数。<br>&emsp;&emsp;flags为中断标志，可以设置中断的触发方式,可选的值如下所示。  </p>
-<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241208231442.png" alt="20241208231442"><br>&emsp;&emsp;name为中断名。  </p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux驱动报错</title>
-    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
-<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
-<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>STM32</category>
-        <category>linux驱动</category>
-        <category>报错解决</category>
       </categories>
       <tags>
         <tag>嵌入式</tag>
@@ -142,20 +116,29 @@
       </tags>
   </entry>
   <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>linux驱动学习--中断</title>
+    <url>/2024/12/06/linux/linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="linux驱动–基于platform和设备树下的按键中断"><a href="#linux驱动–基于platform和设备树下的按键中断" class="headerlink" title="linux驱动–基于platform和设备树下的按键中断"></a>linux驱动–基于platform和设备树下的按键中断</h2><h3 id="一、linux中断管理"><a href="#一、linux中断管理" class="headerlink" title="一、linux中断管理"></a>一、linux中断管理</h3><p>&emsp;&emsp;首先先看一下裸机下中断的管理，以STM32为例，实现一个按键的外部中断流程如下：</p>
+<ul>
+<li>设置按键为输入</li>
+<li>映射中断线，即将对应引脚映射到对应的中断线上，比如PB5映射到5号中断线 </li>
+<li>设置中断触发方式和中断优先级 </li>
+<li>编写中断服务函数 </li>
+<li>使能外部中断线</li>
+<li>中断触发时执行中断服务函数</li>
+</ul>
+<p>&emsp;&emsp;需要注意的是，上述的中断服务函数名已经在启动文件中定义好了，不可以随意更改。<br>&emsp;&emsp;接下来看一下linux下的中断，和STM32不同的是，linux使用中断前首先需要先向内核申请，而且中断服务函数名可以自定义，向内核申请中断的过程中其实就是<em><strong>映射中断线</strong></em>，<em><strong>注册中断服务函数</strong></em>，<em><strong>使能中断</strong></em>这三个步骤，向内核申请中断使用<em><strong>request_irq()</strong></em> 函数，该函数实现上述三个步骤，函数原型如下。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">request_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq,</span></span><br><span class="line"><span class="params">                <span class="type">irq_handler_t</span>  handler,</span></span><br><span class="line"><span class="params">                <span class="type">unsigned</span> <span class="type">long</span> flags,</span></span><br><span class="line"><span class="params">                <span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                <span class="type">void</span> *dev)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参数： </span><br><span class="line">- irq：中断号</span><br><span class="line">- handler：中断服务函数</span><br><span class="line">- flags：中断标志</span><br><span class="line">- name：中断名</span><br><span class="line">- dev：设备结构体  </span><br><span class="line"></span><br><span class="line">返回值：</span><br><span class="line">- 0：申请成功</span><br><span class="line">- -EBUSY：已经被申请了</span><br><span class="line">- 其他负数：申请失败</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;irg为需要申请中断的中断号，可以通过查找芯片手册的中断表来查看，当然该值一般都在设备树节点中体现了，可以直接使用相关的API函数来获取，比如<em><strong>platform_get_irq</strong></em>函数，该函数从设备树节点中获取<em>interrupts</em>属性的值，该值即为中断号(interrupts属性不止有中断号，还有触发方式等的描述)。<br>&emsp;&emsp;handler为中断服务函数，也就是发生中断后执行的函数。<br>&emsp;&emsp;flags为中断标志，可以设置中断的触发方式,可选的值如下所示。  </p>
+<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241208231442.png" alt="20241208231442"><br>&emsp;&emsp;name为中断名。  </p>
+]]></content>
       <categories>
-        <category>share</category>
+        <category>linux驱动</category>
       </categories>
       <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -197,6 +180,23 @@
       <tags>
         <tag>分享</tag>
         <tag>404</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+</blockquote>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
