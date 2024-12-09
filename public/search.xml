@@ -35,27 +35,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
-<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
-<ul>
-<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
-<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
-<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
-<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
-</ul>
-<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分享VSCode插件</title>
     <url>/2023/03/04/share/share-vscode-plugins/</url>
     <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
@@ -116,22 +95,17 @@
       </tags>
   </entry>
   <entry>
-    <title>linux驱动学习--中断</title>
-    <url>/2024/12/06/linux/linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--%E4%B8%AD%E6%96%AD/</url>
-    <content><![CDATA[<h2 id="linux驱动–基于platform和设备树下的按键中断"><a href="#linux驱动–基于platform和设备树下的按键中断" class="headerlink" title="linux驱动–基于platform和设备树下的按键中断"></a>linux驱动–基于platform和设备树下的按键中断</h2><h3 id="一、linux中断管理"><a href="#一、linux中断管理" class="headerlink" title="一、linux中断管理"></a>一、linux中断管理</h3><p>&emsp;&emsp;首先先看一下裸机下中断的管理，以STM32为例，实现一个按键的外部中断流程如下：</p>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
+<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
 <ul>
-<li>设置按键为输入</li>
-<li>映射中断线，即将对应引脚映射到对应的中断线上，比如PB5映射到5号中断线 </li>
-<li>设置中断触发方式和中断优先级 </li>
-<li>编写中断服务函数 </li>
-<li>使能外部中断线</li>
-<li>中断触发时执行中断服务函数</li>
+<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
+<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
+<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
+<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
 </ul>
-<p>&emsp;&emsp;需要注意的是，上述的中断服务函数名已经在启动文件中定义好了，不可以随意更改。<br>&emsp;&emsp;接下来看一下linux下的中断，和STM32不同的是，linux使用中断前首先需要先向内核申请，而且中断服务函数名可以自定义，向内核申请中断的过程中其实就是<em><strong>映射中断线</strong></em>，<em><strong>注册中断服务函数</strong></em>，<em><strong>使能中断</strong></em>这三个步骤，向内核申请中断使用<em><strong>request_irq()</strong></em> 函数，该函数实现上述三个步骤，函数原型如下。  </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">request_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq,</span></span><br><span class="line"><span class="params">                <span class="type">irq_handler_t</span>  handler,</span></span><br><span class="line"><span class="params">                <span class="type">unsigned</span> <span class="type">long</span> flags,</span></span><br><span class="line"><span class="params">                <span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                <span class="type">void</span> *dev)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参数： </span><br><span class="line">- irq：中断号</span><br><span class="line">- handler：中断服务函数</span><br><span class="line">- flags：中断标志</span><br><span class="line">- name：中断名</span><br><span class="line">- dev：设备结构体  </span><br><span class="line"></span><br><span class="line">返回值：</span><br><span class="line">- 0：申请成功</span><br><span class="line">- -EBUSY：已经被申请了</span><br><span class="line">- 其他负数：申请失败</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;irg为需要申请中断的中断号，可以通过查找芯片手册的中断表来查看，当然该值一般都在设备树节点中体现了，可以直接使用相关的API函数来获取，比如<em><strong>platform_get_irq</strong></em>函数，该函数从设备树节点中获取<em>interrupts</em>属性的值，该值即为中断号(interrupts属性不止有中断号，还有触发方式等的描述)。<br>&emsp;&emsp;handler为中断服务函数，也就是发生中断后执行的函数。<br>&emsp;&emsp;flags为中断标志，可以设置中断的触发方式,可选的值如下所示。  </p>
-<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241208231442.png" alt="20241208231442"><br>&emsp;&emsp;name为中断名。  </p>
+<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
 ]]></content>
       <categories>
         <category>linux驱动</category>
@@ -142,44 +116,117 @@
       </tags>
   </entry>
   <entry>
-    <title>Funny 404 Gif</title>
-    <url>/2023/05/27/share/funny-404-gif/index/</url>
-    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
-<blockquote>
-<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
-<span id="more"></span>
-<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+    <title>linux驱动学习--中断</title>
+    <url>/2024/12/06/linux/linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="linux驱动–基于platform和设备树下的按键中断"><a href="#linux驱动–基于platform和设备树下的按键中断" class="headerlink" title="linux驱动–基于platform和设备树下的按键中断"></a>linux驱动–基于platform和设备树下的按键中断</h2><h3 id="一、linux中断管理"><a href="#一、linux中断管理" class="headerlink" title="一、linux中断管理"></a>一、linux中断管理</h3><p>&emsp;&emsp;首先先看一下几个概念  </p>
+<ul>
+<li>中断号：每个中断都有一个中断号，中断控制器根据中断号区分不同的中断(中断号由MCU厂商规定)</li>
+<li>中断服务函数：发生中断时执行的函数</li>
+<li>中断向量：中断号和中断服务函数的地址一一对应起来的一个记录，发生中断时根据中断号查找中断服务函数  </li>
+<li>中断向量表：多个中断向量组成的一张表，一款CPU可以支持多个中断，这些中断向量组成了中断向量表</li>
+</ul>
+<p>&emsp;&emsp;在发生中断时，进入中断向量表，根据中断号查找对应的中断服务函数地址，进而去执行中断服务函数，执行完成后继续中断前的任务。<br>&emsp;&emsp;在一般的MCU中，中断号，中断服务函数名，中断向量表一般都是固定的，都在启动文件中定义，例如STM32，但是在linux中，中断服务函数名和中断向量表不是固定的，可以自定义中断服务函数名，所以就需要实现中断号和中断服务函数的绑定，进而构造出中断向量表，在linux中使用<em><strong>request_irq()</strong></em> 函数来实现这一需求，该函数可以用来实现中断号与中断服务函数的绑定，设置中断触发方式等功能，函数原型如下：  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">request_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq,</span></span><br><span class="line"><span class="params">                <span class="type">irq_handler_t</span>  handler,</span></span><br><span class="line"><span class="params">                <span class="type">unsigned</span> <span class="type">long</span> flags,</span></span><br><span class="line"><span class="params">                <span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                <span class="type">void</span> *dev)</span></span><br><span class="line"></span><br><span class="line">参数： </span><br><span class="line">- irq：中断号</span><br><span class="line">- handler：中断服务函数</span><br><span class="line">- flags：中断标志</span><br><span class="line">- name：中断名</span><br><span class="line">- dev：设备结构体  </span><br><span class="line"></span><br><span class="line">返回值：</span><br><span class="line">- 0：申请成功</span><br><span class="line">- -EBUSY：已经被申请了</span><br><span class="line">- 其他负数：申请失败</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
-<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;<em><strong>irg</strong></em>为需要申请中断的中断号，可以通过查找芯片手册的中断表来查看，当然该值一般都在设备树节点中体现了，可以直接使用相关的API函数来获取，比如<em><strong>platform_get_irq</strong></em>函数，该函数从设备树节点中获取<em>interrupts</em>属性的值，该值即为中断号。<br>&emsp;&emsp;<em><strong>handler</strong></em>为中断服务函数，也就是发生中断后执行的函数，该参数是一个函数指针，类型为irq_handler_t，原型如下，第一个参数是中断号，第二个参数是个通用指针,需要与 request_irq 函数的 dev 参数保持一致。用于区分共享中断的不同设备。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">irqreturn_t</span> (*<span class="type">irq_handler_t</span>) (<span class="type">int</span>, <span class="type">void</span> *)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
-<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;<em><strong>flags</strong></em>为中断标志，可以设置中断的触发方式，可选的值如下所示，这些标志可以通过 “|” 来组合。  </p>
+<center>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="center">标志</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IRQF_SHARED</td>
+<td align="center">多个设备共享一个中断线,共享的所有中断都必须指定此标志。</td>
+</tr>
+<tr>
+<td align="center">IRQF_ONESHOT</td>
+<td align="center">单次中断,中断执行一次就结束</td>
+</tr>
+<tr>
+<td align="center">IRQF_TRIGGER_NONE</td>
+<td align="center">无触发</td>
+</tr>
+<tr>
+<td align="center">IRQF_TRIGGER_RISING</td>
+<td align="center">上升沿触发</td>
+</tr>
+<tr>
+<td align="center">IRQF_TRIGGER_FALLING</td>
+<td align="center">下降沿触发</td>
+</tr>
+<tr>
+<td align="center">IRQF_TRIGGER_HIGH</td>
+<td align="center">高电平触发</td>
+</tr>
+<tr>
+<td align="center">IRQF_TRIGGER_LOW</td>
+<td align="center">低电平触发</td>
+</tr>
+</tbody></table>
+</center>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;<em><strong>name</strong></em>为中断名，指定申请的中断的名称，设置以后可以在&#x2F;proc&#x2F;interrupts 文件中看到对应的中断名字。<br>&emsp;&emsp;<em><strong>dev</strong></em>：如果将 flags 设置为 IRQF_SHARED 的话,dev 用来区分不同的中断,一般情况下将dev 设置为设备结构体,dev 会传递给中断处理函数 irq_handler_t 的第二个参数。<br>&emsp;&emsp;中断申请成功后如果不再使用了需要注销掉这个中断，使用<em><strong>free_irq()</strong></em> 函数，该函数会解除中断号和中断服务函数之间的绑定关系，并且会禁止掉该中断，原型如下，参数irg表示需要注销中断的中断号，dev用来区分共享中断的设备。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">free_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq,<span class="type">void</span> *dev)</span></span><br><span class="line"></span><br><span class="line">参数：</span><br><span class="line">- irq:中断号 </span><br><span class="line">- dev:如果中断设置为共享<span class="params">(IRQF_SHARED)</span>的话,此参数用来区分具体的中断  </span><br><span class="line"></span><br><span class="line">返回值：无</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="二、其他API函数"><a href="#二、其他API函数" class="headerlink" title="二、其他API函数"></a>二、其他API函数</h3><p>1.获取中断号<br>&emsp;&emsp;在申请中断的时候需要使用到中断号，可以直接查找<em><strong>芯片手册</strong></em>上的中断描述，但是这样太麻烦了，现在都将所有的设备信息写到了设备树上了，所以可以直接去<em><strong>设备树节点</strong></em>上找，比如通过<em><strong>irq_of_parse_and_map()</strong></em> 函数，该函数从指定的节点中获取<em>interrupts</em>属性的值，该值描述了中断号，这个函数适合于使用了设备树的驱动，函数原型如下。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">irq_of_parse_and_map</span><span class="params">(<span class="keyword">struct</span> device_node *dev,<span class="type">int</span> index)</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后还有一个函数是<em>*<em>platform_get_irq()<em>*<em>，该函数也是从设备树节点中获取</em>interrupts*属性的值，不同的是这个函数需要基于</em></em>*platform总线</em>*<em>使用，在编写platform_driver结构体的时候，有个probe成员，该成员指向一个函数，该函数的参数就是匹配到的设备树节点，platform的驱动和设备匹配成功后，就会向probe函数传递一个匹配到的设备树节点，我们可以直接使用这个参数，而</em>不用手动的获取某个节点信息*，函数原型如下。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">platform_get_irq</span><span class="params">(<span class="keyword">struct</span> platform_device *dev, <span class="type">unsigned</span> <span class="type">int</span> num)</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
-]]></content>
+<p>&emsp;&emsp;如果使用 GPIO 的话,可以使用 gpio_to_irq 函数来获取 gpio 对应的中断号，函数原型如下，gpio即为要获取中断的 GPIO 编号。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">gpio_to_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> gpio)</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;设备树中关于中断的描述如下所示。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">key &#123;</span><br><span class="line">	<span class="meta">#address-cells = <span class="string">&lt;1&gt;</span>;</span></span><br><span class="line">	<span class="meta">#size-cells = <span class="string">&lt;1&gt;</span>;</span></span><br><span class="line">	compatible = <span class="string">&quot;atkalpha-key&quot;</span>;            <span class="comment">//兼容性属性</span></span><br><span class="line">	pinctrl-names = <span class="string">&quot;default&quot;</span>;</span><br><span class="line">	pinctrl<span class="number">-0</span> = &lt;&amp;pinctrl_key&gt;;</span><br><span class="line">	key-gpio = &lt;&amp;gpio1 <span class="number">18</span> GPIO_ACTIVE_LOW&gt;; <span class="comment">/* KEY0 */</span></span><br><span class="line">	interrupt-parent = &lt;&amp;gpio1&gt;;            <span class="comment">//该属性描述了父中断控制器</span></span><br><span class="line">	interrupts = &lt;<span class="number">18</span> IRQ_TYPE_EDGE_BOTH&gt;;   <span class="comment">//该属性描述了中断号</span></span><br><span class="line">	status = <span class="string">&quot;okay&quot;</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;综上所述，获取中断号的方法有以下几种。  </p>
+<center>
+
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">适用情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">芯片手册</td>
+<td align="center">不太建议</td>
+</tr>
+<tr>
+<td align="center">irq_of_parse_and_map</td>
+<td align="center">基于设备树</td>
+</tr>
+<tr>
+<td align="center">platform_get_irq</td>
+<td align="center">基于设备树和platform总线</td>
+</tr>
+<tr>
+<td align="center">gpio_to_irq</td>
+<td align="center">基于GPIO</td>
+</tr>
+</tbody></table>
+</center>
+
+<p>2.中断使能与禁能  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">enable_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq)</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">disable_irq</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> irq)</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;enable_irq 和 disable_irq 用于使能和禁止指定的中断,irq 就是要禁止的中断号。disable_irq函数要等到当前正在执行的中断处理函数执行完才返回,因此使用者需要保证不会产生新的中断,并且确保所有已经开始执行的中断处理程序已经全部退出。  </p>
+<h3 id="三、示例：基于platform下的按键中断"><a href="#三、示例：基于platform下的按键中断" class="headerlink" title="三、示例：基于platform下的按键中断"></a>三、示例：基于platform下的按键中断</h3>]]></content>
       <categories>
-        <category>share</category>
+        <category>linux驱动</category>
       </categories>
       <tags>
-        <tag>分享</tag>
-        <tag>404</tag>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1606,6 +1653,47 @@
         <tag>demo</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Funny 404 Gif</title>
+    <url>/2023/05/27/share/funny-404-gif/index/</url>
+    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
+<blockquote>
+<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
+<span id="more"></span>
+<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
+<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
+<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>404</tag>
       </tags>
   </entry>
 </search>
