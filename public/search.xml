@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GPIO</title>
+    <url>/2024/11/30/STM32/GPIO/</url>
+    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
+<ul>
+<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
+<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
+</ul>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux驱动报错</title>
     <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
@@ -18,20 +35,24 @@
       </tags>
   </entry>
   <entry>
-    <title>GPIO</title>
-    <url>/2024/11/30/STM32/GPIO/</url>
-    <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
+    <title>Linux驱动学习--platform总线</title>
+    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
+<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
 <ul>
-<li>上拉输入<br>下拉输入<br>浮空输入<br>模拟输入  </li>
-<li>推挽输出<br>开漏输出<br>复用推挽<br>复用开漏</li>
+<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
+<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
+<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
+<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
 </ul>
+<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
 ]]></content>
       <categories>
-        <category>STM32</category>
+        <category>linux驱动</category>
       </categories>
       <tags>
         <tag>嵌入式</tag>
-        <tag>STM32</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -209,27 +230,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux驱动学习--platform总线</title>
-    <url>/2024/12/03/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--platform%E6%80%BB%E7%BA%BF/</url>
-    <content><![CDATA[<h1 id="Linux驱动学习–platform总线"><a href="#Linux驱动学习–platform总线" class="headerlink" title="Linux驱动学习–platform总线"></a>Linux驱动学习–platform总线</h1><p>首先需要知道的是linux采用驱动的分离和分层思想，将所有的驱动分为总线，驱动和设备，驱动和设备通过总线进行匹配。因此platform也遵循这个规定，将驱动分为platform总线，platform驱动和platform设备。他们之间的关系如下所示。<br><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/20241204135742.png" alt="20241204135742"></p>
-<p>当有新的驱动加入时，platform总线通过match方法匹配与之对应的设备，当然这个match方法platform总线已经实现了，驱动和设备匹配的方法有好几种。</p>
-<ul>
-<li>第一种通过比较驱动的<em><strong>of_match_table</strong></em>元素中的compatible属性和设备树节点中的<em><strong>compatible</strong></em>属性</li>
-<li>第二种通过比较<em><strong>ACPI</strong></em>，这种方法暂时不太了解</li>
-<li>第三种通过比较<em><strong>id_table</strong></em>，这种方法适合于没有采用设备树的设备</li>
-<li>最后一种直接比较驱动和设备的名称，也是最简单的一种</li>
-</ul>
-<p>如果匹配成功则执行驱动的probe方法，来完成设备注册等工作。</p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Funny 404 Gif</title>
     <url>/2023/05/27/share/funny-404-gif/index/</url>
     <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
@@ -268,23 +268,6 @@
       <tags>
         <tag>分享</tag>
         <tag>404</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -1694,6 +1677,23 @@
         <tag>demo</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+</blockquote>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
 </search>
