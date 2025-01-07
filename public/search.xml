@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>IIC驱动不执行probe函数</title>
-    <url>/2025/01/07/error/IIC%E9%A9%B1%E5%8A%A8%E4%B8%8D%E6%89%A7%E8%A1%8Cprobe%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="linux-IIC驱动报错-–-不执行IIC驱动的probe函数"><a href="#linux-IIC驱动报错-–-不执行IIC驱动的probe函数" class="headerlink" title="linux IIC驱动报错 – 不执行IIC驱动的probe函数"></a>linux IIC驱动报错 – 不执行IIC驱动的probe函数</h2><p><em><strong>问题描述</strong></em>：加载IIC驱动时，驱动的compitible属性和设备树的compitible属性一样，但是加载完成时并没有执行IIC驱动的probe函数  </p>
-<p><em><strong>解决办法</strong></em>：IIC总线匹配设备时，不止需要设备树的compitible属性，还需要传统方法的<em><strong>id_table</strong></em>，即同时需要设备树的compitible属性匹配方法和传统的id_table匹配方法。 </p>
-<p>转载至：<a href="https://www.cnblogs.com/xiaojiang1025/p/6501956.html">Linux i2c子系统(三) _解决probe无法执行</a></p>
-<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/1736262119713.jpg" alt="1736262119713"></p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux驱动报错</title>
-    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
-<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
-<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>STM32</category>
-        <category>linux驱动</category>
-        <category>报错解决</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GPIO</title>
     <url>/2024/11/30/STM32/GPIO/</url>
     <content><![CDATA[<h1 id="STM32-GPIO简介"><a href="#STM32-GPIO简介" class="headerlink" title="STM32 GPIO简介"></a>STM32 GPIO简介</h1><p>STM32的GPIO八种工作方式如下所示，通过设置CRL&#x2F;CRH寄存器的值即可设置对应方式  </p>
@@ -48,6 +15,22 @@
       <tags>
         <tag>嵌入式</tag>
         <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IIC驱动不执行probe函数</title>
+    <url>/2025/01/07/error/IIC%E9%A9%B1%E5%8A%A8%E4%B8%8D%E6%89%A7%E8%A1%8Cprobe%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="linux-IIC驱动报错-–-不执行IIC驱动的probe函数"><a href="#linux-IIC驱动报错-–-不执行IIC驱动的probe函数" class="headerlink" title="linux IIC驱动报错 – 不执行IIC驱动的probe函数"></a>linux IIC驱动报错 – 不执行IIC驱动的probe函数</h2><p><em><strong>问题描述</strong></em>：加载IIC驱动时，驱动的compitible属性和设备树的compitible属性一样，但是加载完成时并没有执行IIC驱动的probe函数  </p>
+<p><em><strong>解决办法</strong></em>：IIC总线匹配设备时，不止需要设备树的compitible属性，还需要传统方法的<em><strong>id_table</strong></em>，即同时需要设备树的compitible属性匹配方法和传统的id_table匹配方法。 </p>
+<p>转载自：<a href="https://www.cnblogs.com/xiaojiang1025/p/6501956.html">Linux i2c子系统(三) _解决probe无法执行</a></p>
+<p><img src="https://gqlblog-picture.oss-cn-beijing.aliyuncs.com/1736262119713.jpg" alt="1736262119713"></p>
+]]></content>
+      <categories>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -72,63 +55,20 @@
       </tags>
   </entry>
   <entry>
-    <title>分享VSCode插件</title>
-    <url>/2023/03/04/share/share-vscode-plugins/</url>
-    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
-<blockquote>
-<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
-</blockquote>
-<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
-<span id="more"></span>
-<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
-<thead>
-<tr>
-<th align="left"><center><strong>插件链接</strong></center></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
-<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
-<td align="left">国产，免费</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
-<td align="left">AI-assisted development</td>
-<td align="left">微软自家的</td>
-</tr>
-<tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
-<td align="left">Your AI pair programmer</td>
-<td align="left">代码能力比较强</td>
-</tr>
-</tbody></table>
-<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
-<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">链接</th>
-<th align="left">描述</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
-<td align="left">View git log, file history, compare branches or commits</td>
-<td align="left">查看git提交记录和比较提交信息</td>
-</tr>
-</tbody></table>
-]]></content>
+    <title>linux驱动报错</title>
+    <url>/2024/12/05/error/linux%E9%A9%B1%E5%8A%A8%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h1 id="加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000"><a href="#加载linux驱动时显示-Unable-to-handle-kernel-NULL-pointer-dereference-at-virtual-address-00000000" class="headerlink" title="加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000"></a>加载linux驱动时显示 Unable to handle kernel NULL pointer dereference at virtual address 00000000</h1><p>原因：驱动中使用了<em><strong>空指针</strong></em><br>解决办法：查找驱动程序中的指针问题，确保没有使用空指针  </p>
+<p>我遇到的原因：没有定义<em>platform_driver</em>结构体中的<em>driver</em>成员的name属性，导致空指针报错。  </p>
+<p><em><strong>注意</strong></em>：platform_driver结构体中的driver成员的name属性是指明该驱动的名称，该属性是必须存在的，of_match_table和id_table是用来匹配设备的，第一个是用设备树的方法，第二个是传统方法。  </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">platform_driver</span> <span class="title">key_driver</span> =</span> &#123;</span><br><span class="line">    .driver = &#123;                 <span class="comment">//驱动程序的属性，用来匹配设备(设备树方法)</span></span><br><span class="line">        .name	= <span class="string">&quot;MyPlatformKey&quot;</span>,  <span class="comment">//报错因为没有定义该属性</span></span><br><span class="line">        .of_match_table = key_of_match,</span><br><span class="line">    &#125;,</span><br><span class="line">    .probe = Keyprobe,         <span class="comment">//probe元素，匹配成功后执行</span></span><br><span class="line">    .remove = Keyremove,        <span class="comment">//remove元素，卸载后执行</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>share</category>
+        <category>STM32</category>
+        <category>linux驱动</category>
+        <category>报错解决</category>
       </categories>
       <tags>
-        <tag>分享</tag>
-        <tag>vscode</tag>
-        <tag>plugins</tag>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -243,6 +183,66 @@
       <tags>
         <tag>嵌入式</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分享VSCode插件</title>
+    <url>/2023/03/04/share/share-vscode-plugins/</url>
+    <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。</p>
+</blockquote>
+<p>小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</p>
+<span id="more"></span>
+<h2 id="AI类-辅助写代码工具"><a href="#AI类-辅助写代码工具" class="headerlink" title="AI类-辅助写代码工具"></a>AI类-辅助写代码工具</h2><table>
+<thead>
+<tr>
+<th align="left"><center><strong>插件链接</strong></center></th>
+<th align="left"><strong>描述</strong></th>
+<th align="left"><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=aminer.codegeex">CodeGeex</a></td>
+<td align="left">免费的AI编程助手、代码自动生成、代码智能补全、代码翻译、支持多种语言、适配主流IDE</td>
+<td align="left">国产，免费</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">微软IntelliCode</a></td>
+<td align="left">AI-assisted development</td>
+<td align="left">微软自家的</td>
+</tr>
+<tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">GitHub Copilot</a></td>
+<td align="left">Your AI pair programmer</td>
+<td align="left">代码能力比较强</td>
+</tr>
+</tbody></table>
+<h2 id="tools-工具类"><a href="#tools-工具类" class="headerlink" title="tools-工具类"></a>tools-工具类</h2><h2 id="git功能增强"><a href="#git功能增强" class="headerlink" title="git功能增强"></a>git功能增强</h2><blockquote>
+<p>vscode自带的git插件只能提交和更新代码，不能查看和查看远程的分支历史提交记录。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">链接</th>
+<th align="left">描述</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></td>
+<td align="left">View git log, file history, compare branches or commits</td>
+<td align="left">查看git提交记录和比较提交信息</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>vscode</tag>
+        <tag>plugins</tag>
       </tags>
   </entry>
   <entry>
