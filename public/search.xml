@@ -51,6 +51,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux驱动学习--IIC驱动</title>
+    <url>/2025/01/09/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--IIC%E9%A9%B1%E5%8A%A8/</url>
+    <content><![CDATA[<p>驱动链接：<a href="https://gitee.com/ZiXieGQL/LinuxDriver/tree/master/IIC">IICDriver.c</a>  </p>
+]]></content>
+      <categories>
+        <category>linux驱动</category>
+      </categories>
+      <tags>
+        <tag>嵌入式</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分享VSCode插件</title>
     <url>/2023/03/04/share/share-vscode-plugins/</url>
     <content><![CDATA[<p>所有分享资源来自互联网，如有侵权请告知，会立即删除</p>
@@ -108,19 +121,6 @@
         <tag>分享</tag>
         <tag>vscode</tag>
         <tag>plugins</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux驱动学习--IIC驱动</title>
-    <url>/2025/01/09/linux/Linux%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0--IIC%E9%A9%B1%E5%8A%A8/</url>
-    <content><![CDATA[<p>驱动链接：<a href="https://gitee.com/ZiXieGQL/LinuxDriver/tree/master/IIC">IICDriver.c</a>  </p>
-]]></content>
-      <categories>
-        <category>linux驱动</category>
-      </categories>
-      <tags>
-        <tag>嵌入式</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -262,6 +262,64 @@
       <tags>
         <tag>嵌入式</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Funny 404 Gif</title>
+    <url>/2023/05/27/share/funny-404-gif/index/</url>
+    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
+<blockquote>
+<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
+<span id="more"></span>
+<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
+<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
+<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
+]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>404</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>史上最牛Hello World</title>
+    <url>/2023/06/04/share/hello-world-js/index/</url>
+    <content><![CDATA[<blockquote>
+<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
+</blockquote>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>share</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>js</tag>
+        <tag>hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -1671,64 +1729,6 @@
         <tag>demo</tag>
         <tag>Hexo</tag>
         <tag>Hexo-Theme-Anzhiyu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>史上最牛Hello World</title>
-    <url>/2023/06/04/share/hello-world-js/index/</url>
-    <content><![CDATA[<blockquote>
-<p>这是我见过的最 niubility 的 最神奇的 Hello World!</p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://geekswg.js.cool/funs/js-hello-world/20230228171407-helloworld.gif" alt="史上最牛Hello World" title="hell world js"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">eval</span>(z=<span class="string">&#x27;p=&quot;&lt;&quot;+&quot;pre&gt;&quot;/* ,.oq#+     ,._, */;for(y in n=&quot;zw24l6k\</span></span><br><span class="line"><span class="string">4e3t4jnt4qj24xh2 x/* =&lt;,m#F^    A W###q. */42kty24wrt413n243n\</span></span><br><span class="line"><span class="string">9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\</span></span><br><span class="line"><span class="string">r24&quot;.split(4))&#123;/* dP      cpq#q##########b, */for(a in t=pars\</span></span><br><span class="line"><span class="string">eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\</span></span><br><span class="line"><span class="string">(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]&gt;i;i+=.05)wi\</span></span><br><span class="line"><span class="string">th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0&lt;cos(o=\</span></span><br><span class="line"><span class="string">new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&amp;&amp;(e[~\</span></span><br><span class="line"><span class="string">~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\</span></span><br><span class="line"><span class="string">+60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122&gt;\</span></span><br><span class="line"><span class="string">x;)p+=&quot;   *#&quot;/* b.        OQ####x#K           */[e[x++]+e[x++\</span></span><br><span class="line"><span class="string">]]||(S=(&quot;eval&quot;/* l         `X#####D  ,       */+&quot;(z=\&#x27;&quot;+z.spl\</span></span><br><span class="line"><span class="string">it(B = &quot;\\\\&quot;)./*           G####B&quot; #       */join(B+B).split\</span></span><br><span class="line"><span class="string">(Q=&quot;\&#x27;&quot;).join(B+Q/*          VQBP`        */)+Q+&quot;)//m1k&quot;)[x/2\</span></span><br><span class="line"><span class="string">+61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&amp;&amp;&quot;#\</span></span><br><span class="line"><span class="string">03B&quot;);document.body.innerHTML=p+=B+&quot;\\n&quot;&#125;setTimeout(z)&#x27;</span>)<span class="comment">//</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>js</tag>
-        <tag>hello world</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Funny 404 Gif</title>
-    <url>/2023/05/27/share/funny-404-gif/index/</url>
-    <content><![CDATA[<p>有趣的404-Not Found gif 动态图。</p>
-<blockquote>
-<p>所有图片资源均来自互联网，如果侵权，请告知！</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" title="样式-Style"></p>
-<span id="more"></span>
-<h2 id="样式1-Style1"><a href="#样式1-Style1" class="headerlink" title="样式1-Style1"></a>样式1-Style1</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-1</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif &quot;样式1-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" title="样式1-Style1"></p>
-<h2 id="样式2-Style2"><a href="#样式2-Style2" class="headerlink" title="样式2-Style2"></a>样式2-Style2</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-2</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif &quot;样式2-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" title="样式2-Style1"></p>
-<h2 id="其他样式"><a href="#其他样式" class="headerlink" title="其他样式"></a>其他样式</h2><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-3</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" title="样式3-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-4</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" title="样式4-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-5</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif &quot;样式3-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" title="样式5-Style1"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-6</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif &quot;样式6-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" title="样式6-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" title="样式7-Style1"></p>
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" title="样式8-Style2"></p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">404-9</span>](<span class="link">https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif &quot;样式9-Style1&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" title="样式9-Style1"></p>
-]]></content>
-      <categories>
-        <category>share</category>
-      </categories>
-      <tags>
-        <tag>分享</tag>
-        <tag>404</tag>
       </tags>
   </entry>
 </search>
